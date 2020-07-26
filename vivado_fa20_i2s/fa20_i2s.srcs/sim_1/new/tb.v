@@ -47,9 +47,10 @@ reg  [15:0] audio_val;
 always @ (posedge clk)
 if (!rst_)
 begin
-    in_i2s_sd   <= 0;
-    i2s_bit_idx <= 5'h1F;
-    audio_val   <= 16'h8000;
+    in_i2s_sd       <= 0;
+    i2s_bit_idx     <= 5'h1F;
+    audio_val       <= 16'h8000;
+    in_parallel_pcm <= 8'h0;
 end
 else if (sck_falling_edge)
 begin
@@ -57,7 +58,10 @@ begin
     i2s_bit_idx <= i2s_bit_idx - 1;
     
     if (i2s_bit_idx == 0)
-        audio_val <= audio_val + 16'h0400;
+    begin
+        audio_val       <= audio_val        + 16'h0400;
+        in_parallel_pcm <= in_parallel_pcm  + 1;
+    end
 end
 
 // This is a bit tricky -- we might think 1 <= bit_idx < 17

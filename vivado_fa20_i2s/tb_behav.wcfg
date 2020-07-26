@@ -11,76 +11,99 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="2571000000000fs"></ZoomStartTime>
-      <ZoomEndTime time="2683000000001fs"></ZoomEndTime>
-      <Cursor1Time time="2642295000000fs"></Cursor1Time>
+      <ZoomStartTime time="86240000000fs"></ZoomStartTime>
+      <ZoomEndTime time="106436947694fs"></ZoomEndTime>
+      <Cursor1Time time="92165000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <NameColumnWidth column_width="210"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pwm_sig" type="logic">
-      <obj_property name="ElementShortName">pwm_sig</obj_property>
-      <obj_property name="ObjectShortName">pwm_sig</obj_property>
+   <WVObjectSize size="5" />
+   <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/in_pcm" type="array">
-      <obj_property name="ElementShortName">in_pcm[15:0]</obj_property>
-      <obj_property name="ObjectShortName">in_pcm[15:0]</obj_property>
+   <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/rst_" type="logic">
+      <obj_property name="ElementShortName">rst_</obj_property>
+      <obj_property name="ObjectShortName">rst_</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/in_ws" type="logic">
-      <obj_property name="ElementShortName">in_ws</obj_property>
-      <obj_property name="ObjectShortName">in_ws</obj_property>
+   <wvobject fp_name="group33" type="group">
+      <obj_property name="label">PARALLEL_IN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/in_parallel_pcm" type="array">
+         <obj_property name="ElementShortName">in_parallel_pcm[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_parallel_pcm[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/i2s_sck_posedge_strobe" type="logic">
+         <obj_property name="ElementShortName">i2s_sck_posedge_strobe</obj_property>
+         <obj_property name="ObjectShortName">i2s_sck_posedge_strobe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/in_ws" type="logic">
+         <obj_property name="ElementShortName">in_ws</obj_property>
+         <obj_property name="ObjectShortName">in_ws</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/out_pcm" type="array">
+         <obj_property name="ElementShortName">out_pcm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out_pcm[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/out_xfc" type="logic">
+         <obj_property name="ElementShortName">out_xfc</obj_property>
+         <obj_property name="ObjectShortName">out_xfc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/in_ws_p1" type="logic">
+         <obj_property name="ElementShortName">in_ws_p1</obj_property>
+         <obj_property name="ObjectShortName">in_ws_p1</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/in_xfc" type="logic">
-      <obj_property name="ElementShortName">in_xfc</obj_property>
-      <obj_property name="ObjectShortName">in_xfc</obj_property>
+   <wvobject fp_name="group32" type="group">
+      <obj_property name="label">I2S_OUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/in_pcm" type="array">
+         <obj_property name="ElementShortName">in_pcm[15:0]</obj_property>
+         <obj_property name="ObjectShortName">in_pcm[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/in_xfc" type="logic">
+         <obj_property name="ElementShortName">in_xfc</obj_property>
+         <obj_property name="ObjectShortName">in_xfc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/in_i2s_ws" type="logic">
+         <obj_property name="ElementShortName">in_i2s_ws</obj_property>
+         <obj_property name="ObjectShortName">in_i2s_ws</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/i2s_sck_posedge_strobe" type="logic">
+         <obj_property name="ElementShortName">i2s_sck_posedge_strobe</obj_property>
+         <obj_property name="ObjectShortName">i2s_sck_posedge_strobe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/i2s_sck_negedge_strobe" type="logic">
+         <obj_property name="ElementShortName">i2s_sck_negedge_strobe</obj_property>
+         <obj_property name="ObjectShortName">i2s_sck_negedge_strobe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/out_i2s_sd" type="logic">
+         <obj_property name="ElementShortName">out_i2s_sd</obj_property>
+         <obj_property name="ObjectShortName">out_i2s_sd</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/cur_val" type="array">
+         <obj_property name="ElementShortName">cur_val[15:0]</obj_property>
+         <obj_property name="ObjectShortName">cur_val[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/ws_posedge_sck" type="logic">
+         <obj_property name="ElementShortName">ws_posedge_sck</obj_property>
+         <obj_property name="ObjectShortName">ws_posedge_sck</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/bit_idx_posedge_sck" type="array">
+         <obj_property name="ElementShortName">bit_idx_posedge_sck[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_idx_posedge_sck[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/u_i2s_top/u_i2s_out/bit_idx_negedge_sck" type="array">
+         <obj_property name="ElementShortName">bit_idx_negedge_sck[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_idx_negedge_sck[3:0]</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/out_parallel_pcm" type="array">
-      <obj_property name="ElementShortName">out_parallel_pcm[15:0]</obj_property>
-      <obj_property name="ObjectShortName">out_parallel_pcm[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/out_pwm" type="logic">
-      <obj_property name="ElementShortName">out_pwm</obj_property>
-      <obj_property name="ObjectShortName">out_pwm</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pwm_control_level" type="array">
-      <obj_property name="ElementShortName">pwm_control_level[11:0]</obj_property>
-      <obj_property name="ObjectShortName">pwm_control_level[11:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/sawtooth" type="array">
-      <obj_property name="ElementShortName">sawtooth[11:0]</obj_property>
-      <obj_property name="ObjectShortName">sawtooth[11:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pcm_11b" type="array">
-      <obj_property name="ElementShortName">pcm_11b[10:0]</obj_property>
-      <obj_property name="ObjectShortName">pcm_11b[10:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
-      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
-      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
-      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
-      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
-      <obj_property name="AnalogHorizLine">0.000000</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/offset_pcm_11b" type="array">
-      <obj_property name="ElementShortName">offset_pcm_11b[12:0]</obj_property>
-      <obj_property name="ObjectShortName">offset_pcm_11b[12:0]</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
-      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
-      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
-      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
-      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
-      <obj_property name="AnalogHorizLine">0.000000</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pwm_sig" type="logic">
-      <obj_property name="ElementShortName">pwm_sig</obj_property>
-      <obj_property name="ObjectShortName">pwm_sig</obj_property>
+   <wvobject fp_name="/tb/inout_i2s_ws" type="logic">
+      <obj_property name="ElementShortName">inout_i2s_ws</obj_property>
+      <obj_property name="ObjectShortName">inout_i2s_ws</obj_property>
    </wvobject>
 </wave_config>

@@ -66,7 +66,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   open_checkpoint i2s_top_routed.dcp
-  set_property webtalk.parent_dir C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.cache/wt [current_project]
+  set_property webtalk.parent_dir {C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.cache/wt} [current_project]
   catch { write_mem_info -force i2s_top.mmi }
   write_bitstream -force i2s_top.bit 
   catch {write_debug_probes -quiet -force i2s_top}

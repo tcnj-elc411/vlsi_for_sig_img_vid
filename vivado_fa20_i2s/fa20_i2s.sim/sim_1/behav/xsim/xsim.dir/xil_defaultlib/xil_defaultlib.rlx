@@ -2,10 +2,10 @@
 2018.3
 Dec  7 2018
 00:33:28
-C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sim_1/new/tb.v,1595707267,verilog,,,,tb,,,,,,,,
-C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_in.v,1595703451,verilog,,C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_top.v,,i2s_in,,,,,,,,
-C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_out.v,1595441205,verilog,,C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_top.v,,i2s_out,,,,,,,,
-C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_top.v,1595703602,verilog,,C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/pwm_out.v,,i2s_top,,,,,,,,
-C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/parallel_in.v,1595550560,verilog,,C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/pwm_out.v,,parallel_in,,,,,,,,
-C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sources_1/new/pwm_out.v,1595708569,verilog,,C:/Users/pearlstl/Documents/Vivado/fa20_i2s/fa20_i2s.srcs/sim_1/new/tb.v,,pwm_out,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sim_1/new/tb.v,1595739541,verilog,,,,tb,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_in.v,1595703451,verilog,,C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_out.v,,i2s_in,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_out.v,1595739551,verilog,,C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_top.v,,i2s_out,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/i2s_top.v,1595740592,verilog,,C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/parallel_in.v,,i2s_top,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/parallel_in.v,1595740222,verilog,,C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/pwm_out.v,,parallel_in,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sources_1/new/pwm_out.v,1595708569,verilog,,C:/Users/pearlstl/Documents/_Teaching/ELC 470 - VLSI for Signal and Image Processing/vlsi_for_sig_img_vid/vivado_fa20_i2s/fa20_i2s.srcs/sim_1/new/tb.v,,pwm_out,,,,,,,,
