@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../fa20_i2s.srcs/sources_1/new/i2s_in.v" \
+"../../../../fa20_i2s.srcs/sources_1/new/i2s_top.v" \
+"../../../../fa20_i2s.srcs/sources_1/new/pwm_out.v" \
+"../../../../fa20_i2s.srcs/sim_1/new/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

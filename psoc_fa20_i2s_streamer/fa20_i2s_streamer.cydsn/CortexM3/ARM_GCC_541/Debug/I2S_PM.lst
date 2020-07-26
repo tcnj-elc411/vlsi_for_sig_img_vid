@@ -1,0 +1,815 @@
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"I2S_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.bss
+  20              		.align	2
+  21              	I2S_backup:
+  22 0000 00       		.space	1
+  23              		.section	.text.I2S_SaveConfig,"ax",%progbits
+  24              		.align	2
+  25              		.global	I2S_SaveConfig
+  26              		.thumb
+  27              		.thumb_func
+  28              		.type	I2S_SaveConfig, %function
+  29              	I2S_SaveConfig:
+  30              	.LFB0:
+  31              		.file 1 "Generated_Source\\PSoC5\\I2S_PM.c"
+   1:Generated_Source\PSoC5/I2S_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/I2S_PM.c **** * File Name: I2S_PM.c
+   3:Generated_Source\PSoC5/I2S_PM.c **** * Version 2.70
+   4:Generated_Source\PSoC5/I2S_PM.c **** *
+   5:Generated_Source\PSoC5/I2S_PM.c **** * Description:
+   6:Generated_Source\PSoC5/I2S_PM.c **** *  This file contains the setup, control and status commands to support
+   7:Generated_Source\PSoC5/I2S_PM.c **** *  component operations in low power mode.
+   8:Generated_Source\PSoC5/I2S_PM.c **** *
+   9:Generated_Source\PSoC5/I2S_PM.c **** * Note:
+  10:Generated_Source\PSoC5/I2S_PM.c **** *
+  11:Generated_Source\PSoC5/I2S_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/I2S_PM.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/I2S_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC5/I2S_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC5/I2S_PM.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/I2S_PM.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/I2S_PM.c **** 
+  18:Generated_Source\PSoC5/I2S_PM.c **** #include "I2S.h"
+  19:Generated_Source\PSoC5/I2S_PM.c **** 
+  20:Generated_Source\PSoC5/I2S_PM.c **** static I2S_BACKUP_STRUCT  I2S_backup = {0u};
+  21:Generated_Source\PSoC5/I2S_PM.c **** 
+  22:Generated_Source\PSoC5/I2S_PM.c **** 
+  23:Generated_Source\PSoC5/I2S_PM.c **** /*******************************************************************************
+  24:Generated_Source\PSoC5/I2S_PM.c **** * Function Name: I2S_SaveConfig
+  25:Generated_Source\PSoC5/I2S_PM.c **** ********************************************************************************
+  26:Generated_Source\PSoC5/I2S_PM.c **** *
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 2
+
+
+  27:Generated_Source\PSoC5/I2S_PM.c **** * Summary:
+  28:Generated_Source\PSoC5/I2S_PM.c **** *  Empty function. Left to preserve backward compatibility.
+  29:Generated_Source\PSoC5/I2S_PM.c **** *
+  30:Generated_Source\PSoC5/I2S_PM.c **** * Parameters:
+  31:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+  32:Generated_Source\PSoC5/I2S_PM.c **** *
+  33:Generated_Source\PSoC5/I2S_PM.c **** * Return:
+  34:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+  35:Generated_Source\PSoC5/I2S_PM.c **** *
+  36:Generated_Source\PSoC5/I2S_PM.c **** *******************************************************************************/
+  37:Generated_Source\PSoC5/I2S_PM.c **** void I2S_SaveConfig(void) 
+  38:Generated_Source\PSoC5/I2S_PM.c **** {
+  32              		.loc 1 38 0
+  33              		.cfi_startproc
+  34              		@ args = 0, pretend = 0, frame = 0
+  35              		@ frame_needed = 1, uses_anonymous_args = 0
+  36              		@ link register save eliminated.
+  37 0000 80B4     		push	{r7}
+  38              		.cfi_def_cfa_offset 4
+  39              		.cfi_offset 7, -4
+  40 0002 00AF     		add	r7, sp, #0
+  41              		.cfi_def_cfa_register 7
+  39:Generated_Source\PSoC5/I2S_PM.c ****     /* Nothing to save. All registers are retention. */
+  40:Generated_Source\PSoC5/I2S_PM.c **** }
+  42              		.loc 1 40 0
+  43 0004 00BF     		nop
+  44 0006 BD46     		mov	sp, r7
+  45              		.cfi_def_cfa_register 13
+  46              		@ sp needed
+  47 0008 80BC     		pop	{r7}
+  48              		.cfi_restore 7
+  49              		.cfi_def_cfa_offset 0
+  50 000a 7047     		bx	lr
+  51              		.cfi_endproc
+  52              	.LFE0:
+  53              		.size	I2S_SaveConfig, .-I2S_SaveConfig
+  54              		.section	.text.I2S_RestoreConfig,"ax",%progbits
+  55              		.align	2
+  56              		.global	I2S_RestoreConfig
+  57              		.thumb
+  58              		.thumb_func
+  59              		.type	I2S_RestoreConfig, %function
+  60              	I2S_RestoreConfig:
+  61              	.LFB1:
+  41:Generated_Source\PSoC5/I2S_PM.c **** 
+  42:Generated_Source\PSoC5/I2S_PM.c **** 
+  43:Generated_Source\PSoC5/I2S_PM.c **** /*******************************************************************************
+  44:Generated_Source\PSoC5/I2S_PM.c **** * Function Name: I2S_RestoreConfig
+  45:Generated_Source\PSoC5/I2S_PM.c **** ********************************************************************************
+  46:Generated_Source\PSoC5/I2S_PM.c **** *
+  47:Generated_Source\PSoC5/I2S_PM.c **** * Summary:
+  48:Generated_Source\PSoC5/I2S_PM.c **** *  Empty function. Left to preserve backward compatibility.
+  49:Generated_Source\PSoC5/I2S_PM.c **** *
+  50:Generated_Source\PSoC5/I2S_PM.c **** * Parameters:
+  51:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+  52:Generated_Source\PSoC5/I2S_PM.c **** *
+  53:Generated_Source\PSoC5/I2S_PM.c **** * Return:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 3
+
+
+  54:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+  55:Generated_Source\PSoC5/I2S_PM.c **** *
+  56:Generated_Source\PSoC5/I2S_PM.c **** *******************************************************************************/
+  57:Generated_Source\PSoC5/I2S_PM.c **** void I2S_RestoreConfig(void) 
+  58:Generated_Source\PSoC5/I2S_PM.c **** {
+  62              		.loc 1 58 0
+  63              		.cfi_startproc
+  64              		@ args = 0, pretend = 0, frame = 0
+  65              		@ frame_needed = 1, uses_anonymous_args = 0
+  66              		@ link register save eliminated.
+  67 0000 80B4     		push	{r7}
+  68              		.cfi_def_cfa_offset 4
+  69              		.cfi_offset 7, -4
+  70 0002 00AF     		add	r7, sp, #0
+  71              		.cfi_def_cfa_register 7
+  59:Generated_Source\PSoC5/I2S_PM.c ****     /* Nothing to restore. All registers are retention. */
+  60:Generated_Source\PSoC5/I2S_PM.c **** }
+  72              		.loc 1 60 0
+  73 0004 00BF     		nop
+  74 0006 BD46     		mov	sp, r7
+  75              		.cfi_def_cfa_register 13
+  76              		@ sp needed
+  77 0008 80BC     		pop	{r7}
+  78              		.cfi_restore 7
+  79              		.cfi_def_cfa_offset 0
+  80 000a 7047     		bx	lr
+  81              		.cfi_endproc
+  82              	.LFE1:
+  83              		.size	I2S_RestoreConfig, .-I2S_RestoreConfig
+  84              		.section	.text.I2S_Sleep,"ax",%progbits
+  85              		.align	2
+  86              		.global	I2S_Sleep
+  87              		.thumb
+  88              		.thumb_func
+  89              		.type	I2S_Sleep, %function
+  90              	I2S_Sleep:
+  91              	.LFB2:
+  61:Generated_Source\PSoC5/I2S_PM.c **** 
+  62:Generated_Source\PSoC5/I2S_PM.c **** 
+  63:Generated_Source\PSoC5/I2S_PM.c **** /*******************************************************************************
+  64:Generated_Source\PSoC5/I2S_PM.c **** * Function Name: I2S_Sleep
+  65:Generated_Source\PSoC5/I2S_PM.c **** ********************************************************************************
+  66:Generated_Source\PSoC5/I2S_PM.c **** *
+  67:Generated_Source\PSoC5/I2S_PM.c **** * Summary:
+  68:Generated_Source\PSoC5/I2S_PM.c **** *  Prepares I2S for entering sleep mode.
+  69:Generated_Source\PSoC5/I2S_PM.c **** *
+  70:Generated_Source\PSoC5/I2S_PM.c **** * Parameters:
+  71:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+  72:Generated_Source\PSoC5/I2S_PM.c **** *
+  73:Generated_Source\PSoC5/I2S_PM.c **** * Return:
+  74:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+  75:Generated_Source\PSoC5/I2S_PM.c **** *
+  76:Generated_Source\PSoC5/I2S_PM.c **** * Global Variables:
+  77:Generated_Source\PSoC5/I2S_PM.c **** *  I2S_backup - used to store component state prior entering 
+  78:Generated_Source\PSoC5/I2S_PM.c **** *    sleep mode.
+  79:Generated_Source\PSoC5/I2S_PM.c **** *
+  80:Generated_Source\PSoC5/I2S_PM.c **** * Reentrant:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 4
+
+
+  81:Generated_Source\PSoC5/I2S_PM.c **** *  No.
+  82:Generated_Source\PSoC5/I2S_PM.c **** *
+  83:Generated_Source\PSoC5/I2S_PM.c **** *******************************************************************************/
+  84:Generated_Source\PSoC5/I2S_PM.c **** void I2S_Sleep(void) 
+  85:Generated_Source\PSoC5/I2S_PM.c **** {
+  92              		.loc 1 85 0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 0
+  95              		@ frame_needed = 1, uses_anonymous_args = 0
+  96 0000 80B5     		push	{r7, lr}
+  97              		.cfi_def_cfa_offset 8
+  98              		.cfi_offset 7, -8
+  99              		.cfi_offset 14, -4
+ 100 0002 00AF     		add	r7, sp, #0
+ 101              		.cfi_def_cfa_register 7
+  86:Generated_Source\PSoC5/I2S_PM.c ****     /* Get component state */
+  87:Generated_Source\PSoC5/I2S_PM.c ****     I2S_backup.enableState = I2S_CONTROL_REG;
+ 102              		.loc 1 87 0
+ 103 0004 044B     		ldr	r3, .L4
+ 104 0006 1B78     		ldrb	r3, [r3]
+ 105 0008 DAB2     		uxtb	r2, r3
+ 106 000a 044B     		ldr	r3, .L4+4
+ 107 000c 1A70     		strb	r2, [r3]
+  88:Generated_Source\PSoC5/I2S_PM.c **** 
+  89:Generated_Source\PSoC5/I2S_PM.c ****     /* Stop component */
+  90:Generated_Source\PSoC5/I2S_PM.c ****     I2S_Stop();
+ 108              		.loc 1 90 0
+ 109 000e FFF7FEFF 		bl	I2S_Stop
+  91:Generated_Source\PSoC5/I2S_PM.c **** }
+ 110              		.loc 1 91 0
+ 111 0012 00BF     		nop
+ 112 0014 80BD     		pop	{r7, pc}
+ 113              	.L5:
+ 114 0016 00BF     		.align	2
+ 115              	.L4:
+ 116 0018 72640040 		.word	1073767538
+ 117 001c 00000000 		.word	I2S_backup
+ 118              		.cfi_endproc
+ 119              	.LFE2:
+ 120              		.size	I2S_Sleep, .-I2S_Sleep
+ 121              		.section	.text.I2S_Wakeup,"ax",%progbits
+ 122              		.align	2
+ 123              		.global	I2S_Wakeup
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.type	I2S_Wakeup, %function
+ 127              	I2S_Wakeup:
+ 128              	.LFB3:
+  92:Generated_Source\PSoC5/I2S_PM.c **** 
+  93:Generated_Source\PSoC5/I2S_PM.c **** 
+  94:Generated_Source\PSoC5/I2S_PM.c **** /*******************************************************************************
+  95:Generated_Source\PSoC5/I2S_PM.c **** * Function Name: I2S_Wakeup
+  96:Generated_Source\PSoC5/I2S_PM.c **** ********************************************************************************
+  97:Generated_Source\PSoC5/I2S_PM.c **** *
+  98:Generated_Source\PSoC5/I2S_PM.c **** * Summary:
+  99:Generated_Source\PSoC5/I2S_PM.c **** *  Prepares I2S for exit from sleep mode.
+ 100:Generated_Source\PSoC5/I2S_PM.c **** *
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 5
+
+
+ 101:Generated_Source\PSoC5/I2S_PM.c **** * Parameters:
+ 102:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+ 103:Generated_Source\PSoC5/I2S_PM.c **** *
+ 104:Generated_Source\PSoC5/I2S_PM.c **** * Return:
+ 105:Generated_Source\PSoC5/I2S_PM.c **** *  None.
+ 106:Generated_Source\PSoC5/I2S_PM.c **** *
+ 107:Generated_Source\PSoC5/I2S_PM.c **** * Global Variables:
+ 108:Generated_Source\PSoC5/I2S_PM.c **** *  I2S_backup - used to restore component state after exit from
+ 109:Generated_Source\PSoC5/I2S_PM.c **** *    sleep mode.
+ 110:Generated_Source\PSoC5/I2S_PM.c **** *
+ 111:Generated_Source\PSoC5/I2S_PM.c **** *******************************************************************************/
+ 112:Generated_Source\PSoC5/I2S_PM.c **** void I2S_Wakeup(void) 
+ 113:Generated_Source\PSoC5/I2S_PM.c **** {
+ 129              		.loc 1 113 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 1, uses_anonymous_args = 0
+ 133 0000 80B5     		push	{r7, lr}
+ 134              		.cfi_def_cfa_offset 8
+ 135              		.cfi_offset 7, -8
+ 136              		.cfi_offset 14, -4
+ 137 0002 00AF     		add	r7, sp, #0
+ 138              		.cfi_def_cfa_register 7
+ 114:Generated_Source\PSoC5/I2S_PM.c ****     #if (I2S_DYNAMIC_BIT_RESOLUTION)
+ 115:Generated_Source\PSoC5/I2S_PM.c ****         I2S_CONTROL_REG = I2S_backup.enableState & I2S_BIT_RESOLUTION_MODE_MASK;
+ 116:Generated_Source\PSoC5/I2S_PM.c ****     #endif /* I2S_DYNAMIC_BIT_RESOLUTION */
+ 117:Generated_Source\PSoC5/I2S_PM.c **** 
+ 118:Generated_Source\PSoC5/I2S_PM.c ****     if(0u != (I2S_backup.enableState & I2S_EN))
+ 139              		.loc 1 118 0
+ 140 0004 084B     		ldr	r3, .L9
+ 141 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 142 0008 03F00403 		and	r3, r3, #4
+ 143 000c 002B     		cmp	r3, #0
+ 144 000e 09D0     		beq	.L8
+ 119:Generated_Source\PSoC5/I2S_PM.c ****     {
+ 120:Generated_Source\PSoC5/I2S_PM.c ****         /* Enable component's operation */
+ 121:Generated_Source\PSoC5/I2S_PM.c ****         I2S_Enable();
+ 145              		.loc 1 121 0
+ 146 0010 FFF7FEFF 		bl	I2S_Enable
+ 122:Generated_Source\PSoC5/I2S_PM.c **** 
+ 123:Generated_Source\PSoC5/I2S_PM.c ****         /* Enable Tx/Rx direction if they were enabled before sleep */
+ 124:Generated_Source\PSoC5/I2S_PM.c ****         #if(I2S_TX_DIRECTION_ENABLE)
+ 125:Generated_Source\PSoC5/I2S_PM.c ****             if(0u != (I2S_backup.enableState & I2S_TX_EN))
+ 147              		.loc 1 125 0
+ 148 0014 044B     		ldr	r3, .L9
+ 149 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 150 0018 03F00103 		and	r3, r3, #1
+ 151 001c 002B     		cmp	r3, #0
+ 152 001e 01D0     		beq	.L8
+ 126:Generated_Source\PSoC5/I2S_PM.c ****             {
+ 127:Generated_Source\PSoC5/I2S_PM.c ****                 I2S_EnableTx();
+ 153              		.loc 1 127 0
+ 154 0020 FFF7FEFF 		bl	I2S_EnableTx
+ 155              	.L8:
+ 128:Generated_Source\PSoC5/I2S_PM.c ****             }
+ 129:Generated_Source\PSoC5/I2S_PM.c ****         #endif /* (I2S_TX_DIRECTION_ENABLE) */
+ 130:Generated_Source\PSoC5/I2S_PM.c ****         
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 6
+
+
+ 131:Generated_Source\PSoC5/I2S_PM.c ****         #if(I2S_RX_DIRECTION_ENABLE)
+ 132:Generated_Source\PSoC5/I2S_PM.c ****             if(0u != (I2S_backup.enableState & I2S_RX_EN))
+ 133:Generated_Source\PSoC5/I2S_PM.c ****             {
+ 134:Generated_Source\PSoC5/I2S_PM.c ****                 I2S_EnableRx();
+ 135:Generated_Source\PSoC5/I2S_PM.c ****             }
+ 136:Generated_Source\PSoC5/I2S_PM.c ****         #endif /* (I2S_RX_DIRECTION_ENABLE) */
+ 137:Generated_Source\PSoC5/I2S_PM.c ****     }
+ 138:Generated_Source\PSoC5/I2S_PM.c **** }
+ 156              		.loc 1 138 0
+ 157 0024 00BF     		nop
+ 158 0026 80BD     		pop	{r7, pc}
+ 159              	.L10:
+ 160              		.align	2
+ 161              	.L9:
+ 162 0028 00000000 		.word	I2S_backup
+ 163              		.cfi_endproc
+ 164              	.LFE3:
+ 165              		.size	I2S_Wakeup, .-I2S_Wakeup
+ 166              		.text
+ 167              	.Letext0:
+ 168              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 169              		.file 3 "Generated_Source\\PSoC5\\I2S.h"
+ 170              		.section	.debug_info,"",%progbits
+ 171              	.Ldebug_info0:
+ 172 0000 0F010000 		.4byte	0x10f
+ 173 0004 0400     		.2byte	0x4
+ 174 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 175 000a 04       		.byte	0x4
+ 176 000b 01       		.uleb128 0x1
+ 177 000c 0B000000 		.4byte	.LASF19
+ 178 0010 0C       		.byte	0xc
+ 179 0011 B8010000 		.4byte	.LASF20
+ 180 0015 2E010000 		.4byte	.LASF21
+ 181 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 182 001d 00000000 		.4byte	0
+ 183 0021 00000000 		.4byte	.Ldebug_line0
+ 184 0025 02       		.uleb128 0x2
+ 185 0026 01       		.byte	0x1
+ 186 0027 06       		.byte	0x6
+ 187 0028 D8010000 		.4byte	.LASF0
+ 188 002c 02       		.uleb128 0x2
+ 189 002d 01       		.byte	0x1
+ 190 002e 08       		.byte	0x8
+ 191 002f AE000000 		.4byte	.LASF1
+ 192 0033 02       		.uleb128 0x2
+ 193 0034 02       		.byte	0x2
+ 194 0035 05       		.byte	0x5
+ 195 0036 93010000 		.4byte	.LASF2
+ 196 003a 02       		.uleb128 0x2
+ 197 003b 02       		.byte	0x2
+ 198 003c 07       		.byte	0x7
+ 199 003d D3000000 		.4byte	.LASF3
+ 200 0041 02       		.uleb128 0x2
+ 201 0042 04       		.byte	0x4
+ 202 0043 05       		.byte	0x5
+ 203 0044 A3010000 		.4byte	.LASF4
+ 204 0048 02       		.uleb128 0x2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 7
+
+
+ 205 0049 04       		.byte	0x4
+ 206 004a 07       		.byte	0x7
+ 207 004b C1000000 		.4byte	.LASF5
+ 208 004f 02       		.uleb128 0x2
+ 209 0050 08       		.byte	0x8
+ 210 0051 05       		.byte	0x5
+ 211 0052 1B010000 		.4byte	.LASF6
+ 212 0056 02       		.uleb128 0x2
+ 213 0057 08       		.byte	0x8
+ 214 0058 07       		.byte	0x7
+ 215 0059 04010000 		.4byte	.LASF7
+ 216 005d 03       		.uleb128 0x3
+ 217 005e 04       		.byte	0x4
+ 218 005f 05       		.byte	0x5
+ 219 0060 696E7400 		.ascii	"int\000"
+ 220 0064 02       		.uleb128 0x2
+ 221 0065 04       		.byte	0x4
+ 222 0066 07       		.byte	0x7
+ 223 0067 F7000000 		.4byte	.LASF8
+ 224 006b 04       		.uleb128 0x4
+ 225 006c 9D010000 		.4byte	.LASF12
+ 226 0070 02       		.byte	0x2
+ 227 0071 E401     		.2byte	0x1e4
+ 228 0073 2C000000 		.4byte	0x2c
+ 229 0077 02       		.uleb128 0x2
+ 230 0078 04       		.byte	0x4
+ 231 0079 04       		.byte	0x4
+ 232 007a A8000000 		.4byte	.LASF9
+ 233 007e 02       		.uleb128 0x2
+ 234 007f 08       		.byte	0x8
+ 235 0080 04       		.byte	0x4
+ 236 0081 F0000000 		.4byte	.LASF10
+ 237 0085 02       		.uleb128 0x2
+ 238 0086 01       		.byte	0x1
+ 239 0087 08       		.byte	0x8
+ 240 0088 29010000 		.4byte	.LASF11
+ 241 008c 04       		.uleb128 0x4
+ 242 008d BC000000 		.4byte	.LASF13
+ 243 0091 02       		.byte	0x2
+ 244 0092 8E02     		.2byte	0x28e
+ 245 0094 98000000 		.4byte	0x98
+ 246 0098 05       		.uleb128 0x5
+ 247 0099 6B000000 		.4byte	0x6b
+ 248 009d 06       		.uleb128 0x6
+ 249 009e 01       		.byte	0x1
+ 250 009f 03       		.byte	0x3
+ 251 00a0 1D       		.byte	0x1d
+ 252 00a1 B2000000 		.4byte	0xb2
+ 253 00a5 07       		.uleb128 0x7
+ 254 00a6 AC010000 		.4byte	.LASF22
+ 255 00aa 03       		.byte	0x3
+ 256 00ab 1F       		.byte	0x1f
+ 257 00ac 6B000000 		.4byte	0x6b
+ 258 00b0 00       		.byte	0
+ 259 00b1 00       		.byte	0
+ 260 00b2 08       		.uleb128 0x8
+ 261 00b3 81010000 		.4byte	.LASF14
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 8
+
+
+ 262 00b7 03       		.byte	0x3
+ 263 00b8 21       		.byte	0x21
+ 264 00b9 9D000000 		.4byte	0x9d
+ 265 00bd 09       		.uleb128 0x9
+ 266 00be 99000000 		.4byte	.LASF15
+ 267 00c2 01       		.byte	0x1
+ 268 00c3 25       		.byte	0x25
+ 269 00c4 00000000 		.4byte	.LFB0
+ 270 00c8 0C000000 		.4byte	.LFE0-.LFB0
+ 271 00cc 01       		.uleb128 0x1
+ 272 00cd 9C       		.byte	0x9c
+ 273 00ce 09       		.uleb128 0x9
+ 274 00cf E4010000 		.4byte	.LASF16
+ 275 00d3 01       		.byte	0x1
+ 276 00d4 39       		.byte	0x39
+ 277 00d5 00000000 		.4byte	.LFB1
+ 278 00d9 0C000000 		.4byte	.LFE1-.LFB1
+ 279 00dd 01       		.uleb128 0x1
+ 280 00de 9C       		.byte	0x9c
+ 281 00df 0A       		.uleb128 0xa
+ 282 00e0 E6000000 		.4byte	.LASF17
+ 283 00e4 01       		.byte	0x1
+ 284 00e5 54       		.byte	0x54
+ 285 00e6 00000000 		.4byte	.LFB2
+ 286 00ea 20000000 		.4byte	.LFE2-.LFB2
+ 287 00ee 01       		.uleb128 0x1
+ 288 00ef 9C       		.byte	0x9c
+ 289 00f0 0A       		.uleb128 0xa
+ 290 00f1 F6010000 		.4byte	.LASF18
+ 291 00f5 01       		.byte	0x1
+ 292 00f6 70       		.byte	0x70
+ 293 00f7 00000000 		.4byte	.LFB3
+ 294 00fb 2C000000 		.4byte	.LFE3-.LFB3
+ 295 00ff 01       		.uleb128 0x1
+ 296 0100 9C       		.byte	0x9c
+ 297 0101 0B       		.uleb128 0xb
+ 298 0102 00000000 		.4byte	.LASF23
+ 299 0106 01       		.byte	0x1
+ 300 0107 14       		.byte	0x14
+ 301 0108 B2000000 		.4byte	0xb2
+ 302 010c 05       		.uleb128 0x5
+ 303 010d 03       		.byte	0x3
+ 304 010e 00000000 		.4byte	I2S_backup
+ 305 0112 00       		.byte	0
+ 306              		.section	.debug_abbrev,"",%progbits
+ 307              	.Ldebug_abbrev0:
+ 308 0000 01       		.uleb128 0x1
+ 309 0001 11       		.uleb128 0x11
+ 310 0002 01       		.byte	0x1
+ 311 0003 25       		.uleb128 0x25
+ 312 0004 0E       		.uleb128 0xe
+ 313 0005 13       		.uleb128 0x13
+ 314 0006 0B       		.uleb128 0xb
+ 315 0007 03       		.uleb128 0x3
+ 316 0008 0E       		.uleb128 0xe
+ 317 0009 1B       		.uleb128 0x1b
+ 318 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 9
+
+
+ 319 000b 55       		.uleb128 0x55
+ 320 000c 17       		.uleb128 0x17
+ 321 000d 11       		.uleb128 0x11
+ 322 000e 01       		.uleb128 0x1
+ 323 000f 10       		.uleb128 0x10
+ 324 0010 17       		.uleb128 0x17
+ 325 0011 00       		.byte	0
+ 326 0012 00       		.byte	0
+ 327 0013 02       		.uleb128 0x2
+ 328 0014 24       		.uleb128 0x24
+ 329 0015 00       		.byte	0
+ 330 0016 0B       		.uleb128 0xb
+ 331 0017 0B       		.uleb128 0xb
+ 332 0018 3E       		.uleb128 0x3e
+ 333 0019 0B       		.uleb128 0xb
+ 334 001a 03       		.uleb128 0x3
+ 335 001b 0E       		.uleb128 0xe
+ 336 001c 00       		.byte	0
+ 337 001d 00       		.byte	0
+ 338 001e 03       		.uleb128 0x3
+ 339 001f 24       		.uleb128 0x24
+ 340 0020 00       		.byte	0
+ 341 0021 0B       		.uleb128 0xb
+ 342 0022 0B       		.uleb128 0xb
+ 343 0023 3E       		.uleb128 0x3e
+ 344 0024 0B       		.uleb128 0xb
+ 345 0025 03       		.uleb128 0x3
+ 346 0026 08       		.uleb128 0x8
+ 347 0027 00       		.byte	0
+ 348 0028 00       		.byte	0
+ 349 0029 04       		.uleb128 0x4
+ 350 002a 16       		.uleb128 0x16
+ 351 002b 00       		.byte	0
+ 352 002c 03       		.uleb128 0x3
+ 353 002d 0E       		.uleb128 0xe
+ 354 002e 3A       		.uleb128 0x3a
+ 355 002f 0B       		.uleb128 0xb
+ 356 0030 3B       		.uleb128 0x3b
+ 357 0031 05       		.uleb128 0x5
+ 358 0032 49       		.uleb128 0x49
+ 359 0033 13       		.uleb128 0x13
+ 360 0034 00       		.byte	0
+ 361 0035 00       		.byte	0
+ 362 0036 05       		.uleb128 0x5
+ 363 0037 35       		.uleb128 0x35
+ 364 0038 00       		.byte	0
+ 365 0039 49       		.uleb128 0x49
+ 366 003a 13       		.uleb128 0x13
+ 367 003b 00       		.byte	0
+ 368 003c 00       		.byte	0
+ 369 003d 06       		.uleb128 0x6
+ 370 003e 13       		.uleb128 0x13
+ 371 003f 01       		.byte	0x1
+ 372 0040 0B       		.uleb128 0xb
+ 373 0041 0B       		.uleb128 0xb
+ 374 0042 3A       		.uleb128 0x3a
+ 375 0043 0B       		.uleb128 0xb
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 10
+
+
+ 376 0044 3B       		.uleb128 0x3b
+ 377 0045 0B       		.uleb128 0xb
+ 378 0046 01       		.uleb128 0x1
+ 379 0047 13       		.uleb128 0x13
+ 380 0048 00       		.byte	0
+ 381 0049 00       		.byte	0
+ 382 004a 07       		.uleb128 0x7
+ 383 004b 0D       		.uleb128 0xd
+ 384 004c 00       		.byte	0
+ 385 004d 03       		.uleb128 0x3
+ 386 004e 0E       		.uleb128 0xe
+ 387 004f 3A       		.uleb128 0x3a
+ 388 0050 0B       		.uleb128 0xb
+ 389 0051 3B       		.uleb128 0x3b
+ 390 0052 0B       		.uleb128 0xb
+ 391 0053 49       		.uleb128 0x49
+ 392 0054 13       		.uleb128 0x13
+ 393 0055 38       		.uleb128 0x38
+ 394 0056 0B       		.uleb128 0xb
+ 395 0057 00       		.byte	0
+ 396 0058 00       		.byte	0
+ 397 0059 08       		.uleb128 0x8
+ 398 005a 16       		.uleb128 0x16
+ 399 005b 00       		.byte	0
+ 400 005c 03       		.uleb128 0x3
+ 401 005d 0E       		.uleb128 0xe
+ 402 005e 3A       		.uleb128 0x3a
+ 403 005f 0B       		.uleb128 0xb
+ 404 0060 3B       		.uleb128 0x3b
+ 405 0061 0B       		.uleb128 0xb
+ 406 0062 49       		.uleb128 0x49
+ 407 0063 13       		.uleb128 0x13
+ 408 0064 00       		.byte	0
+ 409 0065 00       		.byte	0
+ 410 0066 09       		.uleb128 0x9
+ 411 0067 2E       		.uleb128 0x2e
+ 412 0068 00       		.byte	0
+ 413 0069 3F       		.uleb128 0x3f
+ 414 006a 19       		.uleb128 0x19
+ 415 006b 03       		.uleb128 0x3
+ 416 006c 0E       		.uleb128 0xe
+ 417 006d 3A       		.uleb128 0x3a
+ 418 006e 0B       		.uleb128 0xb
+ 419 006f 3B       		.uleb128 0x3b
+ 420 0070 0B       		.uleb128 0xb
+ 421 0071 27       		.uleb128 0x27
+ 422 0072 19       		.uleb128 0x19
+ 423 0073 11       		.uleb128 0x11
+ 424 0074 01       		.uleb128 0x1
+ 425 0075 12       		.uleb128 0x12
+ 426 0076 06       		.uleb128 0x6
+ 427 0077 40       		.uleb128 0x40
+ 428 0078 18       		.uleb128 0x18
+ 429 0079 9742     		.uleb128 0x2117
+ 430 007b 19       		.uleb128 0x19
+ 431 007c 00       		.byte	0
+ 432 007d 00       		.byte	0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 11
+
+
+ 433 007e 0A       		.uleb128 0xa
+ 434 007f 2E       		.uleb128 0x2e
+ 435 0080 00       		.byte	0
+ 436 0081 3F       		.uleb128 0x3f
+ 437 0082 19       		.uleb128 0x19
+ 438 0083 03       		.uleb128 0x3
+ 439 0084 0E       		.uleb128 0xe
+ 440 0085 3A       		.uleb128 0x3a
+ 441 0086 0B       		.uleb128 0xb
+ 442 0087 3B       		.uleb128 0x3b
+ 443 0088 0B       		.uleb128 0xb
+ 444 0089 27       		.uleb128 0x27
+ 445 008a 19       		.uleb128 0x19
+ 446 008b 11       		.uleb128 0x11
+ 447 008c 01       		.uleb128 0x1
+ 448 008d 12       		.uleb128 0x12
+ 449 008e 06       		.uleb128 0x6
+ 450 008f 40       		.uleb128 0x40
+ 451 0090 18       		.uleb128 0x18
+ 452 0091 9642     		.uleb128 0x2116
+ 453 0093 19       		.uleb128 0x19
+ 454 0094 00       		.byte	0
+ 455 0095 00       		.byte	0
+ 456 0096 0B       		.uleb128 0xb
+ 457 0097 34       		.uleb128 0x34
+ 458 0098 00       		.byte	0
+ 459 0099 03       		.uleb128 0x3
+ 460 009a 0E       		.uleb128 0xe
+ 461 009b 3A       		.uleb128 0x3a
+ 462 009c 0B       		.uleb128 0xb
+ 463 009d 3B       		.uleb128 0x3b
+ 464 009e 0B       		.uleb128 0xb
+ 465 009f 49       		.uleb128 0x49
+ 466 00a0 13       		.uleb128 0x13
+ 467 00a1 02       		.uleb128 0x2
+ 468 00a2 18       		.uleb128 0x18
+ 469 00a3 00       		.byte	0
+ 470 00a4 00       		.byte	0
+ 471 00a5 00       		.byte	0
+ 472              		.section	.debug_aranges,"",%progbits
+ 473 0000 34000000 		.4byte	0x34
+ 474 0004 0200     		.2byte	0x2
+ 475 0006 00000000 		.4byte	.Ldebug_info0
+ 476 000a 04       		.byte	0x4
+ 477 000b 00       		.byte	0
+ 478 000c 0000     		.2byte	0
+ 479 000e 0000     		.2byte	0
+ 480 0010 00000000 		.4byte	.LFB0
+ 481 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 482 0018 00000000 		.4byte	.LFB1
+ 483 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 484 0020 00000000 		.4byte	.LFB2
+ 485 0024 20000000 		.4byte	.LFE2-.LFB2
+ 486 0028 00000000 		.4byte	.LFB3
+ 487 002c 2C000000 		.4byte	.LFE3-.LFB3
+ 488 0030 00000000 		.4byte	0
+ 489 0034 00000000 		.4byte	0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 12
+
+
+ 490              		.section	.debug_ranges,"",%progbits
+ 491              	.Ldebug_ranges0:
+ 492 0000 00000000 		.4byte	.LFB0
+ 493 0004 0C000000 		.4byte	.LFE0
+ 494 0008 00000000 		.4byte	.LFB1
+ 495 000c 0C000000 		.4byte	.LFE1
+ 496 0010 00000000 		.4byte	.LFB2
+ 497 0014 20000000 		.4byte	.LFE2
+ 498 0018 00000000 		.4byte	.LFB3
+ 499 001c 2C000000 		.4byte	.LFE3
+ 500 0020 00000000 		.4byte	0
+ 501 0024 00000000 		.4byte	0
+ 502              		.section	.debug_line,"",%progbits
+ 503              	.Ldebug_line0:
+ 504 0000 9C000000 		.section	.debug_str,"MS",%progbits,1
+ 504      02004C00 
+ 504      00000201 
+ 504      FB0E0D00 
+ 504      01010101 
+ 505              	.LASF23:
+ 506 0000 4932535F 		.ascii	"I2S_backup\000"
+ 506      6261636B 
+ 506      757000
+ 507              	.LASF19:
+ 508 000b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 508      43313120 
+ 508      352E342E 
+ 508      31203230 
+ 508      31363036 
+ 509 003e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 509      20726576 
+ 509      6973696F 
+ 509      6E203233 
+ 509      37373135 
+ 510 0071 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 510      66756E63 
+ 510      74696F6E 
+ 510      2D736563 
+ 510      74696F6E 
+ 511              	.LASF15:
+ 512 0099 4932535F 		.ascii	"I2S_SaveConfig\000"
+ 512      53617665 
+ 512      436F6E66 
+ 512      696700
+ 513              	.LASF9:
+ 514 00a8 666C6F61 		.ascii	"float\000"
+ 514      7400
+ 515              	.LASF1:
+ 516 00ae 756E7369 		.ascii	"unsigned char\000"
+ 516      676E6564 
+ 516      20636861 
+ 516      7200
+ 517              	.LASF13:
+ 518 00bc 72656738 		.ascii	"reg8\000"
+ 518      00
+ 519              	.LASF5:
+ 520 00c1 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 13
+
+
+ 520      20756E73 
+ 520      69676E65 
+ 520      6420696E 
+ 520      7400
+ 521              	.LASF3:
+ 522 00d3 73686F72 		.ascii	"short unsigned int\000"
+ 522      7420756E 
+ 522      7369676E 
+ 522      65642069 
+ 522      6E7400
+ 523              	.LASF17:
+ 524 00e6 4932535F 		.ascii	"I2S_Sleep\000"
+ 524      536C6565 
+ 524      7000
+ 525              	.LASF10:
+ 526 00f0 646F7562 		.ascii	"double\000"
+ 526      6C6500
+ 527              	.LASF8:
+ 528 00f7 756E7369 		.ascii	"unsigned int\000"
+ 528      676E6564 
+ 528      20696E74 
+ 528      00
+ 529              	.LASF7:
+ 530 0104 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 530      206C6F6E 
+ 530      6720756E 
+ 530      7369676E 
+ 530      65642069 
+ 531              	.LASF6:
+ 532 011b 6C6F6E67 		.ascii	"long long int\000"
+ 532      206C6F6E 
+ 532      6720696E 
+ 532      7400
+ 533              	.LASF11:
+ 534 0129 63686172 		.ascii	"char\000"
+ 534      00
+ 535              	.LASF21:
+ 536 012e 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
+ 536      73657273 
+ 536      5C706561 
+ 536      726C7374 
+ 536      6C5C446F 
+ 537 015c 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
+ 537      73747265 
+ 537      616D6572 
+ 537      5C666132 
+ 537      305F6932 
+ 538              	.LASF14:
+ 539 0181 4932535F 		.ascii	"I2S_BACKUP_STRUCT\000"
+ 539      4241434B 
+ 539      55505F53 
+ 539      54525543 
+ 539      5400
+ 540              	.LASF2:
+ 541 0193 73686F72 		.ascii	"short int\000"
+ 541      7420696E 
+ 541      7400
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 14
+
+
+ 542              	.LASF12:
+ 543 019d 75696E74 		.ascii	"uint8\000"
+ 543      3800
+ 544              	.LASF4:
+ 545 01a3 6C6F6E67 		.ascii	"long int\000"
+ 545      20696E74 
+ 545      00
+ 546              	.LASF22:
+ 547 01ac 656E6162 		.ascii	"enableState\000"
+ 547      6C655374 
+ 547      61746500 
+ 548              	.LASF20:
+ 549 01b8 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2S_PM.c\000"
+ 549      72617465 
+ 549      645F536F 
+ 549      75726365 
+ 549      5C50536F 
+ 550              	.LASF0:
+ 551 01d8 7369676E 		.ascii	"signed char\000"
+ 551      65642063 
+ 551      68617200 
+ 552              	.LASF16:
+ 553 01e4 4932535F 		.ascii	"I2S_RestoreConfig\000"
+ 553      52657374 
+ 553      6F726543 
+ 553      6F6E6669 
+ 553      6700
+ 554              	.LASF18:
+ 555 01f6 4932535F 		.ascii	"I2S_Wakeup\000"
+ 555      57616B65 
+ 555      757000
+ 556              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

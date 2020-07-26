@@ -50,3 +50,24 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Vivado files
+*.jou
+*.log
+*.pb
+*.bat
+*.sh
+*.js
+*.rst
+*.vhdl
+*.xml
+*.html
+*.rpt
+*.rpx
+*.vdi
+*.rst
+*.wdf
+*.xci
+*.info
+*.veo
+*.vho

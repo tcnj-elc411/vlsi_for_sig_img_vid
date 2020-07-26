@@ -1,0 +1,2109 @@
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"isr_i2s_tx.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.isr_i2s_tx_Start,"ax",%progbits
+  20              		.align	2
+  21              		.global	isr_i2s_tx_Start
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	isr_i2s_tx_Start, %function
+  25              	isr_i2s_tx_Start:
+  26              	.LFB63:
+  27              		.file 1 "Generated_Source\\PSoC5\\isr_i2s_tx.c"
+   1:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/isr_i2s_tx.c **** * File Name: isr_i2s_tx.c  
+   3:Generated_Source\PSoC5/isr_i2s_tx.c **** * Version 1.70
+   4:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+   5:Generated_Source\PSoC5/isr_i2s_tx.c **** *  Description:
+   6:Generated_Source\PSoC5/isr_i2s_tx.c **** *   API for controlling the state of an interrupt.
+   7:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+   8:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+   9:Generated_Source\PSoC5/isr_i2s_tx.c **** *  Note:
+  10:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+  11:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/isr_i2s_tx.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/isr_i2s_tx.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:Generated_Source\PSoC5/isr_i2s_tx.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:Generated_Source\PSoC5/isr_i2s_tx.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  18:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  19:Generated_Source\PSoC5/isr_i2s_tx.c **** #include <cydevice_trm.h>
+  20:Generated_Source\PSoC5/isr_i2s_tx.c **** #include <CyLib.h>
+  21:Generated_Source\PSoC5/isr_i2s_tx.c **** #include <isr_i2s_tx.h>
+  22:Generated_Source\PSoC5/isr_i2s_tx.c **** #include "cyapicallbacks.h"
+  23:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  24:Generated_Source\PSoC5/isr_i2s_tx.c **** #if !defined(isr_i2s_tx__REMOVED) /* Check for removal by optimization */
+  25:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  26:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+  27:Generated_Source\PSoC5/isr_i2s_tx.c **** *  Place your includes, defines and code here 
+  28:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************/
+  29:Generated_Source\PSoC5/isr_i2s_tx.c **** /* `#START isr_i2s_tx_intc` */
+  30:Generated_Source\PSoC5/isr_i2s_tx.c **** #include "project.h"
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 2
+
+
+  31:Generated_Source\PSoC5/isr_i2s_tx.c **** /* `#END` */
+  32:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  33:Generated_Source\PSoC5/isr_i2s_tx.c **** #ifndef CYINT_IRQ_BASE
+  34:Generated_Source\PSoC5/isr_i2s_tx.c **** #define CYINT_IRQ_BASE      16
+  35:Generated_Source\PSoC5/isr_i2s_tx.c **** #endif /* CYINT_IRQ_BASE */
+  36:Generated_Source\PSoC5/isr_i2s_tx.c **** #ifndef CYINT_VECT_TABLE
+  37:Generated_Source\PSoC5/isr_i2s_tx.c **** #define CYINT_VECT_TABLE    ((cyisraddress **) CYREG_NVIC_VECT_OFFSET)
+  38:Generated_Source\PSoC5/isr_i2s_tx.c **** #endif /* CYINT_VECT_TABLE */
+  39:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  40:Generated_Source\PSoC5/isr_i2s_tx.c **** /* Declared in startup, used to set unused interrupts to. */
+  41:Generated_Source\PSoC5/isr_i2s_tx.c **** CY_ISR_PROTO(IntDefaultHandler);
+  42:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  43:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  44:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+  45:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_Start
+  46:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+  47:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+  48:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+  49:Generated_Source\PSoC5/isr_i2s_tx.c **** *  Set up the interrupt and enable it. This function disables the interrupt, 
+  50:Generated_Source\PSoC5/isr_i2s_tx.c **** *  sets the default interrupt vector, sets the priority from the value in the
+  51:Generated_Source\PSoC5/isr_i2s_tx.c **** *  Design Wide Resources Interrupt Editor, then enables the interrupt to the 
+  52:Generated_Source\PSoC5/isr_i2s_tx.c **** *  interrupt controller.
+  53:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+  54:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:  
+  55:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+  56:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+  57:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+  58:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+  59:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+  60:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+  61:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_Start(void)
+  62:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+  28              		.loc 1 62 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 1, uses_anonymous_args = 0
+  32 0000 80B5     		push	{r7, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 7, -8
+  35              		.cfi_offset 14, -4
+  36 0002 00AF     		add	r7, sp, #0
+  37              		.cfi_def_cfa_register 7
+  63:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* For all we know the interrupt is active. */
+  64:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_Disable();
+  38              		.loc 1 64 0
+  39 0004 FFF7FEFF 		bl	isr_i2s_tx_Disable
+  65:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  66:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Set the ISR to point to the isr_i2s_tx Interrupt. */
+  67:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_SetVector(&isr_i2s_tx_Interrupt);
+  40              		.loc 1 67 0
+  41 0008 0448     		ldr	r0, .L2
+  42 000a FFF7FEFF 		bl	isr_i2s_tx_SetVector
+  68:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  69:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Set the priority. */
+  70:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_SetPriority((uint8)isr_i2s_tx_INTC_PRIOR_NUMBER);
+  43              		.loc 1 70 0
+  44 000e 0720     		movs	r0, #7
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 3
+
+
+  45 0010 FFF7FEFF 		bl	isr_i2s_tx_SetPriority
+  71:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  72:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Enable it. */
+  73:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_Enable();
+  46              		.loc 1 73 0
+  47 0014 FFF7FEFF 		bl	isr_i2s_tx_Enable
+  74:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+  48              		.loc 1 74 0
+  49 0018 00BF     		nop
+  50 001a 80BD     		pop	{r7, pc}
+  51              	.L3:
+  52              		.align	2
+  53              	.L2:
+  54 001c 00000000 		.word	isr_i2s_tx_Interrupt
+  55              		.cfi_endproc
+  56              	.LFE63:
+  57              		.size	isr_i2s_tx_Start, .-isr_i2s_tx_Start
+  58              		.section	.text.isr_i2s_tx_StartEx,"ax",%progbits
+  59              		.align	2
+  60              		.global	isr_i2s_tx_StartEx
+  61              		.thumb
+  62              		.thumb_func
+  63              		.type	isr_i2s_tx_StartEx, %function
+  64              	isr_i2s_tx_StartEx:
+  65              	.LFB64:
+  75:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  76:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+  77:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+  78:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_StartEx
+  79:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+  80:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+  81:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+  82:Generated_Source\PSoC5/isr_i2s_tx.c **** *  Sets up the interrupt and enables it. This function disables the interrupt,
+  83:Generated_Source\PSoC5/isr_i2s_tx.c **** *  sets the interrupt vector based on the address passed in, sets the priority 
+  84:Generated_Source\PSoC5/isr_i2s_tx.c **** *  from the value in the Design Wide Resources Interrupt Editor, then enables 
+  85:Generated_Source\PSoC5/isr_i2s_tx.c **** *  the interrupt to the interrupt controller.
+  86:Generated_Source\PSoC5/isr_i2s_tx.c **** *  
+  87:Generated_Source\PSoC5/isr_i2s_tx.c **** *  When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+  88:Generated_Source\PSoC5/isr_i2s_tx.c **** *  used to provide consistent definition across compilers:
+  89:Generated_Source\PSoC5/isr_i2s_tx.c **** *  
+  90:Generated_Source\PSoC5/isr_i2s_tx.c **** *  Function definition example:
+  91:Generated_Source\PSoC5/isr_i2s_tx.c **** *   CY_ISR(MyISR)
+  92:Generated_Source\PSoC5/isr_i2s_tx.c **** *   {
+  93:Generated_Source\PSoC5/isr_i2s_tx.c **** *   }
+  94:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Function prototype example:
+  95:Generated_Source\PSoC5/isr_i2s_tx.c **** *   CY_ISR_PROTO(MyISR);
+  96:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+  97:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:  
+  98:Generated_Source\PSoC5/isr_i2s_tx.c **** *   address: Address of the ISR to set in the interrupt vector table.
+  99:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 100:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 101:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 102:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 103:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 104:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_StartEx(cyisraddress address)
+ 105:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+  66              		.loc 1 105 0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 4
+
+
+  67              		.cfi_startproc
+  68              		@ args = 0, pretend = 0, frame = 8
+  69              		@ frame_needed = 1, uses_anonymous_args = 0
+  70 0000 80B5     		push	{r7, lr}
+  71              		.cfi_def_cfa_offset 8
+  72              		.cfi_offset 7, -8
+  73              		.cfi_offset 14, -4
+  74 0002 82B0     		sub	sp, sp, #8
+  75              		.cfi_def_cfa_offset 16
+  76 0004 00AF     		add	r7, sp, #0
+  77              		.cfi_def_cfa_register 7
+  78 0006 7860     		str	r0, [r7, #4]
+ 106:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* For all we know the interrupt is active. */
+ 107:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_Disable();
+  79              		.loc 1 107 0
+  80 0008 FFF7FEFF 		bl	isr_i2s_tx_Disable
+ 108:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 109:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Set the ISR to point to the isr_i2s_tx Interrupt. */
+ 110:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_SetVector(address);
+  81              		.loc 1 110 0
+  82 000c 7868     		ldr	r0, [r7, #4]
+  83 000e FFF7FEFF 		bl	isr_i2s_tx_SetVector
+ 111:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 112:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Set the priority. */
+ 113:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_SetPriority((uint8)isr_i2s_tx_INTC_PRIOR_NUMBER);
+  84              		.loc 1 113 0
+  85 0012 0720     		movs	r0, #7
+  86 0014 FFF7FEFF 		bl	isr_i2s_tx_SetPriority
+ 114:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 115:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Enable it. */
+ 116:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_Enable();
+  87              		.loc 1 116 0
+  88 0018 FFF7FEFF 		bl	isr_i2s_tx_Enable
+ 117:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+  89              		.loc 1 117 0
+  90 001c 00BF     		nop
+  91 001e 0837     		adds	r7, r7, #8
+  92              		.cfi_def_cfa_offset 8
+  93 0020 BD46     		mov	sp, r7
+  94              		.cfi_def_cfa_register 13
+  95              		@ sp needed
+  96 0022 80BD     		pop	{r7, pc}
+  97              		.cfi_endproc
+  98              	.LFE64:
+  99              		.size	isr_i2s_tx_StartEx, .-isr_i2s_tx_StartEx
+ 100              		.section	.text.isr_i2s_tx_Stop,"ax",%progbits
+ 101              		.align	2
+ 102              		.global	isr_i2s_tx_Stop
+ 103              		.thumb
+ 104              		.thumb_func
+ 105              		.type	isr_i2s_tx_Stop, %function
+ 106              	isr_i2s_tx_Stop:
+ 107              	.LFB65:
+ 118:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 119:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 120:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 121:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_Stop
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 5
+
+
+ 122:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 123:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 124:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 125:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Disables and removes the interrupt.
+ 126:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 127:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:  
+ 128:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 129:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 130:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 131:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 132:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 133:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 134:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_Stop(void)
+ 135:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 108              		.loc 1 135 0
+ 109              		.cfi_startproc
+ 110              		@ args = 0, pretend = 0, frame = 0
+ 111              		@ frame_needed = 1, uses_anonymous_args = 0
+ 112 0000 80B5     		push	{r7, lr}
+ 113              		.cfi_def_cfa_offset 8
+ 114              		.cfi_offset 7, -8
+ 115              		.cfi_offset 14, -4
+ 116 0002 00AF     		add	r7, sp, #0
+ 117              		.cfi_def_cfa_register 7
+ 136:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Disable this interrupt. */
+ 137:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_Disable();
+ 118              		.loc 1 137 0
+ 119 0004 FFF7FEFF 		bl	isr_i2s_tx_Disable
+ 138:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 139:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Set the ISR to point to the passive one. */
+ 140:Generated_Source\PSoC5/isr_i2s_tx.c ****     isr_i2s_tx_SetVector(&IntDefaultHandler);
+ 120              		.loc 1 140 0
+ 121 0008 0248     		ldr	r0, .L6
+ 122 000a FFF7FEFF 		bl	isr_i2s_tx_SetVector
+ 141:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 123              		.loc 1 141 0
+ 124 000e 00BF     		nop
+ 125 0010 80BD     		pop	{r7, pc}
+ 126              	.L7:
+ 127 0012 00BF     		.align	2
+ 128              	.L6:
+ 129 0014 00000000 		.word	IntDefaultHandler
+ 130              		.cfi_endproc
+ 131              	.LFE65:
+ 132              		.size	isr_i2s_tx_Stop, .-isr_i2s_tx_Stop
+ 133              		.section	.text.isr_i2s_tx_Interrupt,"ax",%progbits
+ 134              		.align	2
+ 135              		.global	isr_i2s_tx_Interrupt
+ 136              		.thumb
+ 137              		.thumb_func
+ 138              		.type	isr_i2s_tx_Interrupt, %function
+ 139              	isr_i2s_tx_Interrupt:
+ 140              	.LFB66:
+ 142:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 143:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 144:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 145:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_Interrupt
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 6
+
+
+ 146:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 147:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 148:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 149:Generated_Source\PSoC5/isr_i2s_tx.c **** *   The default Interrupt Service Routine for isr_i2s_tx.
+ 150:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 151:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Add custom code between the coments to keep the next version of this file
+ 152:Generated_Source\PSoC5/isr_i2s_tx.c **** *   from over writting your code.
+ 153:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 154:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:  
+ 155:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 156:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 157:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 158:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 159:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 160:Generated_Source\PSoC5/isr_i2s_tx.c **** CY_ISR(isr_i2s_tx_Interrupt)
+ 161:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 141              		.loc 1 161 0
+ 142              		.cfi_startproc
+ 143              		@ args = 0, pretend = 0, frame = 8
+ 144              		@ frame_needed = 1, uses_anonymous_args = 0
+ 145              		@ link register save eliminated.
+ 146 0000 80B4     		push	{r7}
+ 147              		.cfi_def_cfa_offset 4
+ 148              		.cfi_offset 7, -4
+ 149 0002 83B0     		sub	sp, sp, #12
+ 150              		.cfi_def_cfa_offset 16
+ 151 0004 00AF     		add	r7, sp, #0
+ 152              		.cfi_def_cfa_register 7
+ 153              	.LBB2:
+ 162:Generated_Source\PSoC5/isr_i2s_tx.c ****     #ifdef isr_i2s_tx_INTERRUPT_INTERRUPT_CALLBACK
+ 163:Generated_Source\PSoC5/isr_i2s_tx.c ****         isr_i2s_tx_Interrupt_InterruptCallback();
+ 164:Generated_Source\PSoC5/isr_i2s_tx.c ****     #endif /* isr_i2s_tx_INTERRUPT_INTERRUPT_CALLBACK */ 
+ 165:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 166:Generated_Source\PSoC5/isr_i2s_tx.c ****     /*  Place your Interrupt code here. */
+ 167:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* `#START isr_i2s_tx_Interrupt` */
+ 168:Generated_Source\PSoC5/isr_i2s_tx.c ****     for (int chan = 0; chan < 2; ++chan)
+ 154              		.loc 1 168 0
+ 155 0006 0023     		movs	r3, #0
+ 156 0008 7B60     		str	r3, [r7, #4]
+ 157 000a 0EE0     		b	.L9
+ 158              	.L12:
+ 159              	.LBB3:
+ 169:Generated_Source\PSoC5/isr_i2s_tx.c ****         for (int byte_idx = 1; byte_idx >= 0; --byte_idx)
+ 160              		.loc 1 169 0
+ 161 000c 0123     		movs	r3, #1
+ 162 000e 3B60     		str	r3, [r7]
+ 163 0010 05E0     		b	.L10
+ 164              	.L11:
+ 170:Generated_Source\PSoC5/isr_i2s_tx.c **** //                I2S_WriteByte( (value >> (8*byte_idx))& 0xFF, 0);
+ 171:Generated_Source\PSoC5/isr_i2s_tx.c **** //                I2S_WriteByte( (force_value >> (8*byte_idx))& 0xFF, chan);
+ 172:Generated_Source\PSoC5/isr_i2s_tx.c ****             I2S_WriteByte( 0xAA, chan);
+ 165              		.loc 1 172 0 discriminator 3
+ 166 0012 0A4B     		ldr	r3, .L13
+ 167 0014 AA22     		movs	r2, #170
+ 168 0016 1A70     		strb	r2, [r3]
+ 169:Generated_Source\PSoC5/isr_i2s_tx.c ****         for (int byte_idx = 1; byte_idx >= 0; --byte_idx)
+ 169              		.loc 1 169 0 discriminator 3
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 7
+
+
+ 170 0018 3B68     		ldr	r3, [r7]
+ 171 001a 013B     		subs	r3, r3, #1
+ 172 001c 3B60     		str	r3, [r7]
+ 173              	.L10:
+ 169:Generated_Source\PSoC5/isr_i2s_tx.c ****         for (int byte_idx = 1; byte_idx >= 0; --byte_idx)
+ 174              		.loc 1 169 0 is_stmt 0 discriminator 1
+ 175 001e 3B68     		ldr	r3, [r7]
+ 176 0020 002B     		cmp	r3, #0
+ 177 0022 F6DA     		bge	.L11
+ 178              	.LBE3:
+ 168:Generated_Source\PSoC5/isr_i2s_tx.c ****         for (int byte_idx = 1; byte_idx >= 0; --byte_idx)
+ 179              		.loc 1 168 0 is_stmt 1 discriminator 2
+ 180 0024 7B68     		ldr	r3, [r7, #4]
+ 181 0026 0133     		adds	r3, r3, #1
+ 182 0028 7B60     		str	r3, [r7, #4]
+ 183              	.L9:
+ 168:Generated_Source\PSoC5/isr_i2s_tx.c ****         for (int byte_idx = 1; byte_idx >= 0; --byte_idx)
+ 184              		.loc 1 168 0 is_stmt 0 discriminator 1
+ 185 002a 7B68     		ldr	r3, [r7, #4]
+ 186 002c 012B     		cmp	r3, #1
+ 187 002e EDDD     		ble	.L12
+ 188              	.LBE2:
+ 173:Generated_Source\PSoC5/isr_i2s_tx.c ****     
+ 174:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* `#END` */
+ 175:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 189              		.loc 1 175 0 is_stmt 1
+ 190 0030 00BF     		nop
+ 191 0032 0C37     		adds	r7, r7, #12
+ 192              		.cfi_def_cfa_offset 4
+ 193 0034 BD46     		mov	sp, r7
+ 194              		.cfi_def_cfa_register 13
+ 195              		@ sp needed
+ 196 0036 80BC     		pop	{r7}
+ 197              		.cfi_restore 7
+ 198              		.cfi_def_cfa_offset 0
+ 199 0038 7047     		bx	lr
+ 200              	.L14:
+ 201 003a 00BF     		.align	2
+ 202              	.L13:
+ 203 003c 42640040 		.word	1073767490
+ 204              		.cfi_endproc
+ 205              	.LFE66:
+ 206              		.size	isr_i2s_tx_Interrupt, .-isr_i2s_tx_Interrupt
+ 207              		.section	.text.isr_i2s_tx_SetVector,"ax",%progbits
+ 208              		.align	2
+ 209              		.global	isr_i2s_tx_SetVector
+ 210              		.thumb
+ 211              		.thumb_func
+ 212              		.type	isr_i2s_tx_SetVector, %function
+ 213              	isr_i2s_tx_SetVector:
+ 214              	.LFB67:
+ 176:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 177:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 178:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 179:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_SetVector
+ 180:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 181:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 8
+
+
+ 182:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 183:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Change the ISR vector for the Interrupt. Note calling isr_i2s_tx_Start
+ 184:Generated_Source\PSoC5/isr_i2s_tx.c **** *   will override any effect this method would have had. To set the vector 
+ 185:Generated_Source\PSoC5/isr_i2s_tx.c **** *   before the component has been started use isr_i2s_tx_StartEx instead.
+ 186:Generated_Source\PSoC5/isr_i2s_tx.c **** * 
+ 187:Generated_Source\PSoC5/isr_i2s_tx.c **** *   When defining ISR functions, the CY_ISR and CY_ISR_PROTO macros should be 
+ 188:Generated_Source\PSoC5/isr_i2s_tx.c **** *   used to provide consistent definition across compilers:
+ 189:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 190:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Function definition example:
+ 191:Generated_Source\PSoC5/isr_i2s_tx.c **** *   CY_ISR(MyISR)
+ 192:Generated_Source\PSoC5/isr_i2s_tx.c **** *   {
+ 193:Generated_Source\PSoC5/isr_i2s_tx.c **** *   }
+ 194:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 195:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Function prototype example:
+ 196:Generated_Source\PSoC5/isr_i2s_tx.c **** *     CY_ISR_PROTO(MyISR);
+ 197:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 198:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 199:Generated_Source\PSoC5/isr_i2s_tx.c **** *   address: Address of the ISR to set in the interrupt vector table.
+ 200:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 201:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 202:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 203:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 204:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 205:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_SetVector(cyisraddress address)
+ 206:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 215              		.loc 1 206 0
+ 216              		.cfi_startproc
+ 217              		@ args = 0, pretend = 0, frame = 16
+ 218              		@ frame_needed = 1, uses_anonymous_args = 0
+ 219              		@ link register save eliminated.
+ 220 0000 80B4     		push	{r7}
+ 221              		.cfi_def_cfa_offset 4
+ 222              		.cfi_offset 7, -4
+ 223 0002 85B0     		sub	sp, sp, #20
+ 224              		.cfi_def_cfa_offset 24
+ 225 0004 00AF     		add	r7, sp, #0
+ 226              		.cfi_def_cfa_register 7
+ 227 0006 7860     		str	r0, [r7, #4]
+ 207:Generated_Source\PSoC5/isr_i2s_tx.c ****     cyisraddress * ramVectorTable;
+ 208:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 209:Generated_Source\PSoC5/isr_i2s_tx.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+ 228              		.loc 1 209 0
+ 229 0008 054B     		ldr	r3, .L16
+ 230 000a 1B68     		ldr	r3, [r3]
+ 231 000c FB60     		str	r3, [r7, #12]
+ 210:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 211:Generated_Source\PSoC5/isr_i2s_tx.c ****     ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_i2s_tx__INTC_NUMBER] = address;
+ 232              		.loc 1 211 0
+ 233 000e FB68     		ldr	r3, [r7, #12]
+ 234 0010 4833     		adds	r3, r3, #72
+ 235 0012 7A68     		ldr	r2, [r7, #4]
+ 236 0014 1A60     		str	r2, [r3]
+ 212:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 237              		.loc 1 212 0
+ 238 0016 00BF     		nop
+ 239 0018 1437     		adds	r7, r7, #20
+ 240              		.cfi_def_cfa_offset 4
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 9
+
+
+ 241 001a BD46     		mov	sp, r7
+ 242              		.cfi_def_cfa_register 13
+ 243              		@ sp needed
+ 244 001c 80BC     		pop	{r7}
+ 245              		.cfi_restore 7
+ 246              		.cfi_def_cfa_offset 0
+ 247 001e 7047     		bx	lr
+ 248              	.L17:
+ 249              		.align	2
+ 250              	.L16:
+ 251 0020 08ED00E0 		.word	-536810232
+ 252              		.cfi_endproc
+ 253              	.LFE67:
+ 254              		.size	isr_i2s_tx_SetVector, .-isr_i2s_tx_SetVector
+ 255              		.section	.text.isr_i2s_tx_GetVector,"ax",%progbits
+ 256              		.align	2
+ 257              		.global	isr_i2s_tx_GetVector
+ 258              		.thumb
+ 259              		.thumb_func
+ 260              		.type	isr_i2s_tx_GetVector, %function
+ 261              	isr_i2s_tx_GetVector:
+ 262              	.LFB68:
+ 213:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 214:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 215:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 216:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_GetVector
+ 217:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 218:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 219:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 220:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Gets the "address" of the current ISR vector for the Interrupt.
+ 221:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 222:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 223:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 224:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 225:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 226:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Address of the ISR in the interrupt vector table.
+ 227:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 228:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 229:Generated_Source\PSoC5/isr_i2s_tx.c **** cyisraddress isr_i2s_tx_GetVector(void)
+ 230:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 263              		.loc 1 230 0
+ 264              		.cfi_startproc
+ 265              		@ args = 0, pretend = 0, frame = 8
+ 266              		@ frame_needed = 1, uses_anonymous_args = 0
+ 267              		@ link register save eliminated.
+ 268 0000 80B4     		push	{r7}
+ 269              		.cfi_def_cfa_offset 4
+ 270              		.cfi_offset 7, -4
+ 271 0002 83B0     		sub	sp, sp, #12
+ 272              		.cfi_def_cfa_offset 16
+ 273 0004 00AF     		add	r7, sp, #0
+ 274              		.cfi_def_cfa_register 7
+ 231:Generated_Source\PSoC5/isr_i2s_tx.c ****     cyisraddress * ramVectorTable;
+ 232:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 233:Generated_Source\PSoC5/isr_i2s_tx.c ****     ramVectorTable = (cyisraddress *) *CYINT_VECT_TABLE;
+ 275              		.loc 1 233 0
+ 276 0006 054B     		ldr	r3, .L20
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 10
+
+
+ 277 0008 1B68     		ldr	r3, [r3]
+ 278 000a 7B60     		str	r3, [r7, #4]
+ 234:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 235:Generated_Source\PSoC5/isr_i2s_tx.c ****     return ramVectorTable[CYINT_IRQ_BASE + (uint32)isr_i2s_tx__INTC_NUMBER];
+ 279              		.loc 1 235 0
+ 280 000c 7B68     		ldr	r3, [r7, #4]
+ 281 000e 9B6C     		ldr	r3, [r3, #72]
+ 236:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 282              		.loc 1 236 0
+ 283 0010 1846     		mov	r0, r3
+ 284 0012 0C37     		adds	r7, r7, #12
+ 285              		.cfi_def_cfa_offset 4
+ 286 0014 BD46     		mov	sp, r7
+ 287              		.cfi_def_cfa_register 13
+ 288              		@ sp needed
+ 289 0016 80BC     		pop	{r7}
+ 290              		.cfi_restore 7
+ 291              		.cfi_def_cfa_offset 0
+ 292 0018 7047     		bx	lr
+ 293              	.L21:
+ 294 001a 00BF     		.align	2
+ 295              	.L20:
+ 296 001c 08ED00E0 		.word	-536810232
+ 297              		.cfi_endproc
+ 298              	.LFE68:
+ 299              		.size	isr_i2s_tx_GetVector, .-isr_i2s_tx_GetVector
+ 300              		.section	.text.isr_i2s_tx_SetPriority,"ax",%progbits
+ 301              		.align	2
+ 302              		.global	isr_i2s_tx_SetPriority
+ 303              		.thumb
+ 304              		.thumb_func
+ 305              		.type	isr_i2s_tx_SetPriority, %function
+ 306              	isr_i2s_tx_SetPriority:
+ 307              	.LFB69:
+ 237:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 238:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 239:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 240:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_SetPriority
+ 241:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 242:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 243:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 244:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Sets the Priority of the Interrupt. 
+ 245:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 246:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Note calling isr_i2s_tx_Start or isr_i2s_tx_StartEx will 
+ 247:Generated_Source\PSoC5/isr_i2s_tx.c **** *   override any effect this API would have had. This API should only be called
+ 248:Generated_Source\PSoC5/isr_i2s_tx.c **** *   after isr_i2s_tx_Start or isr_i2s_tx_StartEx has been called. 
+ 249:Generated_Source\PSoC5/isr_i2s_tx.c **** *   To set the initial priority for the component, use the Design-Wide Resources
+ 250:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Interrupt Editor.
+ 251:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 252:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Note This API has no effect on Non-maskable interrupt NMI).
+ 253:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 254:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 255:Generated_Source\PSoC5/isr_i2s_tx.c **** *   priority: Priority of the interrupt, 0 being the highest priority
+ 256:Generated_Source\PSoC5/isr_i2s_tx.c **** *             PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 257:Generated_Source\PSoC5/isr_i2s_tx.c **** *             PSoC 4: Priority is from 0 to 3.
+ 258:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 259:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 11
+
+
+ 260:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 261:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 262:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 263:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_SetPriority(uint8 priority)
+ 264:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 308              		.loc 1 264 0
+ 309              		.cfi_startproc
+ 310              		@ args = 0, pretend = 0, frame = 8
+ 311              		@ frame_needed = 1, uses_anonymous_args = 0
+ 312              		@ link register save eliminated.
+ 313 0000 80B4     		push	{r7}
+ 314              		.cfi_def_cfa_offset 4
+ 315              		.cfi_offset 7, -4
+ 316 0002 83B0     		sub	sp, sp, #12
+ 317              		.cfi_def_cfa_offset 16
+ 318 0004 00AF     		add	r7, sp, #0
+ 319              		.cfi_def_cfa_register 7
+ 320 0006 0346     		mov	r3, r0
+ 321 0008 FB71     		strb	r3, [r7, #7]
+ 265:Generated_Source\PSoC5/isr_i2s_tx.c ****     *isr_i2s_tx_INTC_PRIOR = priority << 5;
+ 322              		.loc 1 265 0
+ 323 000a 054A     		ldr	r2, .L23
+ 324 000c FB79     		ldrb	r3, [r7, #7]
+ 325 000e 5B01     		lsls	r3, r3, #5
+ 326 0010 DBB2     		uxtb	r3, r3
+ 327 0012 1370     		strb	r3, [r2]
+ 266:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 328              		.loc 1 266 0
+ 329 0014 00BF     		nop
+ 330 0016 0C37     		adds	r7, r7, #12
+ 331              		.cfi_def_cfa_offset 4
+ 332 0018 BD46     		mov	sp, r7
+ 333              		.cfi_def_cfa_register 13
+ 334              		@ sp needed
+ 335 001a 80BC     		pop	{r7}
+ 336              		.cfi_restore 7
+ 337              		.cfi_def_cfa_offset 0
+ 338 001c 7047     		bx	lr
+ 339              	.L24:
+ 340 001e 00BF     		.align	2
+ 341              	.L23:
+ 342 0020 02E400E0 		.word	-536812542
+ 343              		.cfi_endproc
+ 344              	.LFE69:
+ 345              		.size	isr_i2s_tx_SetPriority, .-isr_i2s_tx_SetPriority
+ 346              		.section	.text.isr_i2s_tx_GetPriority,"ax",%progbits
+ 347              		.align	2
+ 348              		.global	isr_i2s_tx_GetPriority
+ 349              		.thumb
+ 350              		.thumb_func
+ 351              		.type	isr_i2s_tx_GetPriority, %function
+ 352              	isr_i2s_tx_GetPriority:
+ 353              	.LFB70:
+ 267:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 268:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 269:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 270:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_GetPriority
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 12
+
+
+ 271:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 272:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 273:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 274:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Gets the Priority of the Interrupt.
+ 275:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 276:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 277:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 278:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 279:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 280:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Priority of the interrupt, 0 being the highest priority
+ 281:Generated_Source\PSoC5/isr_i2s_tx.c **** *    PSoC 3 and PSoC 5LP: Priority is from 0 to 7.
+ 282:Generated_Source\PSoC5/isr_i2s_tx.c **** *    PSoC 4: Priority is from 0 to 3.
+ 283:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 284:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 285:Generated_Source\PSoC5/isr_i2s_tx.c **** uint8 isr_i2s_tx_GetPriority(void)
+ 286:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 354              		.loc 1 286 0
+ 355              		.cfi_startproc
+ 356              		@ args = 0, pretend = 0, frame = 8
+ 357              		@ frame_needed = 1, uses_anonymous_args = 0
+ 358              		@ link register save eliminated.
+ 359 0000 80B4     		push	{r7}
+ 360              		.cfi_def_cfa_offset 4
+ 361              		.cfi_offset 7, -4
+ 362 0002 83B0     		sub	sp, sp, #12
+ 363              		.cfi_def_cfa_offset 16
+ 364 0004 00AF     		add	r7, sp, #0
+ 365              		.cfi_def_cfa_register 7
+ 287:Generated_Source\PSoC5/isr_i2s_tx.c ****     uint8 priority;
+ 288:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 289:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 290:Generated_Source\PSoC5/isr_i2s_tx.c ****     priority = *isr_i2s_tx_INTC_PRIOR >> 5;
+ 366              		.loc 1 290 0
+ 367 0006 054B     		ldr	r3, .L27
+ 368 0008 1B78     		ldrb	r3, [r3]
+ 369 000a DBB2     		uxtb	r3, r3
+ 370 000c 5B09     		lsrs	r3, r3, #5
+ 371 000e FB71     		strb	r3, [r7, #7]
+ 291:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 292:Generated_Source\PSoC5/isr_i2s_tx.c ****     return priority;
+ 372              		.loc 1 292 0
+ 373 0010 FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 293:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 374              		.loc 1 293 0
+ 375 0012 1846     		mov	r0, r3
+ 376 0014 0C37     		adds	r7, r7, #12
+ 377              		.cfi_def_cfa_offset 4
+ 378 0016 BD46     		mov	sp, r7
+ 379              		.cfi_def_cfa_register 13
+ 380              		@ sp needed
+ 381 0018 80BC     		pop	{r7}
+ 382              		.cfi_restore 7
+ 383              		.cfi_def_cfa_offset 0
+ 384 001a 7047     		bx	lr
+ 385              	.L28:
+ 386              		.align	2
+ 387              	.L27:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 13
+
+
+ 388 001c 02E400E0 		.word	-536812542
+ 389              		.cfi_endproc
+ 390              	.LFE70:
+ 391              		.size	isr_i2s_tx_GetPriority, .-isr_i2s_tx_GetPriority
+ 392              		.section	.text.isr_i2s_tx_Enable,"ax",%progbits
+ 393              		.align	2
+ 394              		.global	isr_i2s_tx_Enable
+ 395              		.thumb
+ 396              		.thumb_func
+ 397              		.type	isr_i2s_tx_Enable, %function
+ 398              	isr_i2s_tx_Enable:
+ 399              	.LFB71:
+ 294:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 295:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 296:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 297:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_Enable
+ 298:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 299:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 300:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 301:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Enables the interrupt to the interrupt controller. Do not call this function
+ 302:Generated_Source\PSoC5/isr_i2s_tx.c **** *   unless ISR_Start() has been called or the functionality of the ISR_Start() 
+ 303:Generated_Source\PSoC5/isr_i2s_tx.c **** *   function, which sets the vector and the priority, has been called.
+ 304:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 305:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 306:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 307:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 308:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 309:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 310:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 311:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 312:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_Enable(void)
+ 313:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 400              		.loc 1 313 0
+ 401              		.cfi_startproc
+ 402              		@ args = 0, pretend = 0, frame = 0
+ 403              		@ frame_needed = 1, uses_anonymous_args = 0
+ 404              		@ link register save eliminated.
+ 405 0000 80B4     		push	{r7}
+ 406              		.cfi_def_cfa_offset 4
+ 407              		.cfi_offset 7, -4
+ 408 0002 00AF     		add	r7, sp, #0
+ 409              		.cfi_def_cfa_register 7
+ 314:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Enable the general interrupt. */
+ 315:Generated_Source\PSoC5/isr_i2s_tx.c ****     *isr_i2s_tx_INTC_SET_EN = isr_i2s_tx__INTC_MASK;
+ 410              		.loc 1 315 0
+ 411 0004 034B     		ldr	r3, .L30
+ 412 0006 0422     		movs	r2, #4
+ 413 0008 1A60     		str	r2, [r3]
+ 316:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 414              		.loc 1 316 0
+ 415 000a 00BF     		nop
+ 416 000c BD46     		mov	sp, r7
+ 417              		.cfi_def_cfa_register 13
+ 418              		@ sp needed
+ 419 000e 80BC     		pop	{r7}
+ 420              		.cfi_restore 7
+ 421              		.cfi_def_cfa_offset 0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 14
+
+
+ 422 0010 7047     		bx	lr
+ 423              	.L31:
+ 424 0012 00BF     		.align	2
+ 425              	.L30:
+ 426 0014 00E100E0 		.word	-536813312
+ 427              		.cfi_endproc
+ 428              	.LFE71:
+ 429              		.size	isr_i2s_tx_Enable, .-isr_i2s_tx_Enable
+ 430              		.section	.text.isr_i2s_tx_GetState,"ax",%progbits
+ 431              		.align	2
+ 432              		.global	isr_i2s_tx_GetState
+ 433              		.thumb
+ 434              		.thumb_func
+ 435              		.type	isr_i2s_tx_GetState, %function
+ 436              	isr_i2s_tx_GetState:
+ 437              	.LFB72:
+ 317:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 318:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 319:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 320:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_GetState
+ 321:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 322:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 323:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 324:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Gets the state (enabled, disabled) of the Interrupt.
+ 325:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 326:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 327:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 328:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 329:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 330:Generated_Source\PSoC5/isr_i2s_tx.c **** *   1 if enabled, 0 if disabled.
+ 331:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 332:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 333:Generated_Source\PSoC5/isr_i2s_tx.c **** uint8 isr_i2s_tx_GetState(void)
+ 334:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 438              		.loc 1 334 0
+ 439              		.cfi_startproc
+ 440              		@ args = 0, pretend = 0, frame = 0
+ 441              		@ frame_needed = 1, uses_anonymous_args = 0
+ 442              		@ link register save eliminated.
+ 443 0000 80B4     		push	{r7}
+ 444              		.cfi_def_cfa_offset 4
+ 445              		.cfi_offset 7, -4
+ 446 0002 00AF     		add	r7, sp, #0
+ 447              		.cfi_def_cfa_register 7
+ 335:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Get the state of the general interrupt. */
+ 336:Generated_Source\PSoC5/isr_i2s_tx.c ****     return ((*isr_i2s_tx_INTC_SET_EN & (uint32)isr_i2s_tx__INTC_MASK) != 0u) ? 1u:0u;
+ 448              		.loc 1 336 0
+ 449 0004 064B     		ldr	r3, .L36
+ 450 0006 1B68     		ldr	r3, [r3]
+ 451 0008 03F00403 		and	r3, r3, #4
+ 452 000c 002B     		cmp	r3, #0
+ 453 000e 01D0     		beq	.L33
+ 454              		.loc 1 336 0 is_stmt 0 discriminator 1
+ 455 0010 0123     		movs	r3, #1
+ 456 0012 00E0     		b	.L34
+ 457              	.L33:
+ 458              		.loc 1 336 0 discriminator 2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 15
+
+
+ 459 0014 0023     		movs	r3, #0
+ 460              	.L34:
+ 337:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 461              		.loc 1 337 0 is_stmt 1 discriminator 4
+ 462 0016 1846     		mov	r0, r3
+ 463 0018 BD46     		mov	sp, r7
+ 464              		.cfi_def_cfa_register 13
+ 465              		@ sp needed
+ 466 001a 80BC     		pop	{r7}
+ 467              		.cfi_restore 7
+ 468              		.cfi_def_cfa_offset 0
+ 469 001c 7047     		bx	lr
+ 470              	.L37:
+ 471 001e 00BF     		.align	2
+ 472              	.L36:
+ 473 0020 00E100E0 		.word	-536813312
+ 474              		.cfi_endproc
+ 475              	.LFE72:
+ 476              		.size	isr_i2s_tx_GetState, .-isr_i2s_tx_GetState
+ 477              		.section	.text.isr_i2s_tx_Disable,"ax",%progbits
+ 478              		.align	2
+ 479              		.global	isr_i2s_tx_Disable
+ 480              		.thumb
+ 481              		.thumb_func
+ 482              		.type	isr_i2s_tx_Disable, %function
+ 483              	isr_i2s_tx_Disable:
+ 484              	.LFB73:
+ 338:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 339:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 340:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 341:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_Disable
+ 342:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 343:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 344:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 345:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Disables the Interrupt in the interrupt controller.
+ 346:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 347:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 348:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 349:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 350:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 351:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 352:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 353:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 354:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_Disable(void)
+ 355:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 485              		.loc 1 355 0
+ 486              		.cfi_startproc
+ 487              		@ args = 0, pretend = 0, frame = 0
+ 488              		@ frame_needed = 1, uses_anonymous_args = 0
+ 489              		@ link register save eliminated.
+ 490 0000 80B4     		push	{r7}
+ 491              		.cfi_def_cfa_offset 4
+ 492              		.cfi_offset 7, -4
+ 493 0002 00AF     		add	r7, sp, #0
+ 494              		.cfi_def_cfa_register 7
+ 356:Generated_Source\PSoC5/isr_i2s_tx.c ****     /* Disable the general interrupt. */
+ 357:Generated_Source\PSoC5/isr_i2s_tx.c ****     *isr_i2s_tx_INTC_CLR_EN = isr_i2s_tx__INTC_MASK;
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 16
+
+
+ 495              		.loc 1 357 0
+ 496 0004 034B     		ldr	r3, .L39
+ 497 0006 0422     		movs	r2, #4
+ 498 0008 1A60     		str	r2, [r3]
+ 358:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 499              		.loc 1 358 0
+ 500 000a 00BF     		nop
+ 501 000c BD46     		mov	sp, r7
+ 502              		.cfi_def_cfa_register 13
+ 503              		@ sp needed
+ 504 000e 80BC     		pop	{r7}
+ 505              		.cfi_restore 7
+ 506              		.cfi_def_cfa_offset 0
+ 507 0010 7047     		bx	lr
+ 508              	.L40:
+ 509 0012 00BF     		.align	2
+ 510              	.L39:
+ 511 0014 80E100E0 		.word	-536813184
+ 512              		.cfi_endproc
+ 513              	.LFE73:
+ 514              		.size	isr_i2s_tx_Disable, .-isr_i2s_tx_Disable
+ 515              		.section	.text.isr_i2s_tx_SetPending,"ax",%progbits
+ 516              		.align	2
+ 517              		.global	isr_i2s_tx_SetPending
+ 518              		.thumb
+ 519              		.thumb_func
+ 520              		.type	isr_i2s_tx_SetPending, %function
+ 521              	isr_i2s_tx_SetPending:
+ 522              	.LFB74:
+ 359:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 360:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 361:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 362:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_SetPending
+ 363:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 364:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 365:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 366:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Causes the Interrupt to enter the pending state, a software method of
+ 367:Generated_Source\PSoC5/isr_i2s_tx.c **** *   generating the interrupt.
+ 368:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 369:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 370:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 371:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 372:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 373:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 374:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 375:Generated_Source\PSoC5/isr_i2s_tx.c **** * Side Effects:
+ 376:Generated_Source\PSoC5/isr_i2s_tx.c **** *   If interrupts are enabled and the interrupt is set up properly, the ISR is
+ 377:Generated_Source\PSoC5/isr_i2s_tx.c **** *   entered (depending on the priority of this interrupt and other pending 
+ 378:Generated_Source\PSoC5/isr_i2s_tx.c **** *   interrupts).
+ 379:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 380:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ 381:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_SetPending(void)
+ 382:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 523              		.loc 1 382 0
+ 524              		.cfi_startproc
+ 525              		@ args = 0, pretend = 0, frame = 0
+ 526              		@ frame_needed = 1, uses_anonymous_args = 0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 17
+
+
+ 527              		@ link register save eliminated.
+ 528 0000 80B4     		push	{r7}
+ 529              		.cfi_def_cfa_offset 4
+ 530              		.cfi_offset 7, -4
+ 531 0002 00AF     		add	r7, sp, #0
+ 532              		.cfi_def_cfa_register 7
+ 383:Generated_Source\PSoC5/isr_i2s_tx.c ****     *isr_i2s_tx_INTC_SET_PD = isr_i2s_tx__INTC_MASK;
+ 533              		.loc 1 383 0
+ 534 0004 034B     		ldr	r3, .L42
+ 535 0006 0422     		movs	r2, #4
+ 536 0008 1A60     		str	r2, [r3]
+ 384:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 537              		.loc 1 384 0
+ 538 000a 00BF     		nop
+ 539 000c BD46     		mov	sp, r7
+ 540              		.cfi_def_cfa_register 13
+ 541              		@ sp needed
+ 542 000e 80BC     		pop	{r7}
+ 543              		.cfi_restore 7
+ 544              		.cfi_def_cfa_offset 0
+ 545 0010 7047     		bx	lr
+ 546              	.L43:
+ 547 0012 00BF     		.align	2
+ 548              	.L42:
+ 549 0014 00E200E0 		.word	-536813056
+ 550              		.cfi_endproc
+ 551              	.LFE74:
+ 552              		.size	isr_i2s_tx_SetPending, .-isr_i2s_tx_SetPending
+ 553              		.section	.text.isr_i2s_tx_ClearPending,"ax",%progbits
+ 554              		.align	2
+ 555              		.global	isr_i2s_tx_ClearPending
+ 556              		.thumb
+ 557              		.thumb_func
+ 558              		.type	isr_i2s_tx_ClearPending, %function
+ 559              	isr_i2s_tx_ClearPending:
+ 560              	.LFB75:
+ 385:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 386:Generated_Source\PSoC5/isr_i2s_tx.c **** 
+ 387:Generated_Source\PSoC5/isr_i2s_tx.c **** /*******************************************************************************
+ 388:Generated_Source\PSoC5/isr_i2s_tx.c **** * Function Name: isr_i2s_tx_ClearPending
+ 389:Generated_Source\PSoC5/isr_i2s_tx.c **** ********************************************************************************
+ 390:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 391:Generated_Source\PSoC5/isr_i2s_tx.c **** * Summary:
+ 392:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Clears a pending interrupt in the interrupt controller.
+ 393:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 394:Generated_Source\PSoC5/isr_i2s_tx.c **** *   Note Some interrupt sources are clear-on-read and require the block 
+ 395:Generated_Source\PSoC5/isr_i2s_tx.c **** *   interrupt/status register to be read/cleared with the appropriate block API 
+ 396:Generated_Source\PSoC5/isr_i2s_tx.c **** *   (GPIO, UART, and so on). Otherwise the ISR will continue to remain in 
+ 397:Generated_Source\PSoC5/isr_i2s_tx.c **** *   pending state even though the interrupt itself is cleared using this API.
+ 398:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 399:Generated_Source\PSoC5/isr_i2s_tx.c **** * Parameters:
+ 400:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 401:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 402:Generated_Source\PSoC5/isr_i2s_tx.c **** * Return:
+ 403:Generated_Source\PSoC5/isr_i2s_tx.c **** *   None
+ 404:Generated_Source\PSoC5/isr_i2s_tx.c **** *
+ 405:Generated_Source\PSoC5/isr_i2s_tx.c **** *******************************************************************************/
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 18
+
+
+ 406:Generated_Source\PSoC5/isr_i2s_tx.c **** void isr_i2s_tx_ClearPending(void)
+ 407:Generated_Source\PSoC5/isr_i2s_tx.c **** {
+ 561              		.loc 1 407 0
+ 562              		.cfi_startproc
+ 563              		@ args = 0, pretend = 0, frame = 0
+ 564              		@ frame_needed = 1, uses_anonymous_args = 0
+ 565              		@ link register save eliminated.
+ 566 0000 80B4     		push	{r7}
+ 567              		.cfi_def_cfa_offset 4
+ 568              		.cfi_offset 7, -4
+ 569 0002 00AF     		add	r7, sp, #0
+ 570              		.cfi_def_cfa_register 7
+ 408:Generated_Source\PSoC5/isr_i2s_tx.c ****     *isr_i2s_tx_INTC_CLR_PD = isr_i2s_tx__INTC_MASK;
+ 571              		.loc 1 408 0
+ 572 0004 034B     		ldr	r3, .L45
+ 573 0006 0422     		movs	r2, #4
+ 574 0008 1A60     		str	r2, [r3]
+ 409:Generated_Source\PSoC5/isr_i2s_tx.c **** }
+ 575              		.loc 1 409 0
+ 576 000a 00BF     		nop
+ 577 000c BD46     		mov	sp, r7
+ 578              		.cfi_def_cfa_register 13
+ 579              		@ sp needed
+ 580 000e 80BC     		pop	{r7}
+ 581              		.cfi_restore 7
+ 582              		.cfi_def_cfa_offset 0
+ 583 0010 7047     		bx	lr
+ 584              	.L46:
+ 585 0012 00BF     		.align	2
+ 586              	.L45:
+ 587 0014 80E200E0 		.word	-536812928
+ 588              		.cfi_endproc
+ 589              	.LFE75:
+ 590              		.size	isr_i2s_tx_ClearPending, .-isr_i2s_tx_ClearPending
+ 591              		.text
+ 592              	.Letext0:
+ 593              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 594              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 595              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 596              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 597              		.section	.debug_info,"",%progbits
+ 598              	.Ldebug_info0:
+ 599 0000 99020000 		.4byte	0x299
+ 600 0004 0400     		.2byte	0x4
+ 601 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 602 000a 04       		.byte	0x4
+ 603 000b 01       		.uleb128 0x1
+ 604 000c 06000000 		.4byte	.LASF38
+ 605 0010 0C       		.byte	0xc
+ 606 0011 E8010000 		.4byte	.LASF39
+ 607 0015 51020000 		.4byte	.LASF40
+ 608 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 609 001d 00000000 		.4byte	0
+ 610 0021 00000000 		.4byte	.Ldebug_line0
+ 611 0025 02       		.uleb128 0x2
+ 612 0026 04       		.byte	0x4
+ 613 0027 05       		.byte	0x5
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 19
+
+
+ 614 0028 696E7400 		.ascii	"int\000"
+ 615 002c 03       		.uleb128 0x3
+ 616 002d 04       		.byte	0x4
+ 617 002e 07       		.byte	0x7
+ 618 002f A2010000 		.4byte	.LASF0
+ 619 0033 03       		.uleb128 0x3
+ 620 0034 08       		.byte	0x8
+ 621 0035 05       		.byte	0x5
+ 622 0036 2F020000 		.4byte	.LASF1
+ 623 003a 03       		.uleb128 0x3
+ 624 003b 08       		.byte	0x8
+ 625 003c 04       		.byte	0x4
+ 626 003d 11020000 		.4byte	.LASF2
+ 627 0041 03       		.uleb128 0x3
+ 628 0042 01       		.byte	0x1
+ 629 0043 06       		.byte	0x6
+ 630 0044 07030000 		.4byte	.LASF3
+ 631 0048 03       		.uleb128 0x3
+ 632 0049 01       		.byte	0x1
+ 633 004a 08       		.byte	0x8
+ 634 004b 0C010000 		.4byte	.LASF4
+ 635 004f 03       		.uleb128 0x3
+ 636 0050 02       		.byte	0x2
+ 637 0051 05       		.byte	0x5
+ 638 0052 BD020000 		.4byte	.LASF5
+ 639 0056 03       		.uleb128 0x3
+ 640 0057 02       		.byte	0x2
+ 641 0058 07       		.byte	0x7
+ 642 0059 31010000 		.4byte	.LASF6
+ 643 005d 04       		.uleb128 0x4
+ 644 005e 94000000 		.4byte	.LASF12
+ 645 0062 02       		.byte	0x2
+ 646 0063 3F       		.byte	0x3f
+ 647 0064 68000000 		.4byte	0x68
+ 648 0068 03       		.uleb128 0x3
+ 649 0069 04       		.byte	0x4
+ 650 006a 05       		.byte	0x5
+ 651 006b B1000000 		.4byte	.LASF7
+ 652 006f 03       		.uleb128 0x3
+ 653 0070 04       		.byte	0x4
+ 654 0071 07       		.byte	0x7
+ 655 0072 1F010000 		.4byte	.LASF8
+ 656 0076 03       		.uleb128 0x3
+ 657 0077 08       		.byte	0x8
+ 658 0078 07       		.byte	0x7
+ 659 0079 B7010000 		.4byte	.LASF9
+ 660 007d 03       		.uleb128 0x3
+ 661 007e 04       		.byte	0x4
+ 662 007f 07       		.byte	0x7
+ 663 0080 26020000 		.4byte	.LASF10
+ 664 0084 03       		.uleb128 0x3
+ 665 0085 01       		.byte	0x1
+ 666 0086 08       		.byte	0x8
+ 667 0087 3D020000 		.4byte	.LASF11
+ 668 008b 05       		.uleb128 0x5
+ 669 008c 04       		.byte	0x4
+ 670 008d 91000000 		.4byte	0x91
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 20
+
+
+ 671 0091 06       		.uleb128 0x6
+ 672 0092 04       		.uleb128 0x4
+ 673 0093 B5020000 		.4byte	.LASF13
+ 674 0097 03       		.byte	0x3
+ 675 0098 2C       		.byte	0x2c
+ 676 0099 5D000000 		.4byte	0x5d
+ 677 009d 07       		.uleb128 0x7
+ 678 009e C7020000 		.4byte	.LASF14
+ 679 00a2 04       		.byte	0x4
+ 680 00a3 E401     		.2byte	0x1e4
+ 681 00a5 48000000 		.4byte	0x48
+ 682 00a9 07       		.uleb128 0x7
+ 683 00aa 9B010000 		.4byte	.LASF15
+ 684 00ae 04       		.byte	0x4
+ 685 00af E601     		.2byte	0x1e6
+ 686 00b1 6F000000 		.4byte	0x6f
+ 687 00b5 03       		.uleb128 0x3
+ 688 00b6 04       		.byte	0x4
+ 689 00b7 04       		.byte	0x4
+ 690 00b8 EE000000 		.4byte	.LASF16
+ 691 00bc 03       		.uleb128 0x3
+ 692 00bd 08       		.byte	0x8
+ 693 00be 04       		.byte	0x4
+ 694 00bf 7F010000 		.4byte	.LASF17
+ 695 00c3 07       		.uleb128 0x7
+ 696 00c4 1A010000 		.4byte	.LASF18
+ 697 00c8 04       		.byte	0x4
+ 698 00c9 8E02     		.2byte	0x28e
+ 699 00cb CF000000 		.4byte	0xcf
+ 700 00cf 08       		.uleb128 0x8
+ 701 00d0 9D000000 		.4byte	0x9d
+ 702 00d4 07       		.uleb128 0x7
+ 703 00d5 00000000 		.4byte	.LASF19
+ 704 00d9 04       		.byte	0x4
+ 705 00da 9002     		.2byte	0x290
+ 706 00dc E0000000 		.4byte	0xe0
+ 707 00e0 08       		.uleb128 0x8
+ 708 00e1 A9000000 		.4byte	0xa9
+ 709 00e5 07       		.uleb128 0x7
+ 710 00e6 CE010000 		.4byte	.LASF20
+ 711 00ea 04       		.byte	0x4
+ 712 00eb A002     		.2byte	0x2a0
+ 713 00ed 8B000000 		.4byte	0x8b
+ 714 00f1 09       		.uleb128 0x9
+ 715 00f2 A4020000 		.4byte	.LASF21
+ 716 00f6 01       		.byte	0x1
+ 717 00f7 3D       		.byte	0x3d
+ 718 00f8 00000000 		.4byte	.LFB63
+ 719 00fc 20000000 		.4byte	.LFE63-.LFB63
+ 720 0100 01       		.uleb128 0x1
+ 721 0101 9C       		.byte	0x9c
+ 722 0102 0A       		.uleb128 0xa
+ 723 0103 9E000000 		.4byte	.LASF23
+ 724 0107 01       		.byte	0x1
+ 725 0108 68       		.byte	0x68
+ 726 0109 00000000 		.4byte	.LFB64
+ 727 010d 24000000 		.4byte	.LFE64-.LFB64
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 21
+
+
+ 728 0111 01       		.uleb128 0x1
+ 729 0112 9C       		.byte	0x9c
+ 730 0113 26010000 		.4byte	0x126
+ 731 0117 0B       		.uleb128 0xb
+ 732 0118 AF010000 		.4byte	.LASF28
+ 733 011c 01       		.byte	0x1
+ 734 011d 68       		.byte	0x68
+ 735 011e E5000000 		.4byte	0xe5
+ 736 0122 02       		.uleb128 0x2
+ 737 0123 91       		.byte	0x91
+ 738 0124 74       		.sleb128 -12
+ 739 0125 00       		.byte	0
+ 740 0126 09       		.uleb128 0x9
+ 741 0127 CD020000 		.4byte	.LASF22
+ 742 012b 01       		.byte	0x1
+ 743 012c 86       		.byte	0x86
+ 744 012d 00000000 		.4byte	.LFB65
+ 745 0131 18000000 		.4byte	.LFE65-.LFB65
+ 746 0135 01       		.uleb128 0x1
+ 747 0136 9C       		.byte	0x9c
+ 748 0137 0C       		.uleb128 0xc
+ 749 0138 F2020000 		.4byte	.LASF24
+ 750 013c 01       		.byte	0x1
+ 751 013d A0       		.byte	0xa0
+ 752 013e 00000000 		.4byte	.LFB66
+ 753 0142 40000000 		.4byte	.LFE66-.LFB66
+ 754 0146 01       		.uleb128 0x1
+ 755 0147 9C       		.byte	0x9c
+ 756 0148 7D010000 		.4byte	0x17d
+ 757 014c 0D       		.uleb128 0xd
+ 758 014d 06000000 		.4byte	.LBB2
+ 759 0151 2A000000 		.4byte	.LBE2-.LBB2
+ 760 0155 0E       		.uleb128 0xe
+ 761 0156 0C020000 		.4byte	.LASF25
+ 762 015a 01       		.byte	0x1
+ 763 015b A8       		.byte	0xa8
+ 764 015c 25000000 		.4byte	0x25
+ 765 0160 02       		.uleb128 0x2
+ 766 0161 91       		.byte	0x91
+ 767 0162 74       		.sleb128 -12
+ 768 0163 0D       		.uleb128 0xd
+ 769 0164 0C000000 		.4byte	.LBB3
+ 770 0168 18000000 		.4byte	.LBE3-.LBB3
+ 771 016c 0E       		.uleb128 0xe
+ 772 016d BA000000 		.4byte	.LASF26
+ 773 0171 01       		.byte	0x1
+ 774 0172 A9       		.byte	0xa9
+ 775 0173 25000000 		.4byte	0x25
+ 776 0177 02       		.uleb128 0x2
+ 777 0178 91       		.byte	0x91
+ 778 0179 70       		.sleb128 -16
+ 779 017a 00       		.byte	0
+ 780 017b 00       		.byte	0
+ 781 017c 00       		.byte	0
+ 782 017d 0C       		.uleb128 0xc
+ 783 017e 86010000 		.4byte	.LASF27
+ 784 0182 01       		.byte	0x1
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 22
+
+
+ 785 0183 CD       		.byte	0xcd
+ 786 0184 00000000 		.4byte	.LFB67
+ 787 0188 24000000 		.4byte	.LFE67-.LFB67
+ 788 018c 01       		.uleb128 0x1
+ 789 018d 9C       		.byte	0x9c
+ 790 018e AF010000 		.4byte	0x1af
+ 791 0192 0B       		.uleb128 0xb
+ 792 0193 AF010000 		.4byte	.LASF28
+ 793 0197 01       		.byte	0x1
+ 794 0198 CD       		.byte	0xcd
+ 795 0199 E5000000 		.4byte	0xe5
+ 796 019d 02       		.uleb128 0x2
+ 797 019e 91       		.byte	0x91
+ 798 019f 6C       		.sleb128 -20
+ 799 01a0 0E       		.uleb128 0xe
+ 800 01a1 42020000 		.4byte	.LASF29
+ 801 01a5 01       		.byte	0x1
+ 802 01a6 CF       		.byte	0xcf
+ 803 01a7 AF010000 		.4byte	0x1af
+ 804 01ab 02       		.uleb128 0x2
+ 805 01ac 91       		.byte	0x91
+ 806 01ad 74       		.sleb128 -12
+ 807 01ae 00       		.byte	0
+ 808 01af 05       		.uleb128 0x5
+ 809 01b0 04       		.byte	0x4
+ 810 01b1 E5000000 		.4byte	0xe5
+ 811 01b5 0F       		.uleb128 0xf
+ 812 01b6 DD020000 		.4byte	.LASF32
+ 813 01ba 01       		.byte	0x1
+ 814 01bb E5       		.byte	0xe5
+ 815 01bc E5000000 		.4byte	0xe5
+ 816 01c0 00000000 		.4byte	.LFB68
+ 817 01c4 20000000 		.4byte	.LFE68-.LFB68
+ 818 01c8 01       		.uleb128 0x1
+ 819 01c9 9C       		.byte	0x9c
+ 820 01ca DD010000 		.4byte	0x1dd
+ 821 01ce 0E       		.uleb128 0xe
+ 822 01cf 42020000 		.4byte	.LASF29
+ 823 01d3 01       		.byte	0x1
+ 824 01d4 E7       		.byte	0xe7
+ 825 01d5 AF010000 		.4byte	0x1af
+ 826 01d9 02       		.uleb128 0x2
+ 827 01da 91       		.byte	0x91
+ 828 01db 74       		.sleb128 -12
+ 829 01dc 00       		.byte	0
+ 830 01dd 10       		.uleb128 0x10
+ 831 01de C3000000 		.4byte	.LASF30
+ 832 01e2 01       		.byte	0x1
+ 833 01e3 0701     		.2byte	0x107
+ 834 01e5 00000000 		.4byte	.LFB69
+ 835 01e9 24000000 		.4byte	.LFE69-.LFB69
+ 836 01ed 01       		.uleb128 0x1
+ 837 01ee 9C       		.byte	0x9c
+ 838 01ef 03020000 		.4byte	0x203
+ 839 01f3 11       		.uleb128 0x11
+ 840 01f4 1D020000 		.4byte	.LASF31
+ 841 01f8 01       		.byte	0x1
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 23
+
+
+ 842 01f9 0701     		.2byte	0x107
+ 843 01fb 9D000000 		.4byte	0x9d
+ 844 01ff 02       		.uleb128 0x2
+ 845 0200 91       		.byte	0x91
+ 846 0201 77       		.sleb128 -9
+ 847 0202 00       		.byte	0
+ 848 0203 12       		.uleb128 0x12
+ 849 0204 13030000 		.4byte	.LASF33
+ 850 0208 01       		.byte	0x1
+ 851 0209 1D01     		.2byte	0x11d
+ 852 020b 9D000000 		.4byte	0x9d
+ 853 020f 00000000 		.4byte	.LFB70
+ 854 0213 20000000 		.4byte	.LFE70-.LFB70
+ 855 0217 01       		.uleb128 0x1
+ 856 0218 9C       		.byte	0x9c
+ 857 0219 2D020000 		.4byte	0x22d
+ 858 021d 13       		.uleb128 0x13
+ 859 021e 1D020000 		.4byte	.LASF31
+ 860 0222 01       		.byte	0x1
+ 861 0223 1F01     		.2byte	0x11f
+ 862 0225 9D000000 		.4byte	0x9d
+ 863 0229 02       		.uleb128 0x2
+ 864 022a 91       		.byte	0x91
+ 865 022b 77       		.sleb128 -9
+ 866 022c 00       		.byte	0
+ 867 022d 14       		.uleb128 0x14
+ 868 022e 6D010000 		.4byte	.LASF34
+ 869 0232 01       		.byte	0x1
+ 870 0233 3801     		.2byte	0x138
+ 871 0235 00000000 		.4byte	.LFB71
+ 872 0239 18000000 		.4byte	.LFE71-.LFB71
+ 873 023d 01       		.uleb128 0x1
+ 874 023e 9C       		.byte	0x9c
+ 875 023f 15       		.uleb128 0x15
+ 876 0240 DA000000 		.4byte	.LASF41
+ 877 0244 01       		.byte	0x1
+ 878 0245 4D01     		.2byte	0x14d
+ 879 0247 9D000000 		.4byte	0x9d
+ 880 024b 00000000 		.4byte	.LFB72
+ 881 024f 24000000 		.4byte	.LFE72-.LFB72
+ 882 0253 01       		.uleb128 0x1
+ 883 0254 9C       		.byte	0x9c
+ 884 0255 14       		.uleb128 0x14
+ 885 0256 5A010000 		.4byte	.LASF35
+ 886 025a 01       		.byte	0x1
+ 887 025b 6201     		.2byte	0x162
+ 888 025d 00000000 		.4byte	.LFB73
+ 889 0261 18000000 		.4byte	.LFE73-.LFB73
+ 890 0265 01       		.uleb128 0x1
+ 891 0266 9C       		.byte	0x9c
+ 892 0267 14       		.uleb128 0x14
+ 893 0268 44010000 		.4byte	.LASF36
+ 894 026c 01       		.byte	0x1
+ 895 026d 7D01     		.2byte	0x17d
+ 896 026f 00000000 		.4byte	.LFB74
+ 897 0273 18000000 		.4byte	.LFE74-.LFB74
+ 898 0277 01       		.uleb128 0x1
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 24
+
+
+ 899 0278 9C       		.byte	0x9c
+ 900 0279 14       		.uleb128 0x14
+ 901 027a F4000000 		.4byte	.LASF37
+ 902 027e 01       		.byte	0x1
+ 903 027f 9601     		.2byte	0x196
+ 904 0281 00000000 		.4byte	.LFB75
+ 905 0285 18000000 		.4byte	.LFE75-.LFB75
+ 906 0289 01       		.uleb128 0x1
+ 907 028a 9C       		.byte	0x9c
+ 908 028b 16       		.uleb128 0x16
+ 909 028c DB010000 		.4byte	.LASF42
+ 910 0290 05       		.byte	0x5
+ 911 0291 1207     		.2byte	0x712
+ 912 0293 97020000 		.4byte	0x297
+ 913 0297 08       		.uleb128 0x8
+ 914 0298 92000000 		.4byte	0x92
+ 915 029c 00       		.byte	0
+ 916              		.section	.debug_abbrev,"",%progbits
+ 917              	.Ldebug_abbrev0:
+ 918 0000 01       		.uleb128 0x1
+ 919 0001 11       		.uleb128 0x11
+ 920 0002 01       		.byte	0x1
+ 921 0003 25       		.uleb128 0x25
+ 922 0004 0E       		.uleb128 0xe
+ 923 0005 13       		.uleb128 0x13
+ 924 0006 0B       		.uleb128 0xb
+ 925 0007 03       		.uleb128 0x3
+ 926 0008 0E       		.uleb128 0xe
+ 927 0009 1B       		.uleb128 0x1b
+ 928 000a 0E       		.uleb128 0xe
+ 929 000b 55       		.uleb128 0x55
+ 930 000c 17       		.uleb128 0x17
+ 931 000d 11       		.uleb128 0x11
+ 932 000e 01       		.uleb128 0x1
+ 933 000f 10       		.uleb128 0x10
+ 934 0010 17       		.uleb128 0x17
+ 935 0011 00       		.byte	0
+ 936 0012 00       		.byte	0
+ 937 0013 02       		.uleb128 0x2
+ 938 0014 24       		.uleb128 0x24
+ 939 0015 00       		.byte	0
+ 940 0016 0B       		.uleb128 0xb
+ 941 0017 0B       		.uleb128 0xb
+ 942 0018 3E       		.uleb128 0x3e
+ 943 0019 0B       		.uleb128 0xb
+ 944 001a 03       		.uleb128 0x3
+ 945 001b 08       		.uleb128 0x8
+ 946 001c 00       		.byte	0
+ 947 001d 00       		.byte	0
+ 948 001e 03       		.uleb128 0x3
+ 949 001f 24       		.uleb128 0x24
+ 950 0020 00       		.byte	0
+ 951 0021 0B       		.uleb128 0xb
+ 952 0022 0B       		.uleb128 0xb
+ 953 0023 3E       		.uleb128 0x3e
+ 954 0024 0B       		.uleb128 0xb
+ 955 0025 03       		.uleb128 0x3
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 25
+
+
+ 956 0026 0E       		.uleb128 0xe
+ 957 0027 00       		.byte	0
+ 958 0028 00       		.byte	0
+ 959 0029 04       		.uleb128 0x4
+ 960 002a 16       		.uleb128 0x16
+ 961 002b 00       		.byte	0
+ 962 002c 03       		.uleb128 0x3
+ 963 002d 0E       		.uleb128 0xe
+ 964 002e 3A       		.uleb128 0x3a
+ 965 002f 0B       		.uleb128 0xb
+ 966 0030 3B       		.uleb128 0x3b
+ 967 0031 0B       		.uleb128 0xb
+ 968 0032 49       		.uleb128 0x49
+ 969 0033 13       		.uleb128 0x13
+ 970 0034 00       		.byte	0
+ 971 0035 00       		.byte	0
+ 972 0036 05       		.uleb128 0x5
+ 973 0037 0F       		.uleb128 0xf
+ 974 0038 00       		.byte	0
+ 975 0039 0B       		.uleb128 0xb
+ 976 003a 0B       		.uleb128 0xb
+ 977 003b 49       		.uleb128 0x49
+ 978 003c 13       		.uleb128 0x13
+ 979 003d 00       		.byte	0
+ 980 003e 00       		.byte	0
+ 981 003f 06       		.uleb128 0x6
+ 982 0040 15       		.uleb128 0x15
+ 983 0041 00       		.byte	0
+ 984 0042 27       		.uleb128 0x27
+ 985 0043 19       		.uleb128 0x19
+ 986 0044 00       		.byte	0
+ 987 0045 00       		.byte	0
+ 988 0046 07       		.uleb128 0x7
+ 989 0047 16       		.uleb128 0x16
+ 990 0048 00       		.byte	0
+ 991 0049 03       		.uleb128 0x3
+ 992 004a 0E       		.uleb128 0xe
+ 993 004b 3A       		.uleb128 0x3a
+ 994 004c 0B       		.uleb128 0xb
+ 995 004d 3B       		.uleb128 0x3b
+ 996 004e 05       		.uleb128 0x5
+ 997 004f 49       		.uleb128 0x49
+ 998 0050 13       		.uleb128 0x13
+ 999 0051 00       		.byte	0
+ 1000 0052 00       		.byte	0
+ 1001 0053 08       		.uleb128 0x8
+ 1002 0054 35       		.uleb128 0x35
+ 1003 0055 00       		.byte	0
+ 1004 0056 49       		.uleb128 0x49
+ 1005 0057 13       		.uleb128 0x13
+ 1006 0058 00       		.byte	0
+ 1007 0059 00       		.byte	0
+ 1008 005a 09       		.uleb128 0x9
+ 1009 005b 2E       		.uleb128 0x2e
+ 1010 005c 00       		.byte	0
+ 1011 005d 3F       		.uleb128 0x3f
+ 1012 005e 19       		.uleb128 0x19
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 26
+
+
+ 1013 005f 03       		.uleb128 0x3
+ 1014 0060 0E       		.uleb128 0xe
+ 1015 0061 3A       		.uleb128 0x3a
+ 1016 0062 0B       		.uleb128 0xb
+ 1017 0063 3B       		.uleb128 0x3b
+ 1018 0064 0B       		.uleb128 0xb
+ 1019 0065 27       		.uleb128 0x27
+ 1020 0066 19       		.uleb128 0x19
+ 1021 0067 11       		.uleb128 0x11
+ 1022 0068 01       		.uleb128 0x1
+ 1023 0069 12       		.uleb128 0x12
+ 1024 006a 06       		.uleb128 0x6
+ 1025 006b 40       		.uleb128 0x40
+ 1026 006c 18       		.uleb128 0x18
+ 1027 006d 9642     		.uleb128 0x2116
+ 1028 006f 19       		.uleb128 0x19
+ 1029 0070 00       		.byte	0
+ 1030 0071 00       		.byte	0
+ 1031 0072 0A       		.uleb128 0xa
+ 1032 0073 2E       		.uleb128 0x2e
+ 1033 0074 01       		.byte	0x1
+ 1034 0075 3F       		.uleb128 0x3f
+ 1035 0076 19       		.uleb128 0x19
+ 1036 0077 03       		.uleb128 0x3
+ 1037 0078 0E       		.uleb128 0xe
+ 1038 0079 3A       		.uleb128 0x3a
+ 1039 007a 0B       		.uleb128 0xb
+ 1040 007b 3B       		.uleb128 0x3b
+ 1041 007c 0B       		.uleb128 0xb
+ 1042 007d 27       		.uleb128 0x27
+ 1043 007e 19       		.uleb128 0x19
+ 1044 007f 11       		.uleb128 0x11
+ 1045 0080 01       		.uleb128 0x1
+ 1046 0081 12       		.uleb128 0x12
+ 1047 0082 06       		.uleb128 0x6
+ 1048 0083 40       		.uleb128 0x40
+ 1049 0084 18       		.uleb128 0x18
+ 1050 0085 9642     		.uleb128 0x2116
+ 1051 0087 19       		.uleb128 0x19
+ 1052 0088 01       		.uleb128 0x1
+ 1053 0089 13       		.uleb128 0x13
+ 1054 008a 00       		.byte	0
+ 1055 008b 00       		.byte	0
+ 1056 008c 0B       		.uleb128 0xb
+ 1057 008d 05       		.uleb128 0x5
+ 1058 008e 00       		.byte	0
+ 1059 008f 03       		.uleb128 0x3
+ 1060 0090 0E       		.uleb128 0xe
+ 1061 0091 3A       		.uleb128 0x3a
+ 1062 0092 0B       		.uleb128 0xb
+ 1063 0093 3B       		.uleb128 0x3b
+ 1064 0094 0B       		.uleb128 0xb
+ 1065 0095 49       		.uleb128 0x49
+ 1066 0096 13       		.uleb128 0x13
+ 1067 0097 02       		.uleb128 0x2
+ 1068 0098 18       		.uleb128 0x18
+ 1069 0099 00       		.byte	0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 27
+
+
+ 1070 009a 00       		.byte	0
+ 1071 009b 0C       		.uleb128 0xc
+ 1072 009c 2E       		.uleb128 0x2e
+ 1073 009d 01       		.byte	0x1
+ 1074 009e 3F       		.uleb128 0x3f
+ 1075 009f 19       		.uleb128 0x19
+ 1076 00a0 03       		.uleb128 0x3
+ 1077 00a1 0E       		.uleb128 0xe
+ 1078 00a2 3A       		.uleb128 0x3a
+ 1079 00a3 0B       		.uleb128 0xb
+ 1080 00a4 3B       		.uleb128 0x3b
+ 1081 00a5 0B       		.uleb128 0xb
+ 1082 00a6 27       		.uleb128 0x27
+ 1083 00a7 19       		.uleb128 0x19
+ 1084 00a8 11       		.uleb128 0x11
+ 1085 00a9 01       		.uleb128 0x1
+ 1086 00aa 12       		.uleb128 0x12
+ 1087 00ab 06       		.uleb128 0x6
+ 1088 00ac 40       		.uleb128 0x40
+ 1089 00ad 18       		.uleb128 0x18
+ 1090 00ae 9742     		.uleb128 0x2117
+ 1091 00b0 19       		.uleb128 0x19
+ 1092 00b1 01       		.uleb128 0x1
+ 1093 00b2 13       		.uleb128 0x13
+ 1094 00b3 00       		.byte	0
+ 1095 00b4 00       		.byte	0
+ 1096 00b5 0D       		.uleb128 0xd
+ 1097 00b6 0B       		.uleb128 0xb
+ 1098 00b7 01       		.byte	0x1
+ 1099 00b8 11       		.uleb128 0x11
+ 1100 00b9 01       		.uleb128 0x1
+ 1101 00ba 12       		.uleb128 0x12
+ 1102 00bb 06       		.uleb128 0x6
+ 1103 00bc 00       		.byte	0
+ 1104 00bd 00       		.byte	0
+ 1105 00be 0E       		.uleb128 0xe
+ 1106 00bf 34       		.uleb128 0x34
+ 1107 00c0 00       		.byte	0
+ 1108 00c1 03       		.uleb128 0x3
+ 1109 00c2 0E       		.uleb128 0xe
+ 1110 00c3 3A       		.uleb128 0x3a
+ 1111 00c4 0B       		.uleb128 0xb
+ 1112 00c5 3B       		.uleb128 0x3b
+ 1113 00c6 0B       		.uleb128 0xb
+ 1114 00c7 49       		.uleb128 0x49
+ 1115 00c8 13       		.uleb128 0x13
+ 1116 00c9 02       		.uleb128 0x2
+ 1117 00ca 18       		.uleb128 0x18
+ 1118 00cb 00       		.byte	0
+ 1119 00cc 00       		.byte	0
+ 1120 00cd 0F       		.uleb128 0xf
+ 1121 00ce 2E       		.uleb128 0x2e
+ 1122 00cf 01       		.byte	0x1
+ 1123 00d0 3F       		.uleb128 0x3f
+ 1124 00d1 19       		.uleb128 0x19
+ 1125 00d2 03       		.uleb128 0x3
+ 1126 00d3 0E       		.uleb128 0xe
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 28
+
+
+ 1127 00d4 3A       		.uleb128 0x3a
+ 1128 00d5 0B       		.uleb128 0xb
+ 1129 00d6 3B       		.uleb128 0x3b
+ 1130 00d7 0B       		.uleb128 0xb
+ 1131 00d8 27       		.uleb128 0x27
+ 1132 00d9 19       		.uleb128 0x19
+ 1133 00da 49       		.uleb128 0x49
+ 1134 00db 13       		.uleb128 0x13
+ 1135 00dc 11       		.uleb128 0x11
+ 1136 00dd 01       		.uleb128 0x1
+ 1137 00de 12       		.uleb128 0x12
+ 1138 00df 06       		.uleb128 0x6
+ 1139 00e0 40       		.uleb128 0x40
+ 1140 00e1 18       		.uleb128 0x18
+ 1141 00e2 9742     		.uleb128 0x2117
+ 1142 00e4 19       		.uleb128 0x19
+ 1143 00e5 01       		.uleb128 0x1
+ 1144 00e6 13       		.uleb128 0x13
+ 1145 00e7 00       		.byte	0
+ 1146 00e8 00       		.byte	0
+ 1147 00e9 10       		.uleb128 0x10
+ 1148 00ea 2E       		.uleb128 0x2e
+ 1149 00eb 01       		.byte	0x1
+ 1150 00ec 3F       		.uleb128 0x3f
+ 1151 00ed 19       		.uleb128 0x19
+ 1152 00ee 03       		.uleb128 0x3
+ 1153 00ef 0E       		.uleb128 0xe
+ 1154 00f0 3A       		.uleb128 0x3a
+ 1155 00f1 0B       		.uleb128 0xb
+ 1156 00f2 3B       		.uleb128 0x3b
+ 1157 00f3 05       		.uleb128 0x5
+ 1158 00f4 27       		.uleb128 0x27
+ 1159 00f5 19       		.uleb128 0x19
+ 1160 00f6 11       		.uleb128 0x11
+ 1161 00f7 01       		.uleb128 0x1
+ 1162 00f8 12       		.uleb128 0x12
+ 1163 00f9 06       		.uleb128 0x6
+ 1164 00fa 40       		.uleb128 0x40
+ 1165 00fb 18       		.uleb128 0x18
+ 1166 00fc 9742     		.uleb128 0x2117
+ 1167 00fe 19       		.uleb128 0x19
+ 1168 00ff 01       		.uleb128 0x1
+ 1169 0100 13       		.uleb128 0x13
+ 1170 0101 00       		.byte	0
+ 1171 0102 00       		.byte	0
+ 1172 0103 11       		.uleb128 0x11
+ 1173 0104 05       		.uleb128 0x5
+ 1174 0105 00       		.byte	0
+ 1175 0106 03       		.uleb128 0x3
+ 1176 0107 0E       		.uleb128 0xe
+ 1177 0108 3A       		.uleb128 0x3a
+ 1178 0109 0B       		.uleb128 0xb
+ 1179 010a 3B       		.uleb128 0x3b
+ 1180 010b 05       		.uleb128 0x5
+ 1181 010c 49       		.uleb128 0x49
+ 1182 010d 13       		.uleb128 0x13
+ 1183 010e 02       		.uleb128 0x2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 29
+
+
+ 1184 010f 18       		.uleb128 0x18
+ 1185 0110 00       		.byte	0
+ 1186 0111 00       		.byte	0
+ 1187 0112 12       		.uleb128 0x12
+ 1188 0113 2E       		.uleb128 0x2e
+ 1189 0114 01       		.byte	0x1
+ 1190 0115 3F       		.uleb128 0x3f
+ 1191 0116 19       		.uleb128 0x19
+ 1192 0117 03       		.uleb128 0x3
+ 1193 0118 0E       		.uleb128 0xe
+ 1194 0119 3A       		.uleb128 0x3a
+ 1195 011a 0B       		.uleb128 0xb
+ 1196 011b 3B       		.uleb128 0x3b
+ 1197 011c 05       		.uleb128 0x5
+ 1198 011d 27       		.uleb128 0x27
+ 1199 011e 19       		.uleb128 0x19
+ 1200 011f 49       		.uleb128 0x49
+ 1201 0120 13       		.uleb128 0x13
+ 1202 0121 11       		.uleb128 0x11
+ 1203 0122 01       		.uleb128 0x1
+ 1204 0123 12       		.uleb128 0x12
+ 1205 0124 06       		.uleb128 0x6
+ 1206 0125 40       		.uleb128 0x40
+ 1207 0126 18       		.uleb128 0x18
+ 1208 0127 9742     		.uleb128 0x2117
+ 1209 0129 19       		.uleb128 0x19
+ 1210 012a 01       		.uleb128 0x1
+ 1211 012b 13       		.uleb128 0x13
+ 1212 012c 00       		.byte	0
+ 1213 012d 00       		.byte	0
+ 1214 012e 13       		.uleb128 0x13
+ 1215 012f 34       		.uleb128 0x34
+ 1216 0130 00       		.byte	0
+ 1217 0131 03       		.uleb128 0x3
+ 1218 0132 0E       		.uleb128 0xe
+ 1219 0133 3A       		.uleb128 0x3a
+ 1220 0134 0B       		.uleb128 0xb
+ 1221 0135 3B       		.uleb128 0x3b
+ 1222 0136 05       		.uleb128 0x5
+ 1223 0137 49       		.uleb128 0x49
+ 1224 0138 13       		.uleb128 0x13
+ 1225 0139 02       		.uleb128 0x2
+ 1226 013a 18       		.uleb128 0x18
+ 1227 013b 00       		.byte	0
+ 1228 013c 00       		.byte	0
+ 1229 013d 14       		.uleb128 0x14
+ 1230 013e 2E       		.uleb128 0x2e
+ 1231 013f 00       		.byte	0
+ 1232 0140 3F       		.uleb128 0x3f
+ 1233 0141 19       		.uleb128 0x19
+ 1234 0142 03       		.uleb128 0x3
+ 1235 0143 0E       		.uleb128 0xe
+ 1236 0144 3A       		.uleb128 0x3a
+ 1237 0145 0B       		.uleb128 0xb
+ 1238 0146 3B       		.uleb128 0x3b
+ 1239 0147 05       		.uleb128 0x5
+ 1240 0148 27       		.uleb128 0x27
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 30
+
+
+ 1241 0149 19       		.uleb128 0x19
+ 1242 014a 11       		.uleb128 0x11
+ 1243 014b 01       		.uleb128 0x1
+ 1244 014c 12       		.uleb128 0x12
+ 1245 014d 06       		.uleb128 0x6
+ 1246 014e 40       		.uleb128 0x40
+ 1247 014f 18       		.uleb128 0x18
+ 1248 0150 9742     		.uleb128 0x2117
+ 1249 0152 19       		.uleb128 0x19
+ 1250 0153 00       		.byte	0
+ 1251 0154 00       		.byte	0
+ 1252 0155 15       		.uleb128 0x15
+ 1253 0156 2E       		.uleb128 0x2e
+ 1254 0157 00       		.byte	0
+ 1255 0158 3F       		.uleb128 0x3f
+ 1256 0159 19       		.uleb128 0x19
+ 1257 015a 03       		.uleb128 0x3
+ 1258 015b 0E       		.uleb128 0xe
+ 1259 015c 3A       		.uleb128 0x3a
+ 1260 015d 0B       		.uleb128 0xb
+ 1261 015e 3B       		.uleb128 0x3b
+ 1262 015f 05       		.uleb128 0x5
+ 1263 0160 27       		.uleb128 0x27
+ 1264 0161 19       		.uleb128 0x19
+ 1265 0162 49       		.uleb128 0x49
+ 1266 0163 13       		.uleb128 0x13
+ 1267 0164 11       		.uleb128 0x11
+ 1268 0165 01       		.uleb128 0x1
+ 1269 0166 12       		.uleb128 0x12
+ 1270 0167 06       		.uleb128 0x6
+ 1271 0168 40       		.uleb128 0x40
+ 1272 0169 18       		.uleb128 0x18
+ 1273 016a 9742     		.uleb128 0x2117
+ 1274 016c 19       		.uleb128 0x19
+ 1275 016d 00       		.byte	0
+ 1276 016e 00       		.byte	0
+ 1277 016f 16       		.uleb128 0x16
+ 1278 0170 34       		.uleb128 0x34
+ 1279 0171 00       		.byte	0
+ 1280 0172 03       		.uleb128 0x3
+ 1281 0173 0E       		.uleb128 0xe
+ 1282 0174 3A       		.uleb128 0x3a
+ 1283 0175 0B       		.uleb128 0xb
+ 1284 0176 3B       		.uleb128 0x3b
+ 1285 0177 05       		.uleb128 0x5
+ 1286 0178 49       		.uleb128 0x49
+ 1287 0179 13       		.uleb128 0x13
+ 1288 017a 3F       		.uleb128 0x3f
+ 1289 017b 19       		.uleb128 0x19
+ 1290 017c 3C       		.uleb128 0x3c
+ 1291 017d 19       		.uleb128 0x19
+ 1292 017e 00       		.byte	0
+ 1293 017f 00       		.byte	0
+ 1294 0180 00       		.byte	0
+ 1295              		.section	.debug_aranges,"",%progbits
+ 1296 0000 7C000000 		.4byte	0x7c
+ 1297 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 31
+
+
+ 1298 0006 00000000 		.4byte	.Ldebug_info0
+ 1299 000a 04       		.byte	0x4
+ 1300 000b 00       		.byte	0
+ 1301 000c 0000     		.2byte	0
+ 1302 000e 0000     		.2byte	0
+ 1303 0010 00000000 		.4byte	.LFB63
+ 1304 0014 20000000 		.4byte	.LFE63-.LFB63
+ 1305 0018 00000000 		.4byte	.LFB64
+ 1306 001c 24000000 		.4byte	.LFE64-.LFB64
+ 1307 0020 00000000 		.4byte	.LFB65
+ 1308 0024 18000000 		.4byte	.LFE65-.LFB65
+ 1309 0028 00000000 		.4byte	.LFB66
+ 1310 002c 40000000 		.4byte	.LFE66-.LFB66
+ 1311 0030 00000000 		.4byte	.LFB67
+ 1312 0034 24000000 		.4byte	.LFE67-.LFB67
+ 1313 0038 00000000 		.4byte	.LFB68
+ 1314 003c 20000000 		.4byte	.LFE68-.LFB68
+ 1315 0040 00000000 		.4byte	.LFB69
+ 1316 0044 24000000 		.4byte	.LFE69-.LFB69
+ 1317 0048 00000000 		.4byte	.LFB70
+ 1318 004c 20000000 		.4byte	.LFE70-.LFB70
+ 1319 0050 00000000 		.4byte	.LFB71
+ 1320 0054 18000000 		.4byte	.LFE71-.LFB71
+ 1321 0058 00000000 		.4byte	.LFB72
+ 1322 005c 24000000 		.4byte	.LFE72-.LFB72
+ 1323 0060 00000000 		.4byte	.LFB73
+ 1324 0064 18000000 		.4byte	.LFE73-.LFB73
+ 1325 0068 00000000 		.4byte	.LFB74
+ 1326 006c 18000000 		.4byte	.LFE74-.LFB74
+ 1327 0070 00000000 		.4byte	.LFB75
+ 1328 0074 18000000 		.4byte	.LFE75-.LFB75
+ 1329 0078 00000000 		.4byte	0
+ 1330 007c 00000000 		.4byte	0
+ 1331              		.section	.debug_ranges,"",%progbits
+ 1332              	.Ldebug_ranges0:
+ 1333 0000 00000000 		.4byte	.LFB63
+ 1334 0004 20000000 		.4byte	.LFE63
+ 1335 0008 00000000 		.4byte	.LFB64
+ 1336 000c 24000000 		.4byte	.LFE64
+ 1337 0010 00000000 		.4byte	.LFB65
+ 1338 0014 18000000 		.4byte	.LFE65
+ 1339 0018 00000000 		.4byte	.LFB66
+ 1340 001c 40000000 		.4byte	.LFE66
+ 1341 0020 00000000 		.4byte	.LFB67
+ 1342 0024 24000000 		.4byte	.LFE67
+ 1343 0028 00000000 		.4byte	.LFB68
+ 1344 002c 20000000 		.4byte	.LFE68
+ 1345 0030 00000000 		.4byte	.LFB69
+ 1346 0034 24000000 		.4byte	.LFE69
+ 1347 0038 00000000 		.4byte	.LFB70
+ 1348 003c 20000000 		.4byte	.LFE70
+ 1349 0040 00000000 		.4byte	.LFB71
+ 1350 0044 18000000 		.4byte	.LFE71
+ 1351 0048 00000000 		.4byte	.LFB72
+ 1352 004c 24000000 		.4byte	.LFE72
+ 1353 0050 00000000 		.4byte	.LFB73
+ 1354 0054 18000000 		.4byte	.LFE73
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 32
+
+
+ 1355 0058 00000000 		.4byte	.LFB74
+ 1356 005c 18000000 		.4byte	.LFE74
+ 1357 0060 00000000 		.4byte	.LFB75
+ 1358 0064 18000000 		.4byte	.LFE75
+ 1359 0068 00000000 		.4byte	0
+ 1360 006c 00000000 		.4byte	0
+ 1361              		.section	.debug_line,"",%progbits
+ 1362              	.Ldebug_line0:
+ 1363 0000 79020000 		.section	.debug_str,"MS",%progbits,1
+ 1363      02005201 
+ 1363      00000201 
+ 1363      FB0E0D00 
+ 1363      01010101 
+ 1364              	.LASF19:
+ 1365 0000 72656733 		.ascii	"reg32\000"
+ 1365      3200
+ 1366              	.LASF38:
+ 1367 0006 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1367      43313120 
+ 1367      352E342E 
+ 1367      31203230 
+ 1367      31363036 
+ 1368 0039 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1368      20726576 
+ 1368      6973696F 
+ 1368      6E203233 
+ 1368      37373135 
+ 1369 006c 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1369      66756E63 
+ 1369      74696F6E 
+ 1369      2D736563 
+ 1369      74696F6E 
+ 1370              	.LASF12:
+ 1371 0094 5F5F696E 		.ascii	"__int32_t\000"
+ 1371      7433325F 
+ 1371      7400
+ 1372              	.LASF23:
+ 1373 009e 6973725F 		.ascii	"isr_i2s_tx_StartEx\000"
+ 1373      6932735F 
+ 1373      74785F53 
+ 1373      74617274 
+ 1373      457800
+ 1374              	.LASF7:
+ 1375 00b1 6C6F6E67 		.ascii	"long int\000"
+ 1375      20696E74 
+ 1375      00
+ 1376              	.LASF26:
+ 1377 00ba 62797465 		.ascii	"byte_idx\000"
+ 1377      5F696478 
+ 1377      00
+ 1378              	.LASF30:
+ 1379 00c3 6973725F 		.ascii	"isr_i2s_tx_SetPriority\000"
+ 1379      6932735F 
+ 1379      74785F53 
+ 1379      65745072 
+ 1379      696F7269 
+ 1380              	.LASF41:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 33
+
+
+ 1381 00da 6973725F 		.ascii	"isr_i2s_tx_GetState\000"
+ 1381      6932735F 
+ 1381      74785F47 
+ 1381      65745374 
+ 1381      61746500 
+ 1382              	.LASF16:
+ 1383 00ee 666C6F61 		.ascii	"float\000"
+ 1383      7400
+ 1384              	.LASF37:
+ 1385 00f4 6973725F 		.ascii	"isr_i2s_tx_ClearPending\000"
+ 1385      6932735F 
+ 1385      74785F43 
+ 1385      6C656172 
+ 1385      50656E64 
+ 1386              	.LASF4:
+ 1387 010c 756E7369 		.ascii	"unsigned char\000"
+ 1387      676E6564 
+ 1387      20636861 
+ 1387      7200
+ 1388              	.LASF18:
+ 1389 011a 72656738 		.ascii	"reg8\000"
+ 1389      00
+ 1390              	.LASF8:
+ 1391 011f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1391      20756E73 
+ 1391      69676E65 
+ 1391      6420696E 
+ 1391      7400
+ 1392              	.LASF6:
+ 1393 0131 73686F72 		.ascii	"short unsigned int\000"
+ 1393      7420756E 
+ 1393      7369676E 
+ 1393      65642069 
+ 1393      6E7400
+ 1394              	.LASF36:
+ 1395 0144 6973725F 		.ascii	"isr_i2s_tx_SetPending\000"
+ 1395      6932735F 
+ 1395      74785F53 
+ 1395      65745065 
+ 1395      6E64696E 
+ 1396              	.LASF35:
+ 1397 015a 6973725F 		.ascii	"isr_i2s_tx_Disable\000"
+ 1397      6932735F 
+ 1397      74785F44 
+ 1397      69736162 
+ 1397      6C6500
+ 1398              	.LASF34:
+ 1399 016d 6973725F 		.ascii	"isr_i2s_tx_Enable\000"
+ 1399      6932735F 
+ 1399      74785F45 
+ 1399      6E61626C 
+ 1399      6500
+ 1400              	.LASF17:
+ 1401 017f 646F7562 		.ascii	"double\000"
+ 1401      6C6500
+ 1402              	.LASF27:
+ 1403 0186 6973725F 		.ascii	"isr_i2s_tx_SetVector\000"
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 34
+
+
+ 1403      6932735F 
+ 1403      74785F53 
+ 1403      65745665 
+ 1403      63746F72 
+ 1404              	.LASF15:
+ 1405 019b 75696E74 		.ascii	"uint32\000"
+ 1405      333200
+ 1406              	.LASF0:
+ 1407 01a2 756E7369 		.ascii	"unsigned int\000"
+ 1407      676E6564 
+ 1407      20696E74 
+ 1407      00
+ 1408              	.LASF28:
+ 1409 01af 61646472 		.ascii	"address\000"
+ 1409      65737300 
+ 1410              	.LASF9:
+ 1411 01b7 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1411      206C6F6E 
+ 1411      6720756E 
+ 1411      7369676E 
+ 1411      65642069 
+ 1412              	.LASF20:
+ 1413 01ce 63796973 		.ascii	"cyisraddress\000"
+ 1413      72616464 
+ 1413      72657373 
+ 1413      00
+ 1414              	.LASF42:
+ 1415 01db 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1415      52784275 
+ 1415      66666572 
+ 1415      00
+ 1416              	.LASF39:
+ 1417 01e8 47656E65 		.ascii	"Generated_Source\\PSoC5\\isr_i2s_tx.c\000"
+ 1417      72617465 
+ 1417      645F536F 
+ 1417      75726365 
+ 1417      5C50536F 
+ 1418              	.LASF25:
+ 1419 020c 6368616E 		.ascii	"chan\000"
+ 1419      00
+ 1420              	.LASF2:
+ 1421 0211 6C6F6E67 		.ascii	"long double\000"
+ 1421      20646F75 
+ 1421      626C6500 
+ 1422              	.LASF31:
+ 1423 021d 7072696F 		.ascii	"priority\000"
+ 1423      72697479 
+ 1423      00
+ 1424              	.LASF10:
+ 1425 0226 73697A65 		.ascii	"sizetype\000"
+ 1425      74797065 
+ 1425      00
+ 1426              	.LASF1:
+ 1427 022f 6C6F6E67 		.ascii	"long long int\000"
+ 1427      206C6F6E 
+ 1427      6720696E 
+ 1427      7400
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 35
+
+
+ 1428              	.LASF11:
+ 1429 023d 63686172 		.ascii	"char\000"
+ 1429      00
+ 1430              	.LASF29:
+ 1431 0242 72616D56 		.ascii	"ramVectorTable\000"
+ 1431      6563746F 
+ 1431      72546162 
+ 1431      6C6500
+ 1432              	.LASF40:
+ 1433 0251 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
+ 1433      73657273 
+ 1433      5C706561 
+ 1433      726C7374 
+ 1433      6C5C446F 
+ 1434 027f 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
+ 1434      73747265 
+ 1434      616D6572 
+ 1434      5C666132 
+ 1434      305F6932 
+ 1435              	.LASF21:
+ 1436 02a4 6973725F 		.ascii	"isr_i2s_tx_Start\000"
+ 1436      6932735F 
+ 1436      74785F53 
+ 1436      74617274 
+ 1436      00
+ 1437              	.LASF13:
+ 1438 02b5 696E7433 		.ascii	"int32_t\000"
+ 1438      325F7400 
+ 1439              	.LASF5:
+ 1440 02bd 73686F72 		.ascii	"short int\000"
+ 1440      7420696E 
+ 1440      7400
+ 1441              	.LASF14:
+ 1442 02c7 75696E74 		.ascii	"uint8\000"
+ 1442      3800
+ 1443              	.LASF22:
+ 1444 02cd 6973725F 		.ascii	"isr_i2s_tx_Stop\000"
+ 1444      6932735F 
+ 1444      74785F53 
+ 1444      746F7000 
+ 1445              	.LASF32:
+ 1446 02dd 6973725F 		.ascii	"isr_i2s_tx_GetVector\000"
+ 1446      6932735F 
+ 1446      74785F47 
+ 1446      65745665 
+ 1446      63746F72 
+ 1447              	.LASF24:
+ 1448 02f2 6973725F 		.ascii	"isr_i2s_tx_Interrupt\000"
+ 1448      6932735F 
+ 1448      74785F49 
+ 1448      6E746572 
+ 1448      72757074 
+ 1449              	.LASF3:
+ 1450 0307 7369676E 		.ascii	"signed char\000"
+ 1450      65642063 
+ 1450      68617200 
+ 1451              	.LASF33:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccy6hbxj.s 			page 36
+
+
+ 1452 0313 6973725F 		.ascii	"isr_i2s_tx_GetPriority\000"
+ 1452      6932735F 
+ 1452      74785F47 
+ 1452      65745072 
+ 1452      696F7269 
+ 1453              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

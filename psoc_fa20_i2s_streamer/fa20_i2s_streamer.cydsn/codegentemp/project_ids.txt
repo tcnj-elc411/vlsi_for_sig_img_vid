@@ -1,0 +1,7 @@
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|2e31ef87-c605-4b2a-9079-329ea6bf0ecc
+C:\Users\pearlstl\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|3772af7a-3fc0-41fc-98e5-2e1ed9b29a15
+C:\Users\pearlstl\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|1fc29e03-969d-403a-a1b4-96fd1fdeb057
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|2baa2eb1-8b76-41b0-8441-db18b1e5716e
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|6cb02346-6b2d-47b5-9128-631a63f6783c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|42dba55e-fc5f-428c-b646-f60812fdbe4f
+C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\fa20_i2s_streamer.cyprj|ec161dd4-9a2b-4f34-9293-b4fbcc0238c9

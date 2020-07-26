@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="2571000000000fs"></ZoomStartTime>
+      <ZoomEndTime time="2683000000001fs"></ZoomEndTime>
+      <Cursor1Time time="2642295000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="144"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="11" />
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pwm_sig" type="logic">
+      <obj_property name="ElementShortName">pwm_sig</obj_property>
+      <obj_property name="ObjectShortName">pwm_sig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/in_pcm" type="array">
+      <obj_property name="ElementShortName">in_pcm[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_pcm[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/in_ws" type="logic">
+      <obj_property name="ElementShortName">in_ws</obj_property>
+      <obj_property name="ObjectShortName">in_ws</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/in_xfc" type="logic">
+      <obj_property name="ElementShortName">in_xfc</obj_property>
+      <obj_property name="ObjectShortName">in_xfc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/out_parallel_pcm" type="array">
+      <obj_property name="ElementShortName">out_parallel_pcm[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_parallel_pcm[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/out_pwm" type="logic">
+      <obj_property name="ElementShortName">out_pwm</obj_property>
+      <obj_property name="ObjectShortName">out_pwm</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pwm_control_level" type="array">
+      <obj_property name="ElementShortName">pwm_control_level[11:0]</obj_property>
+      <obj_property name="ObjectShortName">pwm_control_level[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/sawtooth" type="array">
+      <obj_property name="ElementShortName">sawtooth[11:0]</obj_property>
+      <obj_property name="ObjectShortName">sawtooth[11:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pcm_11b" type="array">
+      <obj_property name="ElementShortName">pcm_11b[10:0]</obj_property>
+      <obj_property name="ObjectShortName">pcm_11b[10:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/offset_pcm_11b" type="array">
+      <obj_property name="ElementShortName">offset_pcm_11b[12:0]</obj_property>
+      <obj_property name="ObjectShortName">offset_pcm_11b[12:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/u_i2s_top/u_pwm_out/pwm_sig" type="logic">
+      <obj_property name="ElementShortName">pwm_sig</obj_property>
+      <obj_property name="ObjectShortName">pwm_sig</obj_property>
+   </wvobject>
+</wave_config>
