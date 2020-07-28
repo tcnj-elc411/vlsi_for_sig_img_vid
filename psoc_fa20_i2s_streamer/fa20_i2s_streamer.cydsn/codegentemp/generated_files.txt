@@ -22,11 +22,13 @@
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\I2S.h" value="HEADER;;;;;I2S" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\I2S_PM.c" value="SOURCE_C;CortexM3;;;;I2S" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\I2S_PVT.h" value="HEADER;;;;;I2S" />
-  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\PARALLEL_OUT_aliases.h" value="HEADER;;;;;PARALLEL_OUT" />
-  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\PARALLEL_OUT.c" value="SOURCE_C;CortexM3;;;;PARALLEL_OUT" />
-  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\PARALLEL_OUT.h" value="HEADER;;;;;PARALLEL_OUT" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_0_aliases.h" value="HEADER;;;;;P3_0" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_0.c" value="SOURCE_C;CortexM3;;;;P3_0" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_0.h" value="HEADER;;;;;P3_0" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\isr_i2s_tx.c" value="SOURCE_C;CortexM3;;;;isr_i2s_tx" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\isr_i2s_tx.h" value="HEADER;;;;;isr_i2s_tx" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\isr_i2s_rx.c" value="SOURCE_C;CortexM3;;;;isr_i2s_rx" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\isr_i2s_rx.h" value="HEADER;;;;;isr_i2s_rx" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\Clock_1.c" value="SOURCE_C;CortexM3;;;;Clock_1" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\Clock_1.h" value="HEADER;;;;;Clock_1" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\ADC.c" value="SOURCE_C;CortexM3;;;;ADC" />
@@ -56,6 +58,12 @@
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\SW3_aliases.h" value="HEADER;;;;;SW3" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\SW3.c" value="SOURCE_C;CortexM3;;;;SW3" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\SW3.h" value="HEADER;;;;;SW3" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_3_aliases.h" value="HEADER;;;;;P3_3" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_3.c" value="SOURCE_C;CortexM3;;;;P3_3" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_3.h" value="HEADER;;;;;P3_3" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_1_aliases.h" value="HEADER;;;;;P3_1" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_1.c" value="SOURCE_C;CortexM3;;;;P3_1" />
+  <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\P3_1.h" value="HEADER;;;;;P3_1" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\ADC_IRQ.c" value="SOURCE_C;CortexM3;;;;ADC_IRQ" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\ADC_IRQ.h" value="HEADER;;;;;ADC_IRQ" />
   <file name="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\codegentemp\ADC_theACLK.c" value="SOURCE_C;CortexM3;;;;ADC_theACLK" />

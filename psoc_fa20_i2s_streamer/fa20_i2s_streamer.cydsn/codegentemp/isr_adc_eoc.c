@@ -28,8 +28,13 @@
 ********************************************************************************/
 /* `#START isr_adc_eoc_intc` */
 #include "project.h"
+#define NUM_ADC_BUF (4)
     
 extern int volatile force_value;
+    
+int16_t volatile adc_buf[NUM_ADC_BUF];
+int volatile adc_buf_wptr = 0;
+int volatile adc_buf_rptr = 0;
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -167,27 +172,19 @@ CY_ISR(isr_adc_eoc_Interrupt)
 
     /*  Place your Interrupt code here. */
     /* `#START isr_adc_eoc_Interrupt` */
-    int status;
-    
-    int word_idx = 0;
-    int byte_idx = 1;
-    
-    // Get ADC result
-    int value = ADC_GetResult16();
-    
-    for (int i = 0; i < 4; ++i)
+    P3_3_Write(1);
+    // Get ADC result, convert to 2's complement
+    int in_value = (ADC_GetResult16()<<4)-(1<<15);
+
+    int next_adc_buf_wptr = (adc_buf_wptr + 1) % NUM_ADC_BUF;
+
+    if (next_adc_buf_wptr != adc_buf_rptr)
     {
-        // Check for I2S_OUT write FIFO not full
-        while (!(I2S_ReadTxStatus() & I2S_TX_FIFO_0_NOT_FULL)) {}
+        adc_buf[adc_buf_wptr] = in_value;
         
-        I2S_WriteByte( (force_value >> (8*byte_idx))& 0xFF, word_idx);
-            
-        if (byte_idx == 0)
-            word_idx = 1 - word_idx;
-        
-        byte_idx = 1 - byte_idx;
+        adc_buf_wptr = next_adc_buf_wptr;
     }
-    //isr_adc_eoc_ClearPending();
+    P3_3_Write(0);
     /* `#END` */
 }
 

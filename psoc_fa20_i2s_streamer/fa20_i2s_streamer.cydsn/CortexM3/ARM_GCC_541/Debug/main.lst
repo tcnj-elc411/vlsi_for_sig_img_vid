@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 1
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 1
 
 
    1              		.syntax unified
@@ -33,9 +33,11 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 1
    2:main.c        **** 
    3:main.c        **** int volatile force_value;
    4:main.c        **** 
-   5:main.c        **** int main(void)
-   6:main.c        **** {
-  29              		.loc 1 6 0
+   5:main.c        **** extern int volatile out_value[2];
+   6:main.c        **** 
+   7:main.c        **** int main(void)
+   8:main.c        **** {
+  29              		.loc 1 8 0
   30              		.cfi_startproc
   31              		@ args = 0, pretend = 0, frame = 0
   32              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -45,509 +47,517 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 1
   36              		.cfi_offset 14, -4
   37 0002 00AF     		add	r7, sp, #0
   38              		.cfi_def_cfa_register 7
-   7:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
-  39              		.loc 1 7 0
+   9:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  39              		.loc 1 9 0
   40              		.syntax unified
-  41              	@ 7 "main.c" 1
+  41              	@ 9 "main.c" 1
   42 0004 62B6     		CPSIE   i
   43              	@ 0 "" 2
-   8:main.c        **** 
-   9:main.c        ****     force_value = 0;
-  44              		.loc 1 9 0
+  10:main.c        **** 
+  11:main.c        ****     force_value = 0;
+  44              		.loc 1 11 0
   45              		.thumb
   46              		.syntax unified
-  47 0006 1A4B     		ldr	r3, .L6
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 2
+
+
+  47 0006 1D4B     		ldr	r3, .L6
   48 0008 0022     		movs	r2, #0
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 2
-
-
   49 000a 1A60     		str	r2, [r3]
-  10:main.c        ****     
-  11:main.c        ****     Clock_1_Start();
-  50              		.loc 1 11 0
-  51 000c FFF7FEFF 		bl	Clock_1_Start
   12:main.c        ****     
-  13:main.c        ****     ADC_Start();
-  52              		.loc 1 13 0
+  13:main.c        ****     Clock_1_Start();
+  50              		.loc 1 13 0
+  51 000c FFF7FEFF 		bl	Clock_1_Start
+  14:main.c        ****     
+  15:main.c        ****     ADC_Start();
+  52              		.loc 1 15 0
   53 0010 FFF7FEFF 		bl	ADC_Start
-  14:main.c        ****     DAC_Start();
-  54              		.loc 1 14 0
+  16:main.c        ****     DAC_Start();
+  54              		.loc 1 16 0
   55 0014 FFF7FEFF 		bl	DAC_Start
-  15:main.c        ****     I2S_Start();
-  56              		.loc 1 15 0
+  17:main.c        ****     I2S_Start();
+  56              		.loc 1 17 0
   57 0018 FFF7FEFF 		bl	I2S_Start
-  16:main.c        ****     
-  17:main.c        ****     // Aaargh!  Evidently there must be some delay between Start() and EnableTx()!
-  18:main.c        ****     CyDelay(1000);
-  58              		.loc 1 18 0
-  59 001c 4FF47A70 		mov	r0, #1000
-  60 0020 FFF7FEFF 		bl	CyDelay
-  19:main.c        ****     
-  20:main.c        ****     I2S_EnableTx();
-  61              		.loc 1 20 0
-  62 0024 FFF7FEFF 		bl	I2S_EnableTx
-  21:main.c        ****     //I2S_EnableRx();
-  22:main.c        ****     
-  23:main.c        ****     isr_adc_eoc_Start();
+  18:main.c        ****     
+  19:main.c        ****     // Aaargh!  Evidently there must be some delay between Start() and EnableTx()!
+  20:main.c        ****     CyDelay(100);
+  58              		.loc 1 20 0
+  59 001c 6420     		movs	r0, #100
+  60 001e FFF7FEFF 		bl	CyDelay
+  21:main.c        ****     I2S_EnableTx();
+  61              		.loc 1 21 0
+  62 0022 FFF7FEFF 		bl	I2S_EnableTx
+  22:main.c        **** 
+  23:main.c        ****     CyDelay(100);
   63              		.loc 1 23 0
-  64 0028 FFF7FEFF 		bl	isr_adc_eoc_Start
-  65              	.L5:
-  24:main.c        **** //   isr_i2s_rx_Start();
-  25:main.c        **** //   isr_i2s_tx_Start();
-  26:main.c        ****     
-  27:main.c        ****     for(;;)
-  28:main.c        ****     {
-  29:main.c        ****         while (SW2_Read() && SW3_Read()) {}
-  66              		.loc 1 29 0
-  67 002c 00BF     		nop
-  68              	.L3:
-  69              		.loc 1 29 0 is_stmt 0 discriminator 2
-  70 002e FFF7FEFF 		bl	SW2_Read
-  71 0032 0346     		mov	r3, r0
-  72 0034 002B     		cmp	r3, #0
-  73 0036 04D0     		beq	.L2
-  74              		.loc 1 29 0 discriminator 1
-  75 0038 FFF7FEFF 		bl	SW3_Read
-  76 003c 0346     		mov	r3, r0
-  77 003e 002B     		cmp	r3, #0
-  78 0040 F5D1     		bne	.L3
-  79              	.L2:
-  30:main.c        ****         ++force_value;
-  80              		.loc 1 30 0 is_stmt 1
-  81 0042 0B4B     		ldr	r3, .L6
-  82 0044 1B68     		ldr	r3, [r3]
-  83 0046 0133     		adds	r3, r3, #1
-  84 0048 094A     		ldr	r2, .L6
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 3
+  64 0026 6420     		movs	r0, #100
+  65 0028 FFF7FEFF 		bl	CyDelay
+  24:main.c        ****     I2S_EnableRx();
+  66              		.loc 1 24 0
+  67 002c FFF7FEFF 		bl	I2S_EnableRx
+  25:main.c        ****     
+  26:main.c        ****     isr_adc_eoc_Start();
+  68              		.loc 1 26 0
+  69 0030 FFF7FEFF 		bl	isr_adc_eoc_Start
+  27:main.c        ****     isr_i2s_rx_Start();
+  70              		.loc 1 27 0
+  71 0034 FFF7FEFF 		bl	isr_i2s_rx_Start
+  72              	.L5:
+  28:main.c        **** //   isr_i2s_tx_Start();
+  29:main.c        ****     
+  30:main.c        ****     for(;;)
+  31:main.c        ****     {
+  32:main.c        ****         while (SW2_Read() && SW3_Read()) {}
+  73              		.loc 1 32 0
+  74 0038 00BF     		nop
+  75              	.L3:
+  76              		.loc 1 32 0 is_stmt 0 discriminator 2
+  77 003a FFF7FEFF 		bl	SW2_Read
+  78 003e 0346     		mov	r3, r0
+  79 0040 002B     		cmp	r3, #0
+  80 0042 04D0     		beq	.L2
+  81              		.loc 1 32 0 discriminator 1
+  82 0044 FFF7FEFF 		bl	SW3_Read
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 3
 
 
-  85 004a 1360     		str	r3, [r2]
-  31:main.c        ****         CyDelay(100);
-  86              		.loc 1 31 0
-  87 004c 6420     		movs	r0, #100
-  88 004e FFF7FEFF 		bl	CyDelay
-  32:main.c        ****         while ((!SW2_Read()) || (!SW3_Read())) {}
-  89              		.loc 1 32 0
-  90 0052 00BF     		nop
-  91              	.L4:
-  92              		.loc 1 32 0 is_stmt 0 discriminator 3
-  93 0054 FFF7FEFF 		bl	SW2_Read
-  94 0058 0346     		mov	r3, r0
-  95 005a 002B     		cmp	r3, #0
-  96 005c FAD0     		beq	.L4
-  97              		.loc 1 32 0 discriminator 2
-  98 005e FFF7FEFF 		bl	SW3_Read
-  99 0062 0346     		mov	r3, r0
- 100 0064 002B     		cmp	r3, #0
- 101 0066 F5D0     		beq	.L4
-  33:main.c        ****         CyDelay(100);
- 102              		.loc 1 33 0 is_stmt 1
- 103 0068 6420     		movs	r0, #100
- 104 006a FFF7FEFF 		bl	CyDelay
-  34:main.c        ****     }
- 105              		.loc 1 34 0
- 106 006e DDE7     		b	.L5
- 107              	.L7:
- 108              		.align	2
- 109              	.L6:
- 110 0070 00000000 		.word	force_value
- 111              		.cfi_endproc
- 112              	.LFE63:
- 113              		.size	main, .-main
- 114              		.text
- 115              	.Letext0:
- 116              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 117              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
- 118              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
- 119              		.section	.debug_info,"",%progbits
- 120              	.Ldebug_info0:
- 121 0000 DD000000 		.4byte	0xdd
- 122 0004 0400     		.2byte	0x4
- 123 0006 00000000 		.4byte	.Ldebug_abbrev0
- 124 000a 04       		.byte	0x4
- 125 000b 01       		.uleb128 0x1
- 126 000c C2000000 		.4byte	.LASF18
- 127 0010 0C       		.byte	0xc
- 128 0011 2E000000 		.4byte	.LASF19
- 129 0015 4C000000 		.4byte	.LASF20
- 130 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 131 001d 00000000 		.4byte	0
- 132 0021 00000000 		.4byte	.Ldebug_line0
- 133 0025 02       		.uleb128 0x2
- 134 0026 01       		.byte	0x1
- 135 0027 06       		.byte	0x6
- 136 0028 80010000 		.4byte	.LASF0
- 137 002c 02       		.uleb128 0x2
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 4
+  83 0048 0346     		mov	r3, r0
+  84 004a 002B     		cmp	r3, #0
+  85 004c F5D1     		bne	.L3
+  86              	.L2:
+  33:main.c        ****         ++force_value;
+  87              		.loc 1 33 0 is_stmt 1
+  88 004e 0B4B     		ldr	r3, .L6
+  89 0050 1B68     		ldr	r3, [r3]
+  90 0052 0133     		adds	r3, r3, #1
+  91 0054 094A     		ldr	r2, .L6
+  92 0056 1360     		str	r3, [r2]
+  34:main.c        ****         CyDelay(100);
+  93              		.loc 1 34 0
+  94 0058 6420     		movs	r0, #100
+  95 005a FFF7FEFF 		bl	CyDelay
+  35:main.c        ****         while ((!SW2_Read()) || (!SW3_Read())) {}
+  96              		.loc 1 35 0
+  97 005e 00BF     		nop
+  98              	.L4:
+  99              		.loc 1 35 0 is_stmt 0 discriminator 3
+ 100 0060 FFF7FEFF 		bl	SW2_Read
+ 101 0064 0346     		mov	r3, r0
+ 102 0066 002B     		cmp	r3, #0
+ 103 0068 FAD0     		beq	.L4
+ 104              		.loc 1 35 0 discriminator 2
+ 105 006a FFF7FEFF 		bl	SW3_Read
+ 106 006e 0346     		mov	r3, r0
+ 107 0070 002B     		cmp	r3, #0
+ 108 0072 F5D0     		beq	.L4
+  36:main.c        ****         CyDelay(100);
+ 109              		.loc 1 36 0 is_stmt 1
+ 110 0074 6420     		movs	r0, #100
+ 111 0076 FFF7FEFF 		bl	CyDelay
+  37:main.c        ****     }
+ 112              		.loc 1 37 0
+ 113 007a DDE7     		b	.L5
+ 114              	.L7:
+ 115              		.align	2
+ 116              	.L6:
+ 117 007c 00000000 		.word	force_value
+ 118              		.cfi_endproc
+ 119              	.LFE63:
+ 120              		.size	main, .-main
+ 121              		.text
+ 122              	.Letext0:
+ 123              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 124              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 125              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 126              		.section	.debug_info,"",%progbits
+ 127              	.Ldebug_info0:
+ 128 0000 DD000000 		.4byte	0xdd
+ 129 0004 0400     		.2byte	0x4
+ 130 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 131 000a 04       		.byte	0x4
+ 132 000b 01       		.uleb128 0x1
+ 133 000c C2000000 		.4byte	.LASF18
+ 134 0010 0C       		.byte	0xc
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 4
 
 
- 138 002d 01       		.byte	0x1
- 139 002e 08       		.byte	0x8
- 140 002f 50010000 		.4byte	.LASF1
- 141 0033 02       		.uleb128 0x2
- 142 0034 02       		.byte	0x2
- 143 0035 05       		.byte	0x5
- 144 0036 A8010000 		.4byte	.LASF2
- 145 003a 02       		.uleb128 0x2
- 146 003b 02       		.byte	0x2
- 147 003c 07       		.byte	0x7
- 148 003d 0E000000 		.4byte	.LASF3
- 149 0041 03       		.uleb128 0x3
- 150 0042 98010000 		.4byte	.LASF9
- 151 0046 02       		.byte	0x2
- 152 0047 3F       		.byte	0x3f
- 153 0048 4C000000 		.4byte	0x4c
- 154 004c 02       		.uleb128 0x2
- 155 004d 04       		.byte	0x4
- 156 004e 05       		.byte	0x5
- 157 004f 63010000 		.4byte	.LASF4
- 158 0053 02       		.uleb128 0x2
- 159 0054 04       		.byte	0x4
- 160 0055 07       		.byte	0x7
- 161 0056 3A000000 		.4byte	.LASF5
- 162 005a 02       		.uleb128 0x2
- 163 005b 08       		.byte	0x8
- 164 005c 05       		.byte	0x5
- 165 005d 00000000 		.4byte	.LASF6
- 166 0061 02       		.uleb128 0x2
- 167 0062 08       		.byte	0x8
- 168 0063 07       		.byte	0x7
- 169 0064 9F000000 		.4byte	.LASF7
- 170 0068 04       		.uleb128 0x4
- 171 0069 04       		.byte	0x4
- 172 006a 05       		.byte	0x5
- 173 006b 696E7400 		.ascii	"int\000"
- 174 006f 02       		.uleb128 0x2
- 175 0070 04       		.byte	0x4
- 176 0071 07       		.byte	0x7
- 177 0072 21000000 		.4byte	.LASF8
- 178 0076 03       		.uleb128 0x3
- 179 0077 B2010000 		.4byte	.LASF10
- 180 007b 03       		.byte	0x3
- 181 007c 2C       		.byte	0x2c
- 182 007d 41000000 		.4byte	0x41
- 183 0081 02       		.uleb128 0x2
- 184 0082 04       		.byte	0x4
- 185 0083 04       		.byte	0x4
- 186 0084 A2010000 		.4byte	.LASF11
- 187 0088 02       		.uleb128 0x2
- 188 0089 08       		.byte	0x8
- 189 008a 04       		.byte	0x4
- 190 008b 6C010000 		.4byte	.LASF12
- 191 008f 02       		.uleb128 0x2
- 192 0090 01       		.byte	0x1
- 193 0091 08       		.byte	0x8
- 194 0092 5E010000 		.4byte	.LASF13
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 5
+ 135 0011 2E000000 		.4byte	.LASF19
+ 136 0015 4C000000 		.4byte	.LASF20
+ 137 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 138 001d 00000000 		.4byte	0
+ 139 0021 00000000 		.4byte	.Ldebug_line0
+ 140 0025 02       		.uleb128 0x2
+ 141 0026 01       		.byte	0x1
+ 142 0027 06       		.byte	0x6
+ 143 0028 80010000 		.4byte	.LASF0
+ 144 002c 02       		.uleb128 0x2
+ 145 002d 01       		.byte	0x1
+ 146 002e 08       		.byte	0x8
+ 147 002f 50010000 		.4byte	.LASF1
+ 148 0033 02       		.uleb128 0x2
+ 149 0034 02       		.byte	0x2
+ 150 0035 05       		.byte	0x5
+ 151 0036 A8010000 		.4byte	.LASF2
+ 152 003a 02       		.uleb128 0x2
+ 153 003b 02       		.byte	0x2
+ 154 003c 07       		.byte	0x7
+ 155 003d 0E000000 		.4byte	.LASF3
+ 156 0041 03       		.uleb128 0x3
+ 157 0042 98010000 		.4byte	.LASF9
+ 158 0046 02       		.byte	0x2
+ 159 0047 3F       		.byte	0x3f
+ 160 0048 4C000000 		.4byte	0x4c
+ 161 004c 02       		.uleb128 0x2
+ 162 004d 04       		.byte	0x4
+ 163 004e 05       		.byte	0x5
+ 164 004f 63010000 		.4byte	.LASF4
+ 165 0053 02       		.uleb128 0x2
+ 166 0054 04       		.byte	0x4
+ 167 0055 07       		.byte	0x7
+ 168 0056 3A000000 		.4byte	.LASF5
+ 169 005a 02       		.uleb128 0x2
+ 170 005b 08       		.byte	0x8
+ 171 005c 05       		.byte	0x5
+ 172 005d 00000000 		.4byte	.LASF6
+ 173 0061 02       		.uleb128 0x2
+ 174 0062 08       		.byte	0x8
+ 175 0063 07       		.byte	0x7
+ 176 0064 9F000000 		.4byte	.LASF7
+ 177 0068 04       		.uleb128 0x4
+ 178 0069 04       		.byte	0x4
+ 179 006a 05       		.byte	0x5
+ 180 006b 696E7400 		.ascii	"int\000"
+ 181 006f 02       		.uleb128 0x2
+ 182 0070 04       		.byte	0x4
+ 183 0071 07       		.byte	0x7
+ 184 0072 21000000 		.4byte	.LASF8
+ 185 0076 03       		.uleb128 0x3
+ 186 0077 B2010000 		.4byte	.LASF10
+ 187 007b 03       		.byte	0x3
+ 188 007c 2C       		.byte	0x2c
+ 189 007d 41000000 		.4byte	0x41
+ 190 0081 02       		.uleb128 0x2
+ 191 0082 04       		.byte	0x4
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 5
 
 
- 195 0096 02       		.uleb128 0x2
- 196 0097 08       		.byte	0x8
- 197 0098 04       		.byte	0x4
- 198 0099 8C010000 		.4byte	.LASF14
- 199 009d 02       		.uleb128 0x2
- 200 009e 04       		.byte	0x4
- 201 009f 07       		.byte	0x7
- 202 00a0 BA010000 		.4byte	.LASF15
- 203 00a4 05       		.uleb128 0x5
- 204 00a5 35000000 		.4byte	.LASF21
- 205 00a9 01       		.byte	0x1
- 206 00aa 05       		.byte	0x5
- 207 00ab 68000000 		.4byte	0x68
- 208 00af 00000000 		.4byte	.LFB63
- 209 00b3 74000000 		.4byte	.LFE63-.LFB63
- 210 00b7 01       		.uleb128 0x1
- 211 00b8 9C       		.byte	0x9c
- 212 00b9 06       		.uleb128 0x6
- 213 00ba 73010000 		.4byte	.LASF16
- 214 00be 04       		.byte	0x4
- 215 00bf 1207     		.2byte	0x712
- 216 00c1 C5000000 		.4byte	0xc5
- 217 00c5 07       		.uleb128 0x7
- 218 00c6 76000000 		.4byte	0x76
- 219 00ca 08       		.uleb128 0x8
- 220 00cb B6000000 		.4byte	.LASF17
- 221 00cf 01       		.byte	0x1
- 222 00d0 03       		.byte	0x3
- 223 00d1 DB000000 		.4byte	0xdb
- 224 00d5 05       		.uleb128 0x5
- 225 00d6 03       		.byte	0x3
- 226 00d7 00000000 		.4byte	force_value
- 227 00db 07       		.uleb128 0x7
- 228 00dc 68000000 		.4byte	0x68
- 229 00e0 00       		.byte	0
- 230              		.section	.debug_abbrev,"",%progbits
- 231              	.Ldebug_abbrev0:
- 232 0000 01       		.uleb128 0x1
- 233 0001 11       		.uleb128 0x11
- 234 0002 01       		.byte	0x1
- 235 0003 25       		.uleb128 0x25
- 236 0004 0E       		.uleb128 0xe
- 237 0005 13       		.uleb128 0x13
- 238 0006 0B       		.uleb128 0xb
- 239 0007 03       		.uleb128 0x3
- 240 0008 0E       		.uleb128 0xe
- 241 0009 1B       		.uleb128 0x1b
- 242 000a 0E       		.uleb128 0xe
- 243 000b 55       		.uleb128 0x55
- 244 000c 17       		.uleb128 0x17
- 245 000d 11       		.uleb128 0x11
- 246 000e 01       		.uleb128 0x1
- 247 000f 10       		.uleb128 0x10
- 248 0010 17       		.uleb128 0x17
- 249 0011 00       		.byte	0
- 250 0012 00       		.byte	0
- 251 0013 02       		.uleb128 0x2
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 6
+ 192 0083 04       		.byte	0x4
+ 193 0084 A2010000 		.4byte	.LASF11
+ 194 0088 02       		.uleb128 0x2
+ 195 0089 08       		.byte	0x8
+ 196 008a 04       		.byte	0x4
+ 197 008b 6C010000 		.4byte	.LASF12
+ 198 008f 02       		.uleb128 0x2
+ 199 0090 01       		.byte	0x1
+ 200 0091 08       		.byte	0x8
+ 201 0092 5E010000 		.4byte	.LASF13
+ 202 0096 02       		.uleb128 0x2
+ 203 0097 08       		.byte	0x8
+ 204 0098 04       		.byte	0x4
+ 205 0099 8C010000 		.4byte	.LASF14
+ 206 009d 02       		.uleb128 0x2
+ 207 009e 04       		.byte	0x4
+ 208 009f 07       		.byte	0x7
+ 209 00a0 BA010000 		.4byte	.LASF15
+ 210 00a4 05       		.uleb128 0x5
+ 211 00a5 35000000 		.4byte	.LASF21
+ 212 00a9 01       		.byte	0x1
+ 213 00aa 07       		.byte	0x7
+ 214 00ab 68000000 		.4byte	0x68
+ 215 00af 00000000 		.4byte	.LFB63
+ 216 00b3 80000000 		.4byte	.LFE63-.LFB63
+ 217 00b7 01       		.uleb128 0x1
+ 218 00b8 9C       		.byte	0x9c
+ 219 00b9 06       		.uleb128 0x6
+ 220 00ba 73010000 		.4byte	.LASF16
+ 221 00be 04       		.byte	0x4
+ 222 00bf 1207     		.2byte	0x712
+ 223 00c1 C5000000 		.4byte	0xc5
+ 224 00c5 07       		.uleb128 0x7
+ 225 00c6 76000000 		.4byte	0x76
+ 226 00ca 08       		.uleb128 0x8
+ 227 00cb B6000000 		.4byte	.LASF17
+ 228 00cf 01       		.byte	0x1
+ 229 00d0 03       		.byte	0x3
+ 230 00d1 DB000000 		.4byte	0xdb
+ 231 00d5 05       		.uleb128 0x5
+ 232 00d6 03       		.byte	0x3
+ 233 00d7 00000000 		.4byte	force_value
+ 234 00db 07       		.uleb128 0x7
+ 235 00dc 68000000 		.4byte	0x68
+ 236 00e0 00       		.byte	0
+ 237              		.section	.debug_abbrev,"",%progbits
+ 238              	.Ldebug_abbrev0:
+ 239 0000 01       		.uleb128 0x1
+ 240 0001 11       		.uleb128 0x11
+ 241 0002 01       		.byte	0x1
+ 242 0003 25       		.uleb128 0x25
+ 243 0004 0E       		.uleb128 0xe
+ 244 0005 13       		.uleb128 0x13
+ 245 0006 0B       		.uleb128 0xb
+ 246 0007 03       		.uleb128 0x3
+ 247 0008 0E       		.uleb128 0xe
+ 248 0009 1B       		.uleb128 0x1b
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 6
 
 
- 252 0014 24       		.uleb128 0x24
- 253 0015 00       		.byte	0
- 254 0016 0B       		.uleb128 0xb
- 255 0017 0B       		.uleb128 0xb
- 256 0018 3E       		.uleb128 0x3e
- 257 0019 0B       		.uleb128 0xb
- 258 001a 03       		.uleb128 0x3
- 259 001b 0E       		.uleb128 0xe
- 260 001c 00       		.byte	0
- 261 001d 00       		.byte	0
- 262 001e 03       		.uleb128 0x3
- 263 001f 16       		.uleb128 0x16
- 264 0020 00       		.byte	0
- 265 0021 03       		.uleb128 0x3
- 266 0022 0E       		.uleb128 0xe
- 267 0023 3A       		.uleb128 0x3a
- 268 0024 0B       		.uleb128 0xb
- 269 0025 3B       		.uleb128 0x3b
- 270 0026 0B       		.uleb128 0xb
- 271 0027 49       		.uleb128 0x49
- 272 0028 13       		.uleb128 0x13
- 273 0029 00       		.byte	0
- 274 002a 00       		.byte	0
- 275 002b 04       		.uleb128 0x4
- 276 002c 24       		.uleb128 0x24
- 277 002d 00       		.byte	0
- 278 002e 0B       		.uleb128 0xb
- 279 002f 0B       		.uleb128 0xb
- 280 0030 3E       		.uleb128 0x3e
- 281 0031 0B       		.uleb128 0xb
- 282 0032 03       		.uleb128 0x3
- 283 0033 08       		.uleb128 0x8
- 284 0034 00       		.byte	0
- 285 0035 00       		.byte	0
- 286 0036 05       		.uleb128 0x5
- 287 0037 2E       		.uleb128 0x2e
- 288 0038 00       		.byte	0
- 289 0039 3F       		.uleb128 0x3f
- 290 003a 19       		.uleb128 0x19
- 291 003b 03       		.uleb128 0x3
- 292 003c 0E       		.uleb128 0xe
- 293 003d 3A       		.uleb128 0x3a
- 294 003e 0B       		.uleb128 0xb
- 295 003f 3B       		.uleb128 0x3b
- 296 0040 0B       		.uleb128 0xb
- 297 0041 27       		.uleb128 0x27
- 298 0042 19       		.uleb128 0x19
- 299 0043 49       		.uleb128 0x49
- 300 0044 13       		.uleb128 0x13
- 301 0045 11       		.uleb128 0x11
- 302 0046 01       		.uleb128 0x1
- 303 0047 12       		.uleb128 0x12
- 304 0048 06       		.uleb128 0x6
- 305 0049 40       		.uleb128 0x40
- 306 004a 18       		.uleb128 0x18
- 307 004b 9642     		.uleb128 0x2116
- 308 004d 19       		.uleb128 0x19
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 7
+ 249 000a 0E       		.uleb128 0xe
+ 250 000b 55       		.uleb128 0x55
+ 251 000c 17       		.uleb128 0x17
+ 252 000d 11       		.uleb128 0x11
+ 253 000e 01       		.uleb128 0x1
+ 254 000f 10       		.uleb128 0x10
+ 255 0010 17       		.uleb128 0x17
+ 256 0011 00       		.byte	0
+ 257 0012 00       		.byte	0
+ 258 0013 02       		.uleb128 0x2
+ 259 0014 24       		.uleb128 0x24
+ 260 0015 00       		.byte	0
+ 261 0016 0B       		.uleb128 0xb
+ 262 0017 0B       		.uleb128 0xb
+ 263 0018 3E       		.uleb128 0x3e
+ 264 0019 0B       		.uleb128 0xb
+ 265 001a 03       		.uleb128 0x3
+ 266 001b 0E       		.uleb128 0xe
+ 267 001c 00       		.byte	0
+ 268 001d 00       		.byte	0
+ 269 001e 03       		.uleb128 0x3
+ 270 001f 16       		.uleb128 0x16
+ 271 0020 00       		.byte	0
+ 272 0021 03       		.uleb128 0x3
+ 273 0022 0E       		.uleb128 0xe
+ 274 0023 3A       		.uleb128 0x3a
+ 275 0024 0B       		.uleb128 0xb
+ 276 0025 3B       		.uleb128 0x3b
+ 277 0026 0B       		.uleb128 0xb
+ 278 0027 49       		.uleb128 0x49
+ 279 0028 13       		.uleb128 0x13
+ 280 0029 00       		.byte	0
+ 281 002a 00       		.byte	0
+ 282 002b 04       		.uleb128 0x4
+ 283 002c 24       		.uleb128 0x24
+ 284 002d 00       		.byte	0
+ 285 002e 0B       		.uleb128 0xb
+ 286 002f 0B       		.uleb128 0xb
+ 287 0030 3E       		.uleb128 0x3e
+ 288 0031 0B       		.uleb128 0xb
+ 289 0032 03       		.uleb128 0x3
+ 290 0033 08       		.uleb128 0x8
+ 291 0034 00       		.byte	0
+ 292 0035 00       		.byte	0
+ 293 0036 05       		.uleb128 0x5
+ 294 0037 2E       		.uleb128 0x2e
+ 295 0038 00       		.byte	0
+ 296 0039 3F       		.uleb128 0x3f
+ 297 003a 19       		.uleb128 0x19
+ 298 003b 03       		.uleb128 0x3
+ 299 003c 0E       		.uleb128 0xe
+ 300 003d 3A       		.uleb128 0x3a
+ 301 003e 0B       		.uleb128 0xb
+ 302 003f 3B       		.uleb128 0x3b
+ 303 0040 0B       		.uleb128 0xb
+ 304 0041 27       		.uleb128 0x27
+ 305 0042 19       		.uleb128 0x19
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 7
 
 
- 309 004e 00       		.byte	0
- 310 004f 00       		.byte	0
- 311 0050 06       		.uleb128 0x6
- 312 0051 34       		.uleb128 0x34
- 313 0052 00       		.byte	0
- 314 0053 03       		.uleb128 0x3
- 315 0054 0E       		.uleb128 0xe
- 316 0055 3A       		.uleb128 0x3a
- 317 0056 0B       		.uleb128 0xb
- 318 0057 3B       		.uleb128 0x3b
- 319 0058 05       		.uleb128 0x5
- 320 0059 49       		.uleb128 0x49
- 321 005a 13       		.uleb128 0x13
- 322 005b 3F       		.uleb128 0x3f
- 323 005c 19       		.uleb128 0x19
- 324 005d 3C       		.uleb128 0x3c
- 325 005e 19       		.uleb128 0x19
- 326 005f 00       		.byte	0
- 327 0060 00       		.byte	0
- 328 0061 07       		.uleb128 0x7
- 329 0062 35       		.uleb128 0x35
- 330 0063 00       		.byte	0
- 331 0064 49       		.uleb128 0x49
- 332 0065 13       		.uleb128 0x13
- 333 0066 00       		.byte	0
- 334 0067 00       		.byte	0
- 335 0068 08       		.uleb128 0x8
- 336 0069 34       		.uleb128 0x34
- 337 006a 00       		.byte	0
- 338 006b 03       		.uleb128 0x3
- 339 006c 0E       		.uleb128 0xe
- 340 006d 3A       		.uleb128 0x3a
- 341 006e 0B       		.uleb128 0xb
- 342 006f 3B       		.uleb128 0x3b
- 343 0070 0B       		.uleb128 0xb
- 344 0071 49       		.uleb128 0x49
- 345 0072 13       		.uleb128 0x13
- 346 0073 3F       		.uleb128 0x3f
- 347 0074 19       		.uleb128 0x19
- 348 0075 02       		.uleb128 0x2
- 349 0076 18       		.uleb128 0x18
- 350 0077 00       		.byte	0
- 351 0078 00       		.byte	0
- 352 0079 00       		.byte	0
- 353              		.section	.debug_aranges,"",%progbits
- 354 0000 1C000000 		.4byte	0x1c
- 355 0004 0200     		.2byte	0x2
- 356 0006 00000000 		.4byte	.Ldebug_info0
- 357 000a 04       		.byte	0x4
- 358 000b 00       		.byte	0
- 359 000c 0000     		.2byte	0
- 360 000e 0000     		.2byte	0
- 361 0010 00000000 		.4byte	.LFB63
- 362 0014 74000000 		.4byte	.LFE63-.LFB63
- 363 0018 00000000 		.4byte	0
- 364 001c 00000000 		.4byte	0
- 365              		.section	.debug_ranges,"",%progbits
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 8
+ 306 0043 49       		.uleb128 0x49
+ 307 0044 13       		.uleb128 0x13
+ 308 0045 11       		.uleb128 0x11
+ 309 0046 01       		.uleb128 0x1
+ 310 0047 12       		.uleb128 0x12
+ 311 0048 06       		.uleb128 0x6
+ 312 0049 40       		.uleb128 0x40
+ 313 004a 18       		.uleb128 0x18
+ 314 004b 9642     		.uleb128 0x2116
+ 315 004d 19       		.uleb128 0x19
+ 316 004e 00       		.byte	0
+ 317 004f 00       		.byte	0
+ 318 0050 06       		.uleb128 0x6
+ 319 0051 34       		.uleb128 0x34
+ 320 0052 00       		.byte	0
+ 321 0053 03       		.uleb128 0x3
+ 322 0054 0E       		.uleb128 0xe
+ 323 0055 3A       		.uleb128 0x3a
+ 324 0056 0B       		.uleb128 0xb
+ 325 0057 3B       		.uleb128 0x3b
+ 326 0058 05       		.uleb128 0x5
+ 327 0059 49       		.uleb128 0x49
+ 328 005a 13       		.uleb128 0x13
+ 329 005b 3F       		.uleb128 0x3f
+ 330 005c 19       		.uleb128 0x19
+ 331 005d 3C       		.uleb128 0x3c
+ 332 005e 19       		.uleb128 0x19
+ 333 005f 00       		.byte	0
+ 334 0060 00       		.byte	0
+ 335 0061 07       		.uleb128 0x7
+ 336 0062 35       		.uleb128 0x35
+ 337 0063 00       		.byte	0
+ 338 0064 49       		.uleb128 0x49
+ 339 0065 13       		.uleb128 0x13
+ 340 0066 00       		.byte	0
+ 341 0067 00       		.byte	0
+ 342 0068 08       		.uleb128 0x8
+ 343 0069 34       		.uleb128 0x34
+ 344 006a 00       		.byte	0
+ 345 006b 03       		.uleb128 0x3
+ 346 006c 0E       		.uleb128 0xe
+ 347 006d 3A       		.uleb128 0x3a
+ 348 006e 0B       		.uleb128 0xb
+ 349 006f 3B       		.uleb128 0x3b
+ 350 0070 0B       		.uleb128 0xb
+ 351 0071 49       		.uleb128 0x49
+ 352 0072 13       		.uleb128 0x13
+ 353 0073 3F       		.uleb128 0x3f
+ 354 0074 19       		.uleb128 0x19
+ 355 0075 02       		.uleb128 0x2
+ 356 0076 18       		.uleb128 0x18
+ 357 0077 00       		.byte	0
+ 358 0078 00       		.byte	0
+ 359 0079 00       		.byte	0
+ 360              		.section	.debug_aranges,"",%progbits
+ 361 0000 1C000000 		.4byte	0x1c
+ 362 0004 0200     		.2byte	0x2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 8
 
 
- 366              	.Ldebug_ranges0:
- 367 0000 00000000 		.4byte	.LFB63
- 368 0004 74000000 		.4byte	.LFE63
- 369 0008 00000000 		.4byte	0
- 370 000c 00000000 		.4byte	0
- 371              		.section	.debug_line,"",%progbits
- 372              	.Ldebug_line0:
- 373 0000 79010000 		.section	.debug_str,"MS",%progbits,1
- 373      02003F01 
- 373      00000201 
- 373      FB0E0D00 
- 373      01010101 
- 374              	.LASF6:
- 375 0000 6C6F6E67 		.ascii	"long long int\000"
- 375      206C6F6E 
- 375      6720696E 
- 375      7400
- 376              	.LASF3:
- 377 000e 73686F72 		.ascii	"short unsigned int\000"
- 377      7420756E 
- 377      7369676E 
- 377      65642069 
- 377      6E7400
- 378              	.LASF8:
- 379 0021 756E7369 		.ascii	"unsigned int\000"
- 379      676E6564 
- 379      20696E74 
- 379      00
- 380              	.LASF19:
- 381 002e 6D61696E 		.ascii	"main.c\000"
- 381      2E6300
- 382              	.LASF21:
- 383 0035 6D61696E 		.ascii	"main\000"
- 383      00
- 384              	.LASF5:
- 385 003a 6C6F6E67 		.ascii	"long unsigned int\000"
- 385      20756E73 
- 385      69676E65 
- 385      6420696E 
- 385      7400
- 386              	.LASF20:
- 387 004c 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
- 387      73657273 
- 387      5C706561 
- 387      726C7374 
- 387      6C5C446F 
- 388 007a 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
- 388      73747265 
- 388      616D6572 
- 388      5C666132 
- 388      305F6932 
- 389              	.LASF7:
- 390 009f 6C6F6E67 		.ascii	"long long unsigned int\000"
- 390      206C6F6E 
- 390      6720756E 
- 390      7369676E 
- 390      65642069 
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 9
+ 363 0006 00000000 		.4byte	.Ldebug_info0
+ 364 000a 04       		.byte	0x4
+ 365 000b 00       		.byte	0
+ 366 000c 0000     		.2byte	0
+ 367 000e 0000     		.2byte	0
+ 368 0010 00000000 		.4byte	.LFB63
+ 369 0014 80000000 		.4byte	.LFE63-.LFB63
+ 370 0018 00000000 		.4byte	0
+ 371 001c 00000000 		.4byte	0
+ 372              		.section	.debug_ranges,"",%progbits
+ 373              	.Ldebug_ranges0:
+ 374 0000 00000000 		.4byte	.LFB63
+ 375 0004 80000000 		.4byte	.LFE63
+ 376 0008 00000000 		.4byte	0
+ 377 000c 00000000 		.4byte	0
+ 378              		.section	.debug_line,"",%progbits
+ 379              	.Ldebug_line0:
+ 380 0000 7C010000 		.section	.debug_str,"MS",%progbits,1
+ 380      02003F01 
+ 380      00000201 
+ 380      FB0E0D00 
+ 380      01010101 
+ 381              	.LASF6:
+ 382 0000 6C6F6E67 		.ascii	"long long int\000"
+ 382      206C6F6E 
+ 382      6720696E 
+ 382      7400
+ 383              	.LASF3:
+ 384 000e 73686F72 		.ascii	"short unsigned int\000"
+ 384      7420756E 
+ 384      7369676E 
+ 384      65642069 
+ 384      6E7400
+ 385              	.LASF8:
+ 386 0021 756E7369 		.ascii	"unsigned int\000"
+ 386      676E6564 
+ 386      20696E74 
+ 386      00
+ 387              	.LASF19:
+ 388 002e 6D61696E 		.ascii	"main.c\000"
+ 388      2E6300
+ 389              	.LASF21:
+ 390 0035 6D61696E 		.ascii	"main\000"
+ 390      00
+ 391              	.LASF5:
+ 392 003a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 392      20756E73 
+ 392      69676E65 
+ 392      6420696E 
+ 392      7400
+ 393              	.LASF20:
+ 394 004c 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
+ 394      73657273 
+ 394      5C706561 
+ 394      726C7374 
+ 394      6C5C446F 
+ 395 007a 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 9
 
 
- 391              	.LASF17:
- 392 00b6 666F7263 		.ascii	"force_value\000"
- 392      655F7661 
- 392      6C756500 
- 393              	.LASF18:
- 394 00c2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 394      43313120 
- 394      352E342E 
- 394      31203230 
- 394      31363036 
- 395 00f5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 395      20726576 
- 395      6973696F 
- 395      6E203233 
- 395      37373135 
- 396 0128 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 396      66756E63 
- 396      74696F6E 
- 396      2D736563 
- 396      74696F6E 
- 397              	.LASF1:
- 398 0150 756E7369 		.ascii	"unsigned char\000"
- 398      676E6564 
- 398      20636861 
- 398      7200
- 399              	.LASF13:
- 400 015e 63686172 		.ascii	"char\000"
- 400      00
- 401              	.LASF4:
- 402 0163 6C6F6E67 		.ascii	"long int\000"
- 402      20696E74 
- 402      00
- 403              	.LASF12:
- 404 016c 646F7562 		.ascii	"double\000"
- 404      6C6500
- 405              	.LASF16:
- 406 0173 49544D5F 		.ascii	"ITM_RxBuffer\000"
- 406      52784275 
- 406      66666572 
- 406      00
- 407              	.LASF0:
- 408 0180 7369676E 		.ascii	"signed char\000"
- 408      65642063 
- 408      68617200 
- 409              	.LASF14:
- 410 018c 6C6F6E67 		.ascii	"long double\000"
- 410      20646F75 
- 410      626C6500 
- 411              	.LASF9:
- 412 0198 5F5F696E 		.ascii	"__int32_t\000"
- 412      7433325F 
- 412      7400
- 413              	.LASF11:
- 414 01a2 666C6F61 		.ascii	"float\000"
- 414      7400
- 415              	.LASF2:
- 416 01a8 73686F72 		.ascii	"short int\000"
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccTmSfKx.s 			page 10
+ 395      73747265 
+ 395      616D6572 
+ 395      5C666132 
+ 395      305F6932 
+ 396              	.LASF7:
+ 397 009f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 397      206C6F6E 
+ 397      6720756E 
+ 397      7369676E 
+ 397      65642069 
+ 398              	.LASF17:
+ 399 00b6 666F7263 		.ascii	"force_value\000"
+ 399      655F7661 
+ 399      6C756500 
+ 400              	.LASF18:
+ 401 00c2 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 401      43313120 
+ 401      352E342E 
+ 401      31203230 
+ 401      31363036 
+ 402 00f5 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 402      20726576 
+ 402      6973696F 
+ 402      6E203233 
+ 402      37373135 
+ 403 0128 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 403      66756E63 
+ 403      74696F6E 
+ 403      2D736563 
+ 403      74696F6E 
+ 404              	.LASF1:
+ 405 0150 756E7369 		.ascii	"unsigned char\000"
+ 405      676E6564 
+ 405      20636861 
+ 405      7200
+ 406              	.LASF13:
+ 407 015e 63686172 		.ascii	"char\000"
+ 407      00
+ 408              	.LASF4:
+ 409 0163 6C6F6E67 		.ascii	"long int\000"
+ 409      20696E74 
+ 409      00
+ 410              	.LASF12:
+ 411 016c 646F7562 		.ascii	"double\000"
+ 411      6C6500
+ 412              	.LASF16:
+ 413 0173 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 413      52784275 
+ 413      66666572 
+ 413      00
+ 414              	.LASF0:
+ 415 0180 7369676E 		.ascii	"signed char\000"
+ 415      65642063 
+ 415      68617200 
+ 416              	.LASF14:
+ 417 018c 6C6F6E67 		.ascii	"long double\000"
+ 417      20646F75 
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccGXvgn0.s 			page 10
 
 
- 416      7420696E 
- 416      7400
- 417              	.LASF10:
- 418 01b2 696E7433 		.ascii	"int32_t\000"
- 418      325F7400 
- 419              	.LASF15:
- 420 01ba 73697A65 		.ascii	"sizetype\000"
- 420      74797065 
- 420      00
- 421              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 417      626C6500 
+ 418              	.LASF9:
+ 419 0198 5F5F696E 		.ascii	"__int32_t\000"
+ 419      7433325F 
+ 419      7400
+ 420              	.LASF11:
+ 421 01a2 666C6F61 		.ascii	"float\000"
+ 421      7400
+ 422              	.LASF2:
+ 423 01a8 73686F72 		.ascii	"short int\000"
+ 423      7420696E 
+ 423      7400
+ 424              	.LASF10:
+ 425 01b2 696E7433 		.ascii	"int32_t\000"
+ 425      325F7400 
+ 426              	.LASF15:
+ 427 01ba 73697A65 		.ascii	"sizetype\000"
+ 427      74797065 
+ 427      00
+ 428              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

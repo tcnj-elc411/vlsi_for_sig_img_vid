@@ -2626,3 +2626,4 @@ dismissDialog("Program Device"); // bC (cp)
 dismissDialog("Program Device"); // bx (cp)
 // Elapsed time: 273 seconds
 selectCodeEditor("parallel_in.v", 101, 320); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,626 MB. GUI used memory: 80 MB. Current time: 7/28/20, 11:39:55 AM EDT

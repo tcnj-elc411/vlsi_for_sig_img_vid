@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
   22:Generated_Source\PSoC5/I2S.c **** 
   23:Generated_Source\PSoC5/I2S.c **** 
   24:Generated_Source\PSoC5/I2S.c **** /*******************************************************************************
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 2
 
 
   25:Generated_Source\PSoC5/I2S.c **** * Function Name: I2S_Enable
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
   63 0026 074A     		ldr	r2, .L2+4
   64 0028 064B     		ldr	r3, .L2+4
   65 002a 1B78     		ldrb	r3, [r3]
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 3
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 3
 
 
   66 002c DBB2     		uxtb	r3, r3
@@ -138,7 +138,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
   79 003e 00BF     		.align	2
   80              	.L2:
   81 0040 93640040 		.word	1073767571
-  82 0044 72640040 		.word	1073767538
+  82 0044 71640040 		.word	1073767537
   83              		.cfi_endproc
   84              	.LFE0:
   85              		.size	I2S_Enable, .-I2S_Enable
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
   99 0000 80B4     		push	{r7}
  100              		.cfi_def_cfa_offset 4
  101              		.cfi_offset 7, -4
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 4
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 4
 
 
  102 0002 00AF     		add	r7, sp, #0
@@ -196,15 +196,15 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
   81:Generated_Source\PSoC5/I2S.c ****     #if (I2S_TX_DIRECTION_ENABLE)
   82:Generated_Source\PSoC5/I2S.c ****         I2S_SET_TX_INT_MASK(CH0, I2S_TX_INT_SOURCE);
  104              		.loc 1 82 0
- 105 0004 094A     		ldr	r2, .L5
- 106 0006 094B     		ldr	r3, .L5
+ 105 0004 114A     		ldr	r2, .L5
+ 106 0006 114B     		ldr	r3, .L5
  107 0008 1B78     		ldrb	r3, [r3]
  108 000a DBB2     		uxtb	r3, r3
  109 000c 23F00703 		bic	r3, r3, #7
  110 0010 DBB2     		uxtb	r3, r3
  111 0012 1370     		strb	r3, [r2]
- 112 0014 054A     		ldr	r2, .L5
- 113 0016 054B     		ldr	r3, .L5
+ 112 0014 0D4A     		ldr	r2, .L5
+ 113 0016 0D4B     		ldr	r3, .L5
  114 0018 1B78     		ldrb	r3, [r3]
  115 001a DBB2     		uxtb	r3, r3
  116 001c 43F00203 		orr	r3, r3, #2
@@ -227,6 +227,24 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
   97:Generated_Source\PSoC5/I2S.c ****     /* Initialize Rx interrupt source and clipping thresholds selected in customizer */
   98:Generated_Source\PSoC5/I2S.c ****     #if (I2S_RX_DIRECTION_ENABLE)
   99:Generated_Source\PSoC5/I2S.c ****         I2S_SET_RX_INT_MASK(CH0, I2S_RX_INT_SOURCE);
+ 119              		.loc 1 99 0
+ 120 0024 0A4A     		ldr	r2, .L5+4
+ 121 0026 0A4B     		ldr	r3, .L5+4
+ 122 0028 1B78     		ldrb	r3, [r3]
+ 123 002a DBB2     		uxtb	r3, r3
+ 124 002c 23F00703 		bic	r3, r3, #7
+ 125 0030 DBB2     		uxtb	r3, r3
+ 126 0032 1370     		strb	r3, [r2]
+ 127 0034 064A     		ldr	r2, .L5+4
+ 128 0036 064B     		ldr	r3, .L5+4
+ 129 0038 1B78     		ldrb	r3, [r3]
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 5
+
+
+ 130 003a DBB2     		uxtb	r3, r3
+ 131 003c 43F00203 		orr	r3, r3, #2
+ 132 0040 DBB2     		uxtb	r3, r3
+ 133 0042 1370     		strb	r3, [r2]
  100:Generated_Source\PSoC5/I2S.c ****         #if (I2S_CLIP_DETECT_ENABLE)
  101:Generated_Source\PSoC5/I2S.c ****             I2S_SET_POS_THRESHOLD(CH0, I2S_posThresholds[I2S_STEREO_0]);
  102:Generated_Source\PSoC5/I2S.c ****             I2S_SET_NEG_THRESHOLD(CH0, I2S_negThresholds[I2S_STEREO_0]);
@@ -238,9 +256,6 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  108:Generated_Source\PSoC5/I2S.c ****                 I2S_SET_NEG_THRESHOLD(CH1, I2S_negThresholds[I2S_STEREO_1]);
  109:Generated_Source\PSoC5/I2S.c ****             #endif /* I2S_CLIP_DETECT_ENABLE */
  110:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STEREO_1_PRESENT */
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 5
-
-
  111:Generated_Source\PSoC5/I2S.c ****         #if (I2S_RX_STEREO_2_PRESENT)
  112:Generated_Source\PSoC5/I2S.c ****             I2S_SET_RX_INT_MASK(CH2, I2S_RX_INT_SOURCE);
  113:Generated_Source\PSoC5/I2S.c ****             #if (I2S_CLIP_DETECT_ENABLE)
@@ -264,30 +279,34 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  131:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STEREO_4_PRESENT */
  132:Generated_Source\PSoC5/I2S.c ****     #endif /* (I2S_RX_DIRECTION_ENABLE) */
  133:Generated_Source\PSoC5/I2S.c **** }
- 119              		.loc 1 133 0
- 120 0024 00BF     		nop
- 121 0026 BD46     		mov	sp, r7
- 122              		.cfi_def_cfa_register 13
- 123              		@ sp needed
- 124 0028 80BC     		pop	{r7}
- 125              		.cfi_restore 7
- 126              		.cfi_def_cfa_offset 0
- 127 002a 7047     		bx	lr
- 128              	.L6:
- 129              		.align	2
- 130              	.L5:
- 131 002c 82640040 		.word	1073767554
- 132              		.cfi_endproc
- 133              	.LFE1:
- 134              		.size	I2S_Init, .-I2S_Init
- 135              		.section	.text.I2S_Start,"ax",%progbits
- 136              		.align	2
- 137              		.global	I2S_Start
- 138              		.thumb
- 139              		.thumb_func
- 140              		.type	I2S_Start, %function
- 141              	I2S_Start:
- 142              	.LFB2:
+ 134              		.loc 1 133 0
+ 135 0044 00BF     		nop
+ 136 0046 BD46     		mov	sp, r7
+ 137              		.cfi_def_cfa_register 13
+ 138              		@ sp needed
+ 139 0048 80BC     		pop	{r7}
+ 140              		.cfi_restore 7
+ 141              		.cfi_def_cfa_offset 0
+ 142 004a 7047     		bx	lr
+ 143              	.L6:
+ 144              		.align	2
+ 145              	.L5:
+ 146 004c 80640040 		.word	1073767552
+ 147 0050 81640040 		.word	1073767553
+ 148              		.cfi_endproc
+ 149              	.LFE1:
+ 150              		.size	I2S_Init, .-I2S_Init
+ 151              		.section	.text.I2S_Start,"ax",%progbits
+ 152              		.align	2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 6
+
+
+ 153              		.global	I2S_Start
+ 154              		.thumb
+ 155              		.thumb_func
+ 156              		.type	I2S_Start, %function
+ 157              	I2S_Start:
+ 158              	.LFB2:
  134:Generated_Source\PSoC5/I2S.c **** 
  135:Generated_Source\PSoC5/I2S.c **** 
  136:Generated_Source\PSoC5/I2S.c **** /*******************************************************************************
@@ -298,9 +317,6 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  141:Generated_Source\PSoC5/I2S.c **** *  Starts the I2S interface. Starts the generation of the sck and ws outputs.
  142:Generated_Source\PSoC5/I2S.c **** *  The Tx and Rx directions remain disabled.
  143:Generated_Source\PSoC5/I2S.c **** *
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 6
-
-
  144:Generated_Source\PSoC5/I2S.c **** * Parameters:
  145:Generated_Source\PSoC5/I2S.c **** *  None.
  146:Generated_Source\PSoC5/I2S.c **** *
@@ -317,59 +333,59 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  157:Generated_Source\PSoC5/I2S.c **** *******************************************************************************/
  158:Generated_Source\PSoC5/I2S.c **** void I2S_Start(void) 
  159:Generated_Source\PSoC5/I2S.c **** {
- 143              		.loc 1 159 0
- 144              		.cfi_startproc
- 145              		@ args = 0, pretend = 0, frame = 0
- 146              		@ frame_needed = 1, uses_anonymous_args = 0
- 147 0000 80B5     		push	{r7, lr}
- 148              		.cfi_def_cfa_offset 8
- 149              		.cfi_offset 7, -8
- 150              		.cfi_offset 14, -4
- 151 0002 00AF     		add	r7, sp, #0
- 152              		.cfi_def_cfa_register 7
+ 159              		.loc 1 159 0
+ 160              		.cfi_startproc
+ 161              		@ args = 0, pretend = 0, frame = 0
+ 162              		@ frame_needed = 1, uses_anonymous_args = 0
+ 163 0000 80B5     		push	{r7, lr}
+ 164              		.cfi_def_cfa_offset 8
+ 165              		.cfi_offset 7, -8
+ 166              		.cfi_offset 14, -4
+ 167 0002 00AF     		add	r7, sp, #0
+ 168              		.cfi_def_cfa_register 7
  160:Generated_Source\PSoC5/I2S.c ****     if(0u == I2S_initVar)
- 153              		.loc 1 160 0
- 154 0004 064B     		ldr	r3, .L9
- 155 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
- 156 0008 002B     		cmp	r3, #0
- 157 000a 04D1     		bne	.L8
+ 169              		.loc 1 160 0
+ 170 0004 064B     		ldr	r3, .L9
+ 171 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 172 0008 002B     		cmp	r3, #0
+ 173 000a 04D1     		bne	.L8
  161:Generated_Source\PSoC5/I2S.c ****     {
  162:Generated_Source\PSoC5/I2S.c ****         I2S_Init();
- 158              		.loc 1 162 0
- 159 000c FFF7FEFF 		bl	I2S_Init
+ 174              		.loc 1 162 0
+ 175 000c FFF7FEFF 		bl	I2S_Init
  163:Generated_Source\PSoC5/I2S.c ****         I2S_initVar = 1u;
- 160              		.loc 1 163 0
- 161 0010 034B     		ldr	r3, .L9
- 162 0012 0122     		movs	r2, #1
- 163 0014 1A70     		strb	r2, [r3]
- 164              	.L8:
+ 176              		.loc 1 163 0
+ 177 0010 034B     		ldr	r3, .L9
+ 178 0012 0122     		movs	r2, #1
+ 179 0014 1A70     		strb	r2, [r3]
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 7
+
+
+ 180              	.L8:
  164:Generated_Source\PSoC5/I2S.c ****     }
  165:Generated_Source\PSoC5/I2S.c **** 
  166:Generated_Source\PSoC5/I2S.c ****     I2S_Enable();
- 165              		.loc 1 166 0
- 166 0016 FFF7FEFF 		bl	I2S_Enable
+ 181              		.loc 1 166 0
+ 182 0016 FFF7FEFF 		bl	I2S_Enable
  167:Generated_Source\PSoC5/I2S.c **** }
- 167              		.loc 1 167 0
- 168 001a 00BF     		nop
- 169 001c 80BD     		pop	{r7, pc}
- 170              	.L10:
- 171 001e 00BF     		.align	2
- 172              	.L9:
- 173 0020 00000000 		.word	I2S_initVar
- 174              		.cfi_endproc
- 175              	.LFE2:
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 7
-
-
- 176              		.size	I2S_Start, .-I2S_Start
- 177              		.section	.text.I2S_Stop,"ax",%progbits
- 178              		.align	2
- 179              		.global	I2S_Stop
- 180              		.thumb
- 181              		.thumb_func
- 182              		.type	I2S_Stop, %function
- 183              	I2S_Stop:
- 184              	.LFB3:
+ 183              		.loc 1 167 0
+ 184 001a 00BF     		nop
+ 185 001c 80BD     		pop	{r7, pc}
+ 186              	.L10:
+ 187 001e 00BF     		.align	2
+ 188              	.L9:
+ 189 0020 00000000 		.word	I2S_initVar
+ 190              		.cfi_endproc
+ 191              	.LFE2:
+ 192              		.size	I2S_Start, .-I2S_Start
+ 193              		.section	.text.I2S_Stop,"ax",%progbits
+ 194              		.align	2
+ 195              		.global	I2S_Stop
+ 196              		.thumb
+ 197              		.thumb_func
+ 198              		.type	I2S_Stop, %function
+ 199              	I2S_Stop:
+ 200              	.LFB3:
  168:Generated_Source\PSoC5/I2S.c **** 
  169:Generated_Source\PSoC5/I2S.c **** 
  170:Generated_Source\PSoC5/I2S.c **** /*******************************************************************************
@@ -389,102 +405,106 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  184:Generated_Source\PSoC5/I2S.c **** *******************************************************************************/
  185:Generated_Source\PSoC5/I2S.c **** void I2S_Stop(void) 
  186:Generated_Source\PSoC5/I2S.c **** {
- 185              		.loc 1 186 0
- 186              		.cfi_startproc
- 187              		@ args = 0, pretend = 0, frame = 8
- 188              		@ frame_needed = 1, uses_anonymous_args = 0
- 189 0000 80B5     		push	{r7, lr}
- 190              		.cfi_def_cfa_offset 8
- 191              		.cfi_offset 7, -8
- 192              		.cfi_offset 14, -4
- 193 0002 82B0     		sub	sp, sp, #8
- 194              		.cfi_def_cfa_offset 16
- 195 0004 00AF     		add	r7, sp, #0
- 196              		.cfi_def_cfa_register 7
+ 201              		.loc 1 186 0
+ 202              		.cfi_startproc
+ 203              		@ args = 0, pretend = 0, frame = 8
+ 204              		@ frame_needed = 1, uses_anonymous_args = 0
+ 205 0000 80B5     		push	{r7, lr}
+ 206              		.cfi_def_cfa_offset 8
+ 207              		.cfi_offset 7, -8
+ 208              		.cfi_offset 14, -4
+ 209 0002 82B0     		sub	sp, sp, #8
+ 210              		.cfi_def_cfa_offset 16
+ 211 0004 00AF     		add	r7, sp, #0
+ 212              		.cfi_def_cfa_register 7
  187:Generated_Source\PSoC5/I2S.c ****     uint8 enableInterrupts;
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 8
+
+
  188:Generated_Source\PSoC5/I2S.c **** 
  189:Generated_Source\PSoC5/I2S.c ****     I2S_CONTROL_REG &= (uint8)~I2S_EN;
- 197              		.loc 1 189 0
- 198 0006 114A     		ldr	r2, .L12
- 199 0008 104B     		ldr	r3, .L12
- 200 000a 1B78     		ldrb	r3, [r3]
- 201 000c DBB2     		uxtb	r3, r3
- 202 000e 23F00403 		bic	r3, r3, #4
- 203 0012 DBB2     		uxtb	r3, r3
- 204 0014 1370     		strb	r3, [r2]
+ 213              		.loc 1 189 0
+ 214 0006 134A     		ldr	r2, .L12
+ 215 0008 124B     		ldr	r3, .L12
+ 216 000a 1B78     		ldrb	r3, [r3]
+ 217 000c DBB2     		uxtb	r3, r3
+ 218 000e 23F00403 		bic	r3, r3, #4
+ 219 0012 DBB2     		uxtb	r3, r3
+ 220 0014 1370     		strb	r3, [r2]
  190:Generated_Source\PSoC5/I2S.c **** 
  191:Generated_Source\PSoC5/I2S.c ****     enableInterrupts = CyEnterCriticalSection();
- 205              		.loc 1 191 0
- 206 0016 FFF7FEFF 		bl	CyEnterCriticalSection
- 207 001a 0346     		mov	r3, r0
- 208 001c FB71     		strb	r3, [r7, #7]
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 8
-
-
+ 221              		.loc 1 191 0
+ 222 0016 FFF7FEFF 		bl	CyEnterCriticalSection
+ 223 001a 0346     		mov	r3, r0
+ 224 001c FB71     		strb	r3, [r7, #7]
  192:Generated_Source\PSoC5/I2S.c ****     I2S_AUX_CONTROL_REG &= (uint8)~I2S_CNT_START;
- 209              		.loc 1 192 0
- 210 001e 0C4A     		ldr	r2, .L12+4
- 211 0020 0B4B     		ldr	r3, .L12+4
- 212 0022 1B78     		ldrb	r3, [r3]
- 213 0024 DBB2     		uxtb	r3, r3
- 214 0026 23F02003 		bic	r3, r3, #32
- 215 002a DBB2     		uxtb	r3, r3
- 216 002c 1370     		strb	r3, [r2]
+ 225              		.loc 1 192 0
+ 226 001e 0E4A     		ldr	r2, .L12+4
+ 227 0020 0D4B     		ldr	r3, .L12+4
+ 228 0022 1B78     		ldrb	r3, [r3]
+ 229 0024 DBB2     		uxtb	r3, r3
+ 230 0026 23F02003 		bic	r3, r3, #32
+ 231 002a DBB2     		uxtb	r3, r3
+ 232 002c 1370     		strb	r3, [r2]
  193:Generated_Source\PSoC5/I2S.c ****     CyExitCriticalSection(enableInterrupts);
- 217              		.loc 1 193 0
- 218 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 219 0030 1846     		mov	r0, r3
- 220 0032 FFF7FEFF 		bl	CyExitCriticalSection
+ 233              		.loc 1 193 0
+ 234 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 235 0030 1846     		mov	r0, r3
+ 236 0032 FFF7FEFF 		bl	CyExitCriticalSection
  194:Generated_Source\PSoC5/I2S.c **** 
  195:Generated_Source\PSoC5/I2S.c ****     /* Clear counter value to force reload when component is enabled */
  196:Generated_Source\PSoC5/I2S.c ****     I2S_CNT_COUNT_REG = 0u;
- 221              		.loc 1 196 0
- 222 0036 074B     		ldr	r3, .L12+8
- 223 0038 0022     		movs	r2, #0
- 224 003a 1A70     		strb	r2, [r3]
+ 237              		.loc 1 196 0
+ 238 0036 094B     		ldr	r3, .L12+8
+ 239 0038 0022     		movs	r2, #0
+ 240 003a 1A70     		strb	r2, [r3]
  197:Generated_Source\PSoC5/I2S.c **** 
  198:Generated_Source\PSoC5/I2S.c ****     #if (I2S_TX_DIRECTION_ENABLE)
  199:Generated_Source\PSoC5/I2S.c ****         I2S_DisableTx();
- 225              		.loc 1 199 0
- 226 003c FFF7FEFF 		bl	I2S_DisableTx
+ 241              		.loc 1 199 0
+ 242 003c FFF7FEFF 		bl	I2S_DisableTx
  200:Generated_Source\PSoC5/I2S.c ****         I2S_ClearTxFIFO();
- 227              		.loc 1 200 0
- 228 0040 FFF7FEFF 		bl	I2S_ClearTxFIFO
+ 243              		.loc 1 200 0
+ 244 0040 FFF7FEFF 		bl	I2S_ClearTxFIFO
  201:Generated_Source\PSoC5/I2S.c ****     #endif /* (I2S_TX_DIRECTION_ENABLE) */
  202:Generated_Source\PSoC5/I2S.c ****     
  203:Generated_Source\PSoC5/I2S.c ****     #if (I2S_RX_DIRECTION_ENABLE)
  204:Generated_Source\PSoC5/I2S.c ****         I2S_DisableRx();
+ 245              		.loc 1 204 0
+ 246 0044 FFF7FEFF 		bl	I2S_DisableRx
  205:Generated_Source\PSoC5/I2S.c ****         I2S_ClearRxFIFO();
+ 247              		.loc 1 205 0
+ 248 0048 FFF7FEFF 		bl	I2S_ClearRxFIFO
  206:Generated_Source\PSoC5/I2S.c ****     #endif /* (I2S_RX_DIRECTION_ENABLE) */
  207:Generated_Source\PSoC5/I2S.c **** }
- 229              		.loc 1 207 0
- 230 0044 00BF     		nop
- 231 0046 0837     		adds	r7, r7, #8
- 232              		.cfi_def_cfa_offset 8
- 233 0048 BD46     		mov	sp, r7
- 234              		.cfi_def_cfa_register 13
- 235              		@ sp needed
- 236 004a 80BD     		pop	{r7, pc}
- 237              	.L13:
- 238              		.align	2
- 239              	.L12:
- 240 004c 72640040 		.word	1073767538
- 241 0050 93640040 		.word	1073767571
- 242 0054 73640040 		.word	1073767539
- 243              		.cfi_endproc
- 244              	.LFE3:
- 245              		.size	I2S_Stop, .-I2S_Stop
- 246              		.section	.text.I2S_EnableTx,"ax",%progbits
- 247              		.align	2
- 248              		.global	I2S_EnableTx
- 249              		.thumb
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 9
+ 249              		.loc 1 207 0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 9
 
 
- 250              		.thumb_func
- 251              		.type	I2S_EnableTx, %function
- 252              	I2S_EnableTx:
- 253              	.LFB4:
+ 250 004c 00BF     		nop
+ 251 004e 0837     		adds	r7, r7, #8
+ 252              		.cfi_def_cfa_offset 8
+ 253 0050 BD46     		mov	sp, r7
+ 254              		.cfi_def_cfa_register 13
+ 255              		@ sp needed
+ 256 0052 80BD     		pop	{r7, pc}
+ 257              	.L13:
+ 258              		.align	2
+ 259              	.L12:
+ 260 0054 71640040 		.word	1073767537
+ 261 0058 93640040 		.word	1073767571
+ 262 005c 73640040 		.word	1073767539
+ 263              		.cfi_endproc
+ 264              	.LFE3:
+ 265              		.size	I2S_Stop, .-I2S_Stop
+ 266              		.section	.text.I2S_EnableTx,"ax",%progbits
+ 267              		.align	2
+ 268              		.global	I2S_EnableTx
+ 269              		.thumb
+ 270              		.thumb_func
+ 271              		.type	I2S_EnableTx, %function
+ 272              	I2S_EnableTx:
+ 273              	.LFB4:
  208:Generated_Source\PSoC5/I2S.c **** 
  209:Generated_Source\PSoC5/I2S.c **** #if (I2S_DYNAMIC_BIT_RESOLUTION)
  210:Generated_Source\PSoC5/I2S.c ****     /*******************************************************************************
@@ -518,6 +538,9 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  238:Generated_Source\PSoC5/I2S.c ****         /* The component must be stopped prior calling this API. Therefore
  239:Generated_Source\PSoC5/I2S.c ****         * all the control bits except the bits modified are zeros.
  240:Generated_Source\PSoC5/I2S.c ****         */
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 10
+
+
  241:Generated_Source\PSoC5/I2S.c ****         switch(dataBits)
  242:Generated_Source\PSoC5/I2S.c ****         {
  243:Generated_Source\PSoC5/I2S.c ****         case I2S_8BIT_DATA:
@@ -538,9 +561,6 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  258:Generated_Source\PSoC5/I2S.c **** 
  259:Generated_Source\PSoC5/I2S.c ****         return (status);
  260:Generated_Source\PSoC5/I2S.c ****     }
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 10
-
-
  261:Generated_Source\PSoC5/I2S.c **** 
  262:Generated_Source\PSoC5/I2S.c **** #endif /* I2S_DYNAMIC_BIT_RESOLUTION */
  263:Generated_Source\PSoC5/I2S.c **** 
@@ -562,34 +582,37 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  279:Generated_Source\PSoC5/I2S.c ****     *******************************************************************************/
  280:Generated_Source\PSoC5/I2S.c ****     void I2S_EnableTx(void) 
  281:Generated_Source\PSoC5/I2S.c ****     {
- 254              		.loc 1 281 0
- 255              		.cfi_startproc
- 256              		@ args = 0, pretend = 0, frame = 8
- 257              		@ frame_needed = 1, uses_anonymous_args = 0
- 258 0000 80B5     		push	{r7, lr}
- 259              		.cfi_def_cfa_offset 8
- 260              		.cfi_offset 7, -8
- 261              		.cfi_offset 14, -4
- 262 0002 82B0     		sub	sp, sp, #8
- 263              		.cfi_def_cfa_offset 16
- 264 0004 00AF     		add	r7, sp, #0
- 265              		.cfi_def_cfa_register 7
+ 274              		.loc 1 281 0
+ 275              		.cfi_startproc
+ 276              		@ args = 0, pretend = 0, frame = 8
+ 277              		@ frame_needed = 1, uses_anonymous_args = 0
+ 278 0000 80B5     		push	{r7, lr}
+ 279              		.cfi_def_cfa_offset 8
+ 280              		.cfi_offset 7, -8
+ 281              		.cfi_offset 14, -4
+ 282 0002 82B0     		sub	sp, sp, #8
+ 283              		.cfi_def_cfa_offset 16
+ 284 0004 00AF     		add	r7, sp, #0
+ 285              		.cfi_def_cfa_register 7
  282:Generated_Source\PSoC5/I2S.c ****         uint8 enableInterrupts;
  283:Generated_Source\PSoC5/I2S.c **** 
  284:Generated_Source\PSoC5/I2S.c ****         enableInterrupts = CyEnterCriticalSection();
- 266              		.loc 1 284 0
- 267 0006 FFF7FEFF 		bl	CyEnterCriticalSection
- 268 000a 0346     		mov	r3, r0
- 269 000c FB71     		strb	r3, [r7, #7]
+ 286              		.loc 1 284 0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 11
+
+
+ 287 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 288 000a 0346     		mov	r3, r0
+ 289 000c FB71     		strb	r3, [r7, #7]
  285:Generated_Source\PSoC5/I2S.c ****         I2S_TX_STS0_1_ACTL_REG |= I2S_INT_EN;
- 270              		.loc 1 285 0
- 271 000e 0C4A     		ldr	r2, .L15
- 272 0010 0B4B     		ldr	r3, .L15
- 273 0012 1B78     		ldrb	r3, [r3]
- 274 0014 DBB2     		uxtb	r3, r3
- 275 0016 43F01003 		orr	r3, r3, #16
- 276 001a DBB2     		uxtb	r3, r3
- 277 001c 1370     		strb	r3, [r2]
+ 290              		.loc 1 285 0
+ 291 000e 0C4A     		ldr	r2, .L15
+ 292 0010 0B4B     		ldr	r3, .L15
+ 293 0012 1B78     		ldrb	r3, [r3]
+ 294 0014 DBB2     		uxtb	r3, r3
+ 295 0016 43F01003 		orr	r3, r3, #16
+ 296 001a DBB2     		uxtb	r3, r3
+ 297 001c 1370     		strb	r3, [r2]
  286:Generated_Source\PSoC5/I2S.c ****         #ifdef I2S_TX_STS2_3_ACTL_REG
  287:Generated_Source\PSoC5/I2S.c ****             I2S_TX_STS2_3_ACTL_REG |= I2S_INT_EN;
  288:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_TX_STS2_3_ACTL_REG */
@@ -597,48 +620,48 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  290:Generated_Source\PSoC5/I2S.c ****             I2S_TX_STS4_ACTL_REG |= I2S_INT_EN;
  291:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_TX_STS4_ACTL_REG */
  292:Generated_Source\PSoC5/I2S.c ****         CyExitCriticalSection(enableInterrupts);
- 278              		.loc 1 292 0
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 11
-
-
- 279 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 280 0020 1846     		mov	r0, r3
- 281 0022 FFF7FEFF 		bl	CyExitCriticalSection
+ 298              		.loc 1 292 0
+ 299 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 300 0020 1846     		mov	r0, r3
+ 301 0022 FFF7FEFF 		bl	CyExitCriticalSection
  293:Generated_Source\PSoC5/I2S.c ****         
  294:Generated_Source\PSoC5/I2S.c ****         I2S_CONTROL_REG |= I2S_TX_EN;
- 282              		.loc 1 294 0
- 283 0026 074A     		ldr	r2, .L15+4
- 284 0028 064B     		ldr	r3, .L15+4
- 285 002a 1B78     		ldrb	r3, [r3]
- 286 002c DBB2     		uxtb	r3, r3
- 287 002e 43F00103 		orr	r3, r3, #1
- 288 0032 DBB2     		uxtb	r3, r3
- 289 0034 1370     		strb	r3, [r2]
+ 302              		.loc 1 294 0
+ 303 0026 074A     		ldr	r2, .L15+4
+ 304 0028 064B     		ldr	r3, .L15+4
+ 305 002a 1B78     		ldrb	r3, [r3]
+ 306 002c DBB2     		uxtb	r3, r3
+ 307 002e 43F00103 		orr	r3, r3, #1
+ 308 0032 DBB2     		uxtb	r3, r3
+ 309 0034 1370     		strb	r3, [r2]
  295:Generated_Source\PSoC5/I2S.c ****     }
- 290              		.loc 1 295 0
- 291 0036 00BF     		nop
- 292 0038 0837     		adds	r7, r7, #8
- 293              		.cfi_def_cfa_offset 8
- 294 003a BD46     		mov	sp, r7
- 295              		.cfi_def_cfa_register 13
- 296              		@ sp needed
- 297 003c 80BD     		pop	{r7, pc}
- 298              	.L16:
- 299 003e 00BF     		.align	2
- 300              	.L15:
- 301 0040 92640040 		.word	1073767570
- 302 0044 72640040 		.word	1073767538
- 303              		.cfi_endproc
- 304              	.LFE4:
- 305              		.size	I2S_EnableTx, .-I2S_EnableTx
- 306              		.section	.text.I2S_DisableTx,"ax",%progbits
- 307              		.align	2
- 308              		.global	I2S_DisableTx
- 309              		.thumb
- 310              		.thumb_func
- 311              		.type	I2S_DisableTx, %function
- 312              	I2S_DisableTx:
- 313              	.LFB5:
+ 310              		.loc 1 295 0
+ 311 0036 00BF     		nop
+ 312 0038 0837     		adds	r7, r7, #8
+ 313              		.cfi_def_cfa_offset 8
+ 314 003a BD46     		mov	sp, r7
+ 315              		.cfi_def_cfa_register 13
+ 316              		@ sp needed
+ 317 003c 80BD     		pop	{r7, pc}
+ 318              	.L16:
+ 319 003e 00BF     		.align	2
+ 320              	.L15:
+ 321 0040 90640040 		.word	1073767568
+ 322 0044 71640040 		.word	1073767537
+ 323              		.cfi_endproc
+ 324              	.LFE4:
+ 325              		.size	I2S_EnableTx, .-I2S_EnableTx
+ 326              		.section	.text.I2S_DisableTx,"ax",%progbits
+ 327              		.align	2
+ 328              		.global	I2S_DisableTx
+ 329              		.thumb
+ 330              		.thumb_func
+ 331              		.type	I2S_DisableTx, %function
+ 332              	I2S_DisableTx:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 12
+
+
+ 333              	.LFB5:
  296:Generated_Source\PSoC5/I2S.c **** 
  297:Generated_Source\PSoC5/I2S.c **** 
  298:Generated_Source\PSoC5/I2S.c ****     /*******************************************************************************
@@ -658,48 +681,48 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  312:Generated_Source\PSoC5/I2S.c ****     *
  313:Generated_Source\PSoC5/I2S.c ****     *******************************************************************************/
  314:Generated_Source\PSoC5/I2S.c ****     void I2S_DisableTx(void) 
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 12
-
-
  315:Generated_Source\PSoC5/I2S.c ****     {
- 314              		.loc 1 315 0
- 315              		.cfi_startproc
- 316              		@ args = 0, pretend = 0, frame = 8
- 317              		@ frame_needed = 1, uses_anonymous_args = 0
- 318 0000 80B5     		push	{r7, lr}
- 319              		.cfi_def_cfa_offset 8
- 320              		.cfi_offset 7, -8
- 321              		.cfi_offset 14, -4
- 322 0002 82B0     		sub	sp, sp, #8
- 323              		.cfi_def_cfa_offset 16
- 324 0004 00AF     		add	r7, sp, #0
- 325              		.cfi_def_cfa_register 7
+ 334              		.loc 1 315 0
+ 335              		.cfi_startproc
+ 336              		@ args = 0, pretend = 0, frame = 8
+ 337              		@ frame_needed = 1, uses_anonymous_args = 0
+ 338 0000 80B5     		push	{r7, lr}
+ 339              		.cfi_def_cfa_offset 8
+ 340              		.cfi_offset 7, -8
+ 341              		.cfi_offset 14, -4
+ 342 0002 82B0     		sub	sp, sp, #8
+ 343              		.cfi_def_cfa_offset 16
+ 344 0004 00AF     		add	r7, sp, #0
+ 345              		.cfi_def_cfa_register 7
  316:Generated_Source\PSoC5/I2S.c ****         uint8 enableInterrupts;
  317:Generated_Source\PSoC5/I2S.c **** 
  318:Generated_Source\PSoC5/I2S.c ****         I2S_CONTROL_REG &= (uint8)~I2S_TX_EN;
- 326              		.loc 1 318 0
- 327 0006 0E4A     		ldr	r2, .L18
- 328 0008 0D4B     		ldr	r3, .L18
- 329 000a 1B78     		ldrb	r3, [r3]
- 330 000c DBB2     		uxtb	r3, r3
- 331 000e 23F00103 		bic	r3, r3, #1
- 332 0012 DBB2     		uxtb	r3, r3
- 333 0014 1370     		strb	r3, [r2]
+ 346              		.loc 1 318 0
+ 347 0006 0E4A     		ldr	r2, .L18
+ 348 0008 0D4B     		ldr	r3, .L18
+ 349 000a 1B78     		ldrb	r3, [r3]
+ 350 000c DBB2     		uxtb	r3, r3
+ 351 000e 23F00103 		bic	r3, r3, #1
+ 352 0012 DBB2     		uxtb	r3, r3
+ 353 0014 1370     		strb	r3, [r2]
  319:Generated_Source\PSoC5/I2S.c **** 
  320:Generated_Source\PSoC5/I2S.c ****         enableInterrupts = CyEnterCriticalSection();
- 334              		.loc 1 320 0
- 335 0016 FFF7FEFF 		bl	CyEnterCriticalSection
- 336 001a 0346     		mov	r3, r0
- 337 001c FB71     		strb	r3, [r7, #7]
+ 354              		.loc 1 320 0
+ 355 0016 FFF7FEFF 		bl	CyEnterCriticalSection
+ 356 001a 0346     		mov	r3, r0
+ 357 001c FB71     		strb	r3, [r7, #7]
  321:Generated_Source\PSoC5/I2S.c ****         I2S_TX_STS0_1_ACTL_REG &= (uint8)~I2S_INT_EN;
- 338              		.loc 1 321 0
- 339 001e 094A     		ldr	r2, .L18+4
- 340 0020 084B     		ldr	r3, .L18+4
- 341 0022 1B78     		ldrb	r3, [r3]
- 342 0024 DBB2     		uxtb	r3, r3
- 343 0026 23F01003 		bic	r3, r3, #16
- 344 002a DBB2     		uxtb	r3, r3
- 345 002c 1370     		strb	r3, [r2]
+ 358              		.loc 1 321 0
+ 359 001e 094A     		ldr	r2, .L18+4
+ 360 0020 084B     		ldr	r3, .L18+4
+ 361 0022 1B78     		ldrb	r3, [r3]
+ 362 0024 DBB2     		uxtb	r3, r3
+ 363 0026 23F01003 		bic	r3, r3, #16
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 13
+
+
+ 364 002a DBB2     		uxtb	r3, r3
+ 365 002c 1370     		strb	r3, [r2]
  322:Generated_Source\PSoC5/I2S.c ****         #ifdef I2S_TX_STS2_3_ACTL_REG
  323:Generated_Source\PSoC5/I2S.c ****             I2S_TX_STS2_3_ACTL_REG &= (uint8)~I2S_INT_EN;
  324:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_TX_STS2_3_ACTL_REG */
@@ -707,38 +730,35 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  326:Generated_Source\PSoC5/I2S.c ****             I2S_TX_STS4_ACTL_REG &= (uint8)~I2S_INT_EN;
  327:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_TX_STS4_ACTL_REG */
  328:Generated_Source\PSoC5/I2S.c ****         CyExitCriticalSection(enableInterrupts);
- 346              		.loc 1 328 0
- 347 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 348 0030 1846     		mov	r0, r3
- 349 0032 FFF7FEFF 		bl	CyExitCriticalSection
+ 366              		.loc 1 328 0
+ 367 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 368 0030 1846     		mov	r0, r3
+ 369 0032 FFF7FEFF 		bl	CyExitCriticalSection
  329:Generated_Source\PSoC5/I2S.c ****     }
- 350              		.loc 1 329 0
- 351 0036 00BF     		nop
- 352 0038 0837     		adds	r7, r7, #8
- 353              		.cfi_def_cfa_offset 8
- 354 003a BD46     		mov	sp, r7
- 355              		.cfi_def_cfa_register 13
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 13
-
-
- 356              		@ sp needed
- 357 003c 80BD     		pop	{r7, pc}
- 358              	.L19:
- 359 003e 00BF     		.align	2
- 360              	.L18:
- 361 0040 72640040 		.word	1073767538
- 362 0044 92640040 		.word	1073767570
- 363              		.cfi_endproc
- 364              	.LFE5:
- 365              		.size	I2S_DisableTx, .-I2S_DisableTx
- 366              		.section	.text.I2S_ClearTxFIFO,"ax",%progbits
- 367              		.align	2
- 368              		.global	I2S_ClearTxFIFO
- 369              		.thumb
- 370              		.thumb_func
- 371              		.type	I2S_ClearTxFIFO, %function
- 372              	I2S_ClearTxFIFO:
- 373              	.LFB6:
+ 370              		.loc 1 329 0
+ 371 0036 00BF     		nop
+ 372 0038 0837     		adds	r7, r7, #8
+ 373              		.cfi_def_cfa_offset 8
+ 374 003a BD46     		mov	sp, r7
+ 375              		.cfi_def_cfa_register 13
+ 376              		@ sp needed
+ 377 003c 80BD     		pop	{r7, pc}
+ 378              	.L19:
+ 379 003e 00BF     		.align	2
+ 380              	.L18:
+ 381 0040 71640040 		.word	1073767537
+ 382 0044 90640040 		.word	1073767568
+ 383              		.cfi_endproc
+ 384              	.LFE5:
+ 385              		.size	I2S_DisableTx, .-I2S_DisableTx
+ 386              		.section	.text.I2S_ClearTxFIFO,"ax",%progbits
+ 387              		.align	2
+ 388              		.global	I2S_ClearTxFIFO
+ 389              		.thumb
+ 390              		.thumb_func
+ 391              		.type	I2S_ClearTxFIFO, %function
+ 392              	I2S_ClearTxFIFO:
+ 393              	.LFB6:
  330:Generated_Source\PSoC5/I2S.c **** 
  331:Generated_Source\PSoC5/I2S.c **** 
  332:Generated_Source\PSoC5/I2S.c ****     /*******************************************************************************
@@ -758,44 +778,44 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  346:Generated_Source\PSoC5/I2S.c ****     *******************************************************************************/
  347:Generated_Source\PSoC5/I2S.c ****     void I2S_ClearTxFIFO(void) 
  348:Generated_Source\PSoC5/I2S.c ****     {
- 374              		.loc 1 348 0
- 375              		.cfi_startproc
- 376              		@ args = 0, pretend = 0, frame = 8
- 377              		@ frame_needed = 1, uses_anonymous_args = 0
- 378 0000 80B5     		push	{r7, lr}
- 379              		.cfi_def_cfa_offset 8
- 380              		.cfi_offset 7, -8
- 381              		.cfi_offset 14, -4
- 382 0002 82B0     		sub	sp, sp, #8
- 383              		.cfi_def_cfa_offset 16
- 384 0004 00AF     		add	r7, sp, #0
- 385              		.cfi_def_cfa_register 7
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 14
+
+
+ 394              		.loc 1 348 0
+ 395              		.cfi_startproc
+ 396              		@ args = 0, pretend = 0, frame = 8
+ 397              		@ frame_needed = 1, uses_anonymous_args = 0
+ 398 0000 80B5     		push	{r7, lr}
+ 399              		.cfi_def_cfa_offset 8
+ 400              		.cfi_offset 7, -8
+ 401              		.cfi_offset 14, -4
+ 402 0002 82B0     		sub	sp, sp, #8
+ 403              		.cfi_def_cfa_offset 16
+ 404 0004 00AF     		add	r7, sp, #0
+ 405              		.cfi_def_cfa_register 7
  349:Generated_Source\PSoC5/I2S.c ****         uint8 enableInterrupts;
  350:Generated_Source\PSoC5/I2S.c **** 
  351:Generated_Source\PSoC5/I2S.c ****         enableInterrupts = CyEnterCriticalSection();
- 386              		.loc 1 351 0
- 387 0006 FFF7FEFF 		bl	CyEnterCriticalSection
- 388 000a 0346     		mov	r3, r0
- 389 000c FB71     		strb	r3, [r7, #7]
+ 406              		.loc 1 351 0
+ 407 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 408 000a 0346     		mov	r3, r0
+ 409 000c FB71     		strb	r3, [r7, #7]
  352:Generated_Source\PSoC5/I2S.c ****         I2S_CLEAR_TX_FIFO(CH0);
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 14
-
-
- 390              		.loc 1 352 0
- 391 000e 0C4A     		ldr	r2, .L21
- 392 0010 0B4B     		ldr	r3, .L21
- 393 0012 1B78     		ldrb	r3, [r3]
- 394 0014 DBB2     		uxtb	r3, r3
- 395 0016 43F00303 		orr	r3, r3, #3
- 396 001a DBB2     		uxtb	r3, r3
- 397 001c 1370     		strb	r3, [r2]
- 398 001e 084A     		ldr	r2, .L21
- 399 0020 074B     		ldr	r3, .L21
- 400 0022 1B78     		ldrb	r3, [r3]
- 401 0024 DBB2     		uxtb	r3, r3
- 402 0026 23F00303 		bic	r3, r3, #3
- 403 002a DBB2     		uxtb	r3, r3
- 404 002c 1370     		strb	r3, [r2]
+ 410              		.loc 1 352 0
+ 411 000e 0C4A     		ldr	r2, .L21
+ 412 0010 0B4B     		ldr	r3, .L21
+ 413 0012 1B78     		ldrb	r3, [r3]
+ 414 0014 DBB2     		uxtb	r3, r3
+ 415 0016 43F00303 		orr	r3, r3, #3
+ 416 001a DBB2     		uxtb	r3, r3
+ 417 001c 1370     		strb	r3, [r2]
+ 418 001e 084A     		ldr	r2, .L21
+ 419 0020 074B     		ldr	r3, .L21
+ 420 0022 1B78     		ldrb	r3, [r3]
+ 421 0024 DBB2     		uxtb	r3, r3
+ 422 0026 23F00303 		bic	r3, r3, #3
+ 423 002a DBB2     		uxtb	r3, r3
+ 424 002c 1370     		strb	r3, [r2]
  353:Generated_Source\PSoC5/I2S.c ****         #if (I2S_TX_STEREO_1_PRESENT)
  354:Generated_Source\PSoC5/I2S.c ****             I2S_CLEAR_TX_FIFO(CH1);
  355:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_TX_STEREO_1_PRESENT */
@@ -809,659 +829,1044 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 1
  363:Generated_Source\PSoC5/I2S.c ****             I2S_CLEAR_TX_FIFO(CH4);
  364:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_TX_STEREO_4_PRESENT */
  365:Generated_Source\PSoC5/I2S.c ****         CyExitCriticalSection(enableInterrupts);
- 405              		.loc 1 365 0
- 406 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
- 407 0030 1846     		mov	r0, r3
- 408 0032 FFF7FEFF 		bl	CyExitCriticalSection
+ 425              		.loc 1 365 0
+ 426 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 427 0030 1846     		mov	r0, r3
+ 428 0032 FFF7FEFF 		bl	CyExitCriticalSection
  366:Generated_Source\PSoC5/I2S.c ****     }
- 409              		.loc 1 366 0
- 410 0036 00BF     		nop
- 411 0038 0837     		adds	r7, r7, #8
- 412              		.cfi_def_cfa_offset 8
- 413 003a BD46     		mov	sp, r7
- 414              		.cfi_def_cfa_register 13
- 415              		@ sp needed
- 416 003c 80BD     		pop	{r7, pc}
- 417              	.L22:
- 418 003e 00BF     		.align	2
- 419              	.L21:
- 420 0040 92640040 		.word	1073767570
- 421              		.cfi_endproc
- 422              	.LFE6:
- 423              		.size	I2S_ClearTxFIFO, .-I2S_ClearTxFIFO
- 424              		.text
- 425              	.Letext0:
- 426              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
- 427              		.section	.debug_info,"",%progbits
- 428              	.Ldebug_info0:
- 429 0000 95010000 		.4byte	0x195
- 430 0004 0400     		.2byte	0x4
- 431 0006 00000000 		.4byte	.Ldebug_abbrev0
- 432 000a 04       		.byte	0x4
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 15
+ 429              		.loc 1 366 0
+ 430 0036 00BF     		nop
+ 431 0038 0837     		adds	r7, r7, #8
+ 432              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 15
 
 
- 433 000b 01       		.uleb128 0x1
- 434 000c 78000000 		.4byte	.LASF24
- 435 0010 0C       		.byte	0xc
- 436 0011 2D010000 		.4byte	.LASF25
- 437 0015 87010000 		.4byte	.LASF26
- 438 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 439 001d 00000000 		.4byte	0
- 440 0021 00000000 		.4byte	.Ldebug_line0
- 441 0025 02       		.uleb128 0x2
- 442 0026 04       		.byte	0x4
- 443 0027 05       		.byte	0x5
- 444 0028 696E7400 		.ascii	"int\000"
- 445 002c 03       		.uleb128 0x3
- 446 002d 04       		.byte	0x4
- 447 002e 07       		.byte	0x7
- 448 002f 0E000000 		.4byte	.LASF0
- 449 0033 03       		.uleb128 0x3
- 450 0034 08       		.byte	0x8
- 451 0035 05       		.byte	0x5
- 452 0036 00000000 		.4byte	.LASF1
- 453 003a 03       		.uleb128 0x3
- 454 003b 08       		.byte	0x8
- 455 003c 04       		.byte	0x4
- 456 003d DA010000 		.4byte	.LASF2
- 457 0041 03       		.uleb128 0x3
- 458 0042 01       		.byte	0x1
- 459 0043 06       		.byte	0x6
- 460 0044 64010000 		.4byte	.LASF3
- 461 0048 03       		.uleb128 0x3
- 462 0049 01       		.byte	0x1
- 463 004a 08       		.byte	0x8
- 464 004b 06010000 		.4byte	.LASF4
- 465 004f 03       		.uleb128 0x3
- 466 0050 02       		.byte	0x2
- 467 0051 05       		.byte	0x5
- 468 0052 EF010000 		.4byte	.LASF5
- 469 0056 03       		.uleb128 0x3
- 470 0057 02       		.byte	0x2
- 471 0058 07       		.byte	0x7
- 472 0059 51010000 		.4byte	.LASF6
- 473 005d 03       		.uleb128 0x3
- 474 005e 04       		.byte	0x4
- 475 005f 05       		.byte	0x5
- 476 0060 24010000 		.4byte	.LASF7
- 477 0064 03       		.uleb128 0x3
- 478 0065 04       		.byte	0x4
- 479 0066 07       		.byte	0x7
- 480 0067 40000000 		.4byte	.LASF8
- 481 006b 03       		.uleb128 0x3
- 482 006c 08       		.byte	0x8
- 483 006d 07       		.byte	0x7
- 484 006e 52000000 		.4byte	.LASF9
- 485 0072 03       		.uleb128 0x3
- 486 0073 04       		.byte	0x4
- 487 0074 07       		.byte	0x7
- 488 0075 1A020000 		.4byte	.LASF10
- 489 0079 03       		.uleb128 0x3
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 16
+ 433 003a BD46     		mov	sp, r7
+ 434              		.cfi_def_cfa_register 13
+ 435              		@ sp needed
+ 436 003c 80BD     		pop	{r7, pc}
+ 437              	.L22:
+ 438 003e 00BF     		.align	2
+ 439              	.L21:
+ 440 0040 90640040 		.word	1073767568
+ 441              		.cfi_endproc
+ 442              	.LFE6:
+ 443              		.size	I2S_ClearTxFIFO, .-I2S_ClearTxFIFO
+ 444              		.section	.text.I2S_EnableRx,"ax",%progbits
+ 445              		.align	2
+ 446              		.global	I2S_EnableRx
+ 447              		.thumb
+ 448              		.thumb_func
+ 449              		.type	I2S_EnableRx, %function
+ 450              	I2S_EnableRx:
+ 451              	.LFB7:
+ 367:Generated_Source\PSoC5/I2S.c **** 
+ 368:Generated_Source\PSoC5/I2S.c **** #endif /* (I2S_TX_DIRECTION_ENABLE) */
+ 369:Generated_Source\PSoC5/I2S.c **** 
+ 370:Generated_Source\PSoC5/I2S.c **** 
+ 371:Generated_Source\PSoC5/I2S.c **** #if(I2S_RX_DIRECTION_ENABLE)
+ 372:Generated_Source\PSoC5/I2S.c ****     /*******************************************************************************
+ 373:Generated_Source\PSoC5/I2S.c ****     * Function Name: I2S_EnableRx
+ 374:Generated_Source\PSoC5/I2S.c ****     ********************************************************************************
+ 375:Generated_Source\PSoC5/I2S.c ****     *
+ 376:Generated_Source\PSoC5/I2S.c ****     * Summary:
+ 377:Generated_Source\PSoC5/I2S.c ****     *  Enables the Rx direction of the I2S interface.  At the next word
+ 378:Generated_Source\PSoC5/I2S.c ****     *  select falling edge reception of data will begin.
+ 379:Generated_Source\PSoC5/I2S.c ****     *
+ 380:Generated_Source\PSoC5/I2S.c ****     * Parameters:
+ 381:Generated_Source\PSoC5/I2S.c ****     *  None.
+ 382:Generated_Source\PSoC5/I2S.c ****     *
+ 383:Generated_Source\PSoC5/I2S.c ****     * Return:
+ 384:Generated_Source\PSoC5/I2S.c ****     *  None.
+ 385:Generated_Source\PSoC5/I2S.c ****     *
+ 386:Generated_Source\PSoC5/I2S.c ****     *******************************************************************************/
+ 387:Generated_Source\PSoC5/I2S.c ****     void I2S_EnableRx(void) 
+ 388:Generated_Source\PSoC5/I2S.c ****     {
+ 452              		.loc 1 388 0
+ 453              		.cfi_startproc
+ 454              		@ args = 0, pretend = 0, frame = 8
+ 455              		@ frame_needed = 1, uses_anonymous_args = 0
+ 456 0000 80B5     		push	{r7, lr}
+ 457              		.cfi_def_cfa_offset 8
+ 458              		.cfi_offset 7, -8
+ 459              		.cfi_offset 14, -4
+ 460 0002 82B0     		sub	sp, sp, #8
+ 461              		.cfi_def_cfa_offset 16
+ 462 0004 00AF     		add	r7, sp, #0
+ 463              		.cfi_def_cfa_register 7
+ 389:Generated_Source\PSoC5/I2S.c ****         uint8 enableInterrupts;
+ 390:Generated_Source\PSoC5/I2S.c **** 
+ 391:Generated_Source\PSoC5/I2S.c ****         enableInterrupts = CyEnterCriticalSection();
+ 464              		.loc 1 391 0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 16
 
 
- 490 007a 01       		.byte	0x1
- 491 007b 08       		.byte	0x8
- 492 007c 14010000 		.4byte	.LASF11
- 493 0080 04       		.uleb128 0x4
- 494 0081 3A000000 		.4byte	.LASF14
- 495 0085 02       		.byte	0x2
- 496 0086 E401     		.2byte	0x1e4
- 497 0088 48000000 		.4byte	0x48
- 498 008c 03       		.uleb128 0x3
- 499 008d 04       		.byte	0x4
- 500 008e 04       		.byte	0x4
- 501 008f 69000000 		.4byte	.LASF12
- 502 0093 03       		.uleb128 0x3
- 503 0094 08       		.byte	0x8
- 504 0095 04       		.byte	0x4
- 505 0096 4A010000 		.4byte	.LASF13
- 506 009a 04       		.uleb128 0x4
- 507 009b F9010000 		.4byte	.LASF15
- 508 009f 02       		.byte	0x2
- 509 00a0 8E02     		.2byte	0x28e
- 510 00a2 A6000000 		.4byte	0xa6
- 511 00a6 05       		.uleb128 0x5
- 512 00a7 80000000 		.4byte	0x80
- 513 00ab 06       		.uleb128 0x6
- 514 00ac 19010000 		.4byte	.LASF18
- 515 00b0 01       		.byte	0x1
- 516 00b1 29       		.byte	0x29
- 517 00b2 00000000 		.4byte	.LFB0
- 518 00b6 48000000 		.4byte	.LFE0-.LFB0
- 519 00ba 01       		.uleb128 0x1
- 520 00bb 9C       		.byte	0x9c
- 521 00bc CF000000 		.4byte	0xcf
- 522 00c0 07       		.uleb128 0x7
- 523 00c1 29000000 		.4byte	.LASF20
- 524 00c5 01       		.byte	0x1
- 525 00c6 2B       		.byte	0x2b
- 526 00c7 80000000 		.4byte	0x80
- 527 00cb 02       		.uleb128 0x2
- 528 00cc 91       		.byte	0x91
- 529 00cd 77       		.sleb128 -9
- 530 00ce 00       		.byte	0
- 531 00cf 08       		.uleb128 0x8
- 532 00d0 E6010000 		.4byte	.LASF16
- 533 00d4 01       		.byte	0x1
- 534 00d5 45       		.byte	0x45
- 535 00d6 00000000 		.4byte	.LFB1
- 536 00da 30000000 		.4byte	.LFE1-.LFB1
- 537 00de 01       		.uleb128 0x1
- 538 00df 9C       		.byte	0x9c
- 539 00e0 09       		.uleb128 0x9
- 540 00e1 7D010000 		.4byte	.LASF17
- 541 00e5 01       		.byte	0x1
- 542 00e6 9E       		.byte	0x9e
- 543 00e7 00000000 		.4byte	.LFB2
- 544 00eb 24000000 		.4byte	.LFE2-.LFB2
- 545 00ef 01       		.uleb128 0x1
- 546 00f0 9C       		.byte	0x9c
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 17
+ 465 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 466 000a 0346     		mov	r3, r0
+ 467 000c FB71     		strb	r3, [r7, #7]
+ 392:Generated_Source\PSoC5/I2S.c ****         I2S_RX_STS0_1_ACTL_REG |= I2S_INT_EN;
+ 468              		.loc 1 392 0
+ 469 000e 0C4A     		ldr	r2, .L24
+ 470 0010 0B4B     		ldr	r3, .L24
+ 471 0012 1B78     		ldrb	r3, [r3]
+ 472 0014 DBB2     		uxtb	r3, r3
+ 473 0016 43F01003 		orr	r3, r3, #16
+ 474 001a DBB2     		uxtb	r3, r3
+ 475 001c 1370     		strb	r3, [r2]
+ 393:Generated_Source\PSoC5/I2S.c ****         #ifdef I2S_RX_STS2_3_ACTL_REG
+ 394:Generated_Source\PSoC5/I2S.c ****             I2S_RX_STS2_3_ACTL_REG |= I2S_INT_EN;
+ 395:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STS2_3_ACTL_REG */
+ 396:Generated_Source\PSoC5/I2S.c ****         #ifdef I2S_RX_STS4_ACTL_REG
+ 397:Generated_Source\PSoC5/I2S.c ****             I2S_RX_STS4_ACTL_REG |= I2S_INT_EN;
+ 398:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STS4_ACTL_REG */
+ 399:Generated_Source\PSoC5/I2S.c ****         CyExitCriticalSection(enableInterrupts);
+ 476              		.loc 1 399 0
+ 477 001e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 478 0020 1846     		mov	r0, r3
+ 479 0022 FFF7FEFF 		bl	CyExitCriticalSection
+ 400:Generated_Source\PSoC5/I2S.c ****         
+ 401:Generated_Source\PSoC5/I2S.c ****         I2S_CONTROL_REG |= I2S_RX_EN;
+ 480              		.loc 1 401 0
+ 481 0026 074A     		ldr	r2, .L24+4
+ 482 0028 064B     		ldr	r3, .L24+4
+ 483 002a 1B78     		ldrb	r3, [r3]
+ 484 002c DBB2     		uxtb	r3, r3
+ 485 002e 43F00203 		orr	r3, r3, #2
+ 486 0032 DBB2     		uxtb	r3, r3
+ 487 0034 1370     		strb	r3, [r2]
+ 402:Generated_Source\PSoC5/I2S.c ****     }
+ 488              		.loc 1 402 0
+ 489 0036 00BF     		nop
+ 490 0038 0837     		adds	r7, r7, #8
+ 491              		.cfi_def_cfa_offset 8
+ 492 003a BD46     		mov	sp, r7
+ 493              		.cfi_def_cfa_register 13
+ 494              		@ sp needed
+ 495 003c 80BD     		pop	{r7, pc}
+ 496              	.L25:
+ 497 003e 00BF     		.align	2
+ 498              	.L24:
+ 499 0040 91640040 		.word	1073767569
+ 500 0044 71640040 		.word	1073767537
+ 501              		.cfi_endproc
+ 502              	.LFE7:
+ 503              		.size	I2S_EnableRx, .-I2S_EnableRx
+ 504              		.section	.text.I2S_DisableRx,"ax",%progbits
+ 505              		.align	2
+ 506              		.global	I2S_DisableRx
+ 507              		.thumb
+ 508              		.thumb_func
+ 509              		.type	I2S_DisableRx, %function
+ 510              	I2S_DisableRx:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 17
 
 
- 547 00f1 06       		.uleb128 0x6
- 548 00f2 6F000000 		.4byte	.LASF19
- 549 00f6 01       		.byte	0x1
- 550 00f7 B9       		.byte	0xb9
- 551 00f8 00000000 		.4byte	.LFB3
- 552 00fc 58000000 		.4byte	.LFE3-.LFB3
- 553 0100 01       		.uleb128 0x1
- 554 0101 9C       		.byte	0x9c
- 555 0102 15010000 		.4byte	0x115
- 556 0106 07       		.uleb128 0x7
- 557 0107 29000000 		.4byte	.LASF20
- 558 010b 01       		.byte	0x1
- 559 010c BB       		.byte	0xbb
- 560 010d 80000000 		.4byte	0x80
- 561 0111 02       		.uleb128 0x2
- 562 0112 91       		.byte	0x91
- 563 0113 77       		.sleb128 -9
- 564 0114 00       		.byte	0
- 565 0115 0A       		.uleb128 0xa
- 566 0116 70010000 		.4byte	.LASF21
- 567 011a 01       		.byte	0x1
- 568 011b 1801     		.2byte	0x118
- 569 011d 00000000 		.4byte	.LFB4
- 570 0121 48000000 		.4byte	.LFE4-.LFB4
- 571 0125 01       		.uleb128 0x1
- 572 0126 9C       		.byte	0x9c
- 573 0127 3B010000 		.4byte	0x13b
- 574 012b 0B       		.uleb128 0xb
- 575 012c 29000000 		.4byte	.LASF20
- 576 0130 01       		.byte	0x1
- 577 0131 1A01     		.2byte	0x11a
- 578 0133 80000000 		.4byte	0x80
- 579 0137 02       		.uleb128 0x2
- 580 0138 91       		.byte	0x91
- 581 0139 77       		.sleb128 -9
- 582 013a 00       		.byte	0
- 583 013b 0A       		.uleb128 0xa
- 584 013c 1B000000 		.4byte	.LASF22
- 585 0140 01       		.byte	0x1
- 586 0141 3A01     		.2byte	0x13a
- 587 0143 00000000 		.4byte	.LFB5
- 588 0147 48000000 		.4byte	.LFE5-.LFB5
- 589 014b 01       		.uleb128 0x1
- 590 014c 9C       		.byte	0x9c
- 591 014d 61010000 		.4byte	0x161
- 592 0151 0B       		.uleb128 0xb
- 593 0152 29000000 		.4byte	.LASF20
- 594 0156 01       		.byte	0x1
- 595 0157 3C01     		.2byte	0x13c
- 596 0159 80000000 		.4byte	0x80
- 597 015d 02       		.uleb128 0x2
- 598 015e 91       		.byte	0x91
- 599 015f 77       		.sleb128 -9
- 600 0160 00       		.byte	0
- 601 0161 0A       		.uleb128 0xa
- 602 0162 0A020000 		.4byte	.LASF23
- 603 0166 01       		.byte	0x1
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 18
+ 511              	.LFB8:
+ 403:Generated_Source\PSoC5/I2S.c **** 
+ 404:Generated_Source\PSoC5/I2S.c **** 
+ 405:Generated_Source\PSoC5/I2S.c ****     /*******************************************************************************
+ 406:Generated_Source\PSoC5/I2S.c ****     * Function Name: I2S_DisableRx
+ 407:Generated_Source\PSoC5/I2S.c ****     ********************************************************************************
+ 408:Generated_Source\PSoC5/I2S.c ****     *
+ 409:Generated_Source\PSoC5/I2S.c ****     * Summary:
+ 410:Generated_Source\PSoC5/I2S.c ****     *  Disables the Rx direction of the I2S interface.
+ 411:Generated_Source\PSoC5/I2S.c ****     *
+ 412:Generated_Source\PSoC5/I2S.c ****     * Parameters:
+ 413:Generated_Source\PSoC5/I2S.c ****     *  None.
+ 414:Generated_Source\PSoC5/I2S.c ****     *
+ 415:Generated_Source\PSoC5/I2S.c ****     * Return:
+ 416:Generated_Source\PSoC5/I2S.c ****     *  None.
+ 417:Generated_Source\PSoC5/I2S.c ****     *
+ 418:Generated_Source\PSoC5/I2S.c ****     *******************************************************************************/
+ 419:Generated_Source\PSoC5/I2S.c ****     void I2S_DisableRx(void) 
+ 420:Generated_Source\PSoC5/I2S.c ****     {
+ 512              		.loc 1 420 0
+ 513              		.cfi_startproc
+ 514              		@ args = 0, pretend = 0, frame = 8
+ 515              		@ frame_needed = 1, uses_anonymous_args = 0
+ 516 0000 80B5     		push	{r7, lr}
+ 517              		.cfi_def_cfa_offset 8
+ 518              		.cfi_offset 7, -8
+ 519              		.cfi_offset 14, -4
+ 520 0002 82B0     		sub	sp, sp, #8
+ 521              		.cfi_def_cfa_offset 16
+ 522 0004 00AF     		add	r7, sp, #0
+ 523              		.cfi_def_cfa_register 7
+ 421:Generated_Source\PSoC5/I2S.c ****         uint8 enableInterrupts;
+ 422:Generated_Source\PSoC5/I2S.c **** 
+ 423:Generated_Source\PSoC5/I2S.c ****         I2S_CONTROL_REG &= (uint8)~I2S_RX_EN;
+ 524              		.loc 1 423 0
+ 525 0006 0E4A     		ldr	r2, .L27
+ 526 0008 0D4B     		ldr	r3, .L27
+ 527 000a 1B78     		ldrb	r3, [r3]
+ 528 000c DBB2     		uxtb	r3, r3
+ 529 000e 23F00203 		bic	r3, r3, #2
+ 530 0012 DBB2     		uxtb	r3, r3
+ 531 0014 1370     		strb	r3, [r2]
+ 424:Generated_Source\PSoC5/I2S.c **** 
+ 425:Generated_Source\PSoC5/I2S.c ****         enableInterrupts = CyEnterCriticalSection();
+ 532              		.loc 1 425 0
+ 533 0016 FFF7FEFF 		bl	CyEnterCriticalSection
+ 534 001a 0346     		mov	r3, r0
+ 535 001c FB71     		strb	r3, [r7, #7]
+ 426:Generated_Source\PSoC5/I2S.c ****         I2S_RX_STS0_1_ACTL_REG &= (uint8)~I2S_INT_EN;
+ 536              		.loc 1 426 0
+ 537 001e 094A     		ldr	r2, .L27+4
+ 538 0020 084B     		ldr	r3, .L27+4
+ 539 0022 1B78     		ldrb	r3, [r3]
+ 540 0024 DBB2     		uxtb	r3, r3
+ 541 0026 23F01003 		bic	r3, r3, #16
+ 542 002a DBB2     		uxtb	r3, r3
+ 543 002c 1370     		strb	r3, [r2]
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 18
 
 
- 604 0167 5B01     		.2byte	0x15b
- 605 0169 00000000 		.4byte	.LFB6
- 606 016d 44000000 		.4byte	.LFE6-.LFB6
- 607 0171 01       		.uleb128 0x1
- 608 0172 9C       		.byte	0x9c
- 609 0173 87010000 		.4byte	0x187
- 610 0177 0B       		.uleb128 0xb
- 611 0178 29000000 		.4byte	.LASF20
- 612 017c 01       		.byte	0x1
- 613 017d 5D01     		.2byte	0x15d
- 614 017f 80000000 		.4byte	0x80
- 615 0183 02       		.uleb128 0x2
- 616 0184 91       		.byte	0x91
- 617 0185 77       		.sleb128 -9
- 618 0186 00       		.byte	0
- 619 0187 0C       		.uleb128 0xc
- 620 0188 FE010000 		.4byte	.LASF27
- 621 018c 01       		.byte	0x1
- 622 018d 15       		.byte	0x15
- 623 018e 80000000 		.4byte	0x80
- 624 0192 05       		.uleb128 0x5
- 625 0193 03       		.byte	0x3
- 626 0194 00000000 		.4byte	I2S_initVar
- 627 0198 00       		.byte	0
- 628              		.section	.debug_abbrev,"",%progbits
- 629              	.Ldebug_abbrev0:
- 630 0000 01       		.uleb128 0x1
- 631 0001 11       		.uleb128 0x11
- 632 0002 01       		.byte	0x1
- 633 0003 25       		.uleb128 0x25
- 634 0004 0E       		.uleb128 0xe
- 635 0005 13       		.uleb128 0x13
- 636 0006 0B       		.uleb128 0xb
- 637 0007 03       		.uleb128 0x3
- 638 0008 0E       		.uleb128 0xe
- 639 0009 1B       		.uleb128 0x1b
- 640 000a 0E       		.uleb128 0xe
- 641 000b 55       		.uleb128 0x55
- 642 000c 17       		.uleb128 0x17
- 643 000d 11       		.uleb128 0x11
- 644 000e 01       		.uleb128 0x1
- 645 000f 10       		.uleb128 0x10
- 646 0010 17       		.uleb128 0x17
- 647 0011 00       		.byte	0
- 648 0012 00       		.byte	0
- 649 0013 02       		.uleb128 0x2
- 650 0014 24       		.uleb128 0x24
- 651 0015 00       		.byte	0
- 652 0016 0B       		.uleb128 0xb
- 653 0017 0B       		.uleb128 0xb
- 654 0018 3E       		.uleb128 0x3e
- 655 0019 0B       		.uleb128 0xb
- 656 001a 03       		.uleb128 0x3
- 657 001b 08       		.uleb128 0x8
- 658 001c 00       		.byte	0
- 659 001d 00       		.byte	0
- 660 001e 03       		.uleb128 0x3
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 19
+ 427:Generated_Source\PSoC5/I2S.c ****         #ifdef I2S_RX_STS2_3_ACTL_REG
+ 428:Generated_Source\PSoC5/I2S.c ****             I2S_RX_STS2_3_ACTL_REG &= (uint8)~I2S_INT_EN;
+ 429:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STS2_3_ACTL_REG */
+ 430:Generated_Source\PSoC5/I2S.c ****         #ifdef I2S_RX_STS4_ACTL_REG
+ 431:Generated_Source\PSoC5/I2S.c ****             I2S_RX_STS4_ACTL_REG &= (uint8)~I2S_INT_EN;
+ 432:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STS4_ACTL_REG */
+ 433:Generated_Source\PSoC5/I2S.c ****         CyExitCriticalSection(enableInterrupts);
+ 544              		.loc 1 433 0
+ 545 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 546 0030 1846     		mov	r0, r3
+ 547 0032 FFF7FEFF 		bl	CyExitCriticalSection
+ 434:Generated_Source\PSoC5/I2S.c ****     }
+ 548              		.loc 1 434 0
+ 549 0036 00BF     		nop
+ 550 0038 0837     		adds	r7, r7, #8
+ 551              		.cfi_def_cfa_offset 8
+ 552 003a BD46     		mov	sp, r7
+ 553              		.cfi_def_cfa_register 13
+ 554              		@ sp needed
+ 555 003c 80BD     		pop	{r7, pc}
+ 556              	.L28:
+ 557 003e 00BF     		.align	2
+ 558              	.L27:
+ 559 0040 71640040 		.word	1073767537
+ 560 0044 91640040 		.word	1073767569
+ 561              		.cfi_endproc
+ 562              	.LFE8:
+ 563              		.size	I2S_DisableRx, .-I2S_DisableRx
+ 564              		.section	.text.I2S_ClearRxFIFO,"ax",%progbits
+ 565              		.align	2
+ 566              		.global	I2S_ClearRxFIFO
+ 567              		.thumb
+ 568              		.thumb_func
+ 569              		.type	I2S_ClearRxFIFO, %function
+ 570              	I2S_ClearRxFIFO:
+ 571              	.LFB9:
+ 435:Generated_Source\PSoC5/I2S.c **** 
+ 436:Generated_Source\PSoC5/I2S.c **** 
+ 437:Generated_Source\PSoC5/I2S.c ****     /*******************************************************************************
+ 438:Generated_Source\PSoC5/I2S.c ****     * Function Name: I2S_ClearRxFIFO
+ 439:Generated_Source\PSoC5/I2S.c ****     ********************************************************************************
+ 440:Generated_Source\PSoC5/I2S.c ****     *
+ 441:Generated_Source\PSoC5/I2S.c ****     * Summary:
+ 442:Generated_Source\PSoC5/I2S.c ****     *  Clears out the Rx FIFO.  Any data present in the FIFO will be lost.
+ 443:Generated_Source\PSoC5/I2S.c ****     *  This call should be made only when the Rx direction is disabled.
+ 444:Generated_Source\PSoC5/I2S.c ****     *
+ 445:Generated_Source\PSoC5/I2S.c ****     * Parameters:
+ 446:Generated_Source\PSoC5/I2S.c ****     *  None.
+ 447:Generated_Source\PSoC5/I2S.c ****     *
+ 448:Generated_Source\PSoC5/I2S.c ****     * Return:
+ 449:Generated_Source\PSoC5/I2S.c ****     *  None.
+ 450:Generated_Source\PSoC5/I2S.c ****     *
+ 451:Generated_Source\PSoC5/I2S.c ****     *******************************************************************************/
+ 452:Generated_Source\PSoC5/I2S.c ****     void I2S_ClearRxFIFO(void) 
+ 453:Generated_Source\PSoC5/I2S.c ****     {
+ 572              		.loc 1 453 0
+ 573              		.cfi_startproc
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 19
 
 
- 661 001f 24       		.uleb128 0x24
- 662 0020 00       		.byte	0
- 663 0021 0B       		.uleb128 0xb
- 664 0022 0B       		.uleb128 0xb
- 665 0023 3E       		.uleb128 0x3e
- 666 0024 0B       		.uleb128 0xb
- 667 0025 03       		.uleb128 0x3
- 668 0026 0E       		.uleb128 0xe
- 669 0027 00       		.byte	0
- 670 0028 00       		.byte	0
- 671 0029 04       		.uleb128 0x4
- 672 002a 16       		.uleb128 0x16
- 673 002b 00       		.byte	0
- 674 002c 03       		.uleb128 0x3
- 675 002d 0E       		.uleb128 0xe
- 676 002e 3A       		.uleb128 0x3a
- 677 002f 0B       		.uleb128 0xb
- 678 0030 3B       		.uleb128 0x3b
- 679 0031 05       		.uleb128 0x5
- 680 0032 49       		.uleb128 0x49
- 681 0033 13       		.uleb128 0x13
- 682 0034 00       		.byte	0
- 683 0035 00       		.byte	0
- 684 0036 05       		.uleb128 0x5
- 685 0037 35       		.uleb128 0x35
- 686 0038 00       		.byte	0
- 687 0039 49       		.uleb128 0x49
- 688 003a 13       		.uleb128 0x13
- 689 003b 00       		.byte	0
- 690 003c 00       		.byte	0
- 691 003d 06       		.uleb128 0x6
- 692 003e 2E       		.uleb128 0x2e
- 693 003f 01       		.byte	0x1
- 694 0040 3F       		.uleb128 0x3f
- 695 0041 19       		.uleb128 0x19
- 696 0042 03       		.uleb128 0x3
- 697 0043 0E       		.uleb128 0xe
- 698 0044 3A       		.uleb128 0x3a
- 699 0045 0B       		.uleb128 0xb
- 700 0046 3B       		.uleb128 0x3b
- 701 0047 0B       		.uleb128 0xb
- 702 0048 27       		.uleb128 0x27
- 703 0049 19       		.uleb128 0x19
- 704 004a 11       		.uleb128 0x11
- 705 004b 01       		.uleb128 0x1
- 706 004c 12       		.uleb128 0x12
- 707 004d 06       		.uleb128 0x6
- 708 004e 40       		.uleb128 0x40
- 709 004f 18       		.uleb128 0x18
- 710 0050 9642     		.uleb128 0x2116
- 711 0052 19       		.uleb128 0x19
- 712 0053 01       		.uleb128 0x1
- 713 0054 13       		.uleb128 0x13
- 714 0055 00       		.byte	0
- 715 0056 00       		.byte	0
- 716 0057 07       		.uleb128 0x7
- 717 0058 34       		.uleb128 0x34
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 20
+ 574              		@ args = 0, pretend = 0, frame = 8
+ 575              		@ frame_needed = 1, uses_anonymous_args = 0
+ 576 0000 80B5     		push	{r7, lr}
+ 577              		.cfi_def_cfa_offset 8
+ 578              		.cfi_offset 7, -8
+ 579              		.cfi_offset 14, -4
+ 580 0002 82B0     		sub	sp, sp, #8
+ 581              		.cfi_def_cfa_offset 16
+ 582 0004 00AF     		add	r7, sp, #0
+ 583              		.cfi_def_cfa_register 7
+ 454:Generated_Source\PSoC5/I2S.c ****         uint8 enableInterrupts;
+ 455:Generated_Source\PSoC5/I2S.c **** 
+ 456:Generated_Source\PSoC5/I2S.c ****         enableInterrupts = CyEnterCriticalSection();
+ 584              		.loc 1 456 0
+ 585 0006 FFF7FEFF 		bl	CyEnterCriticalSection
+ 586 000a 0346     		mov	r3, r0
+ 587 000c FB71     		strb	r3, [r7, #7]
+ 457:Generated_Source\PSoC5/I2S.c ****         I2S_CLEAR_RX_FIFO(CH0);
+ 588              		.loc 1 457 0
+ 589 000e 0C4A     		ldr	r2, .L30
+ 590 0010 0B4B     		ldr	r3, .L30
+ 591 0012 1B78     		ldrb	r3, [r3]
+ 592 0014 DBB2     		uxtb	r3, r3
+ 593 0016 43F00303 		orr	r3, r3, #3
+ 594 001a DBB2     		uxtb	r3, r3
+ 595 001c 1370     		strb	r3, [r2]
+ 596 001e 084A     		ldr	r2, .L30
+ 597 0020 074B     		ldr	r3, .L30
+ 598 0022 1B78     		ldrb	r3, [r3]
+ 599 0024 DBB2     		uxtb	r3, r3
+ 600 0026 23F00303 		bic	r3, r3, #3
+ 601 002a DBB2     		uxtb	r3, r3
+ 602 002c 1370     		strb	r3, [r2]
+ 458:Generated_Source\PSoC5/I2S.c ****         #if (I2S_RX_STEREO_1_PRESENT)
+ 459:Generated_Source\PSoC5/I2S.c ****             I2S_CLEAR_RX_FIFO(CH1);
+ 460:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STEREO_1_PRESENT */
+ 461:Generated_Source\PSoC5/I2S.c ****         #if (I2S_RX_STEREO_2_PRESENT)
+ 462:Generated_Source\PSoC5/I2S.c ****             I2S_CLEAR_RX_FIFO(CH2);
+ 463:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STEREO_2_PRESENT */
+ 464:Generated_Source\PSoC5/I2S.c ****         #if (I2S_RX_STEREO_3_PRESENT)
+ 465:Generated_Source\PSoC5/I2S.c ****             I2S_CLEAR_RX_FIFO(CH3);
+ 466:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STEREO_3_PRESENT */
+ 467:Generated_Source\PSoC5/I2S.c ****         #if (I2S_RX_STEREO_4_PRESENT)
+ 468:Generated_Source\PSoC5/I2S.c ****             I2S_CLEAR_RX_FIFO(CH4);
+ 469:Generated_Source\PSoC5/I2S.c ****         #endif /* I2S_RX_STEREO_4_PRESENT */
+ 470:Generated_Source\PSoC5/I2S.c ****         CyExitCriticalSection(enableInterrupts);
+ 603              		.loc 1 470 0
+ 604 002e FB79     		ldrb	r3, [r7, #7]	@ zero_extendqisi2
+ 605 0030 1846     		mov	r0, r3
+ 606 0032 FFF7FEFF 		bl	CyExitCriticalSection
+ 471:Generated_Source\PSoC5/I2S.c ****     }
+ 607              		.loc 1 471 0
+ 608 0036 00BF     		nop
+ 609 0038 0837     		adds	r7, r7, #8
+ 610              		.cfi_def_cfa_offset 8
+ 611 003a BD46     		mov	sp, r7
+ 612              		.cfi_def_cfa_register 13
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 20
 
 
- 718 0059 00       		.byte	0
- 719 005a 03       		.uleb128 0x3
- 720 005b 0E       		.uleb128 0xe
- 721 005c 3A       		.uleb128 0x3a
- 722 005d 0B       		.uleb128 0xb
- 723 005e 3B       		.uleb128 0x3b
- 724 005f 0B       		.uleb128 0xb
- 725 0060 49       		.uleb128 0x49
- 726 0061 13       		.uleb128 0x13
- 727 0062 02       		.uleb128 0x2
- 728 0063 18       		.uleb128 0x18
- 729 0064 00       		.byte	0
- 730 0065 00       		.byte	0
- 731 0066 08       		.uleb128 0x8
- 732 0067 2E       		.uleb128 0x2e
- 733 0068 00       		.byte	0
- 734 0069 3F       		.uleb128 0x3f
- 735 006a 19       		.uleb128 0x19
- 736 006b 03       		.uleb128 0x3
- 737 006c 0E       		.uleb128 0xe
- 738 006d 3A       		.uleb128 0x3a
- 739 006e 0B       		.uleb128 0xb
- 740 006f 3B       		.uleb128 0x3b
- 741 0070 0B       		.uleb128 0xb
- 742 0071 27       		.uleb128 0x27
- 743 0072 19       		.uleb128 0x19
- 744 0073 11       		.uleb128 0x11
- 745 0074 01       		.uleb128 0x1
- 746 0075 12       		.uleb128 0x12
- 747 0076 06       		.uleb128 0x6
- 748 0077 40       		.uleb128 0x40
- 749 0078 18       		.uleb128 0x18
- 750 0079 9742     		.uleb128 0x2117
- 751 007b 19       		.uleb128 0x19
- 752 007c 00       		.byte	0
- 753 007d 00       		.byte	0
- 754 007e 09       		.uleb128 0x9
- 755 007f 2E       		.uleb128 0x2e
- 756 0080 00       		.byte	0
- 757 0081 3F       		.uleb128 0x3f
- 758 0082 19       		.uleb128 0x19
- 759 0083 03       		.uleb128 0x3
- 760 0084 0E       		.uleb128 0xe
- 761 0085 3A       		.uleb128 0x3a
- 762 0086 0B       		.uleb128 0xb
- 763 0087 3B       		.uleb128 0x3b
- 764 0088 0B       		.uleb128 0xb
- 765 0089 27       		.uleb128 0x27
- 766 008a 19       		.uleb128 0x19
- 767 008b 11       		.uleb128 0x11
- 768 008c 01       		.uleb128 0x1
- 769 008d 12       		.uleb128 0x12
- 770 008e 06       		.uleb128 0x6
- 771 008f 40       		.uleb128 0x40
- 772 0090 18       		.uleb128 0x18
- 773 0091 9642     		.uleb128 0x2116
- 774 0093 19       		.uleb128 0x19
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 21
+ 613              		@ sp needed
+ 614 003c 80BD     		pop	{r7, pc}
+ 615              	.L31:
+ 616 003e 00BF     		.align	2
+ 617              	.L30:
+ 618 0040 92640040 		.word	1073767570
+ 619              		.cfi_endproc
+ 620              	.LFE9:
+ 621              		.size	I2S_ClearRxFIFO, .-I2S_ClearRxFIFO
+ 622              		.text
+ 623              	.Letext0:
+ 624              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 625              		.section	.debug_info,"",%progbits
+ 626              	.Ldebug_info0:
+ 627 0000 07020000 		.4byte	0x207
+ 628 0004 0400     		.2byte	0x4
+ 629 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 630 000a 04       		.byte	0x4
+ 631 000b 01       		.uleb128 0x1
+ 632 000c 10000000 		.4byte	.LASF27
+ 633 0010 0C       		.byte	0xc
+ 634 0011 06010000 		.4byte	.LASF28
+ 635 0015 9E010000 		.4byte	.LASF29
+ 636 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 637 001d 00000000 		.4byte	0
+ 638 0021 00000000 		.4byte	.Ldebug_line0
+ 639 0025 02       		.uleb128 0x2
+ 640 0026 04       		.byte	0x4
+ 641 0027 05       		.byte	0x5
+ 642 0028 696E7400 		.ascii	"int\000"
+ 643 002c 03       		.uleb128 0x3
+ 644 002d 04       		.byte	0x4
+ 645 002e 07       		.byte	0x7
+ 646 002f 2E010000 		.4byte	.LASF0
+ 647 0033 03       		.uleb128 0x3
+ 648 0034 08       		.byte	0x8
+ 649 0035 05       		.byte	0x5
+ 650 0036 7E010000 		.4byte	.LASF1
+ 651 003a 03       		.uleb128 0x3
+ 652 003b 08       		.byte	0x8
+ 653 003c 04       		.byte	0x4
+ 654 003d 2D020000 		.4byte	.LASF2
+ 655 0041 03       		.uleb128 0x3
+ 656 0042 01       		.byte	0x1
+ 657 0043 06       		.byte	0x6
+ 658 0044 39020000 		.4byte	.LASF3
+ 659 0048 03       		.uleb128 0x3
+ 660 0049 01       		.byte	0x1
+ 661 004a 08       		.byte	0x8
+ 662 004b C3000000 		.4byte	.LASF4
+ 663 004f 03       		.uleb128 0x3
+ 664 0050 02       		.byte	0x2
+ 665 0051 05       		.byte	0x5
+ 666 0052 FE010000 		.4byte	.LASF5
+ 667 0056 03       		.uleb128 0x3
+ 668 0057 02       		.byte	0x2
+ 669 0058 07       		.byte	0x7
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 21
 
 
- 775 0094 00       		.byte	0
- 776 0095 00       		.byte	0
- 777 0096 0A       		.uleb128 0xa
- 778 0097 2E       		.uleb128 0x2e
- 779 0098 01       		.byte	0x1
- 780 0099 3F       		.uleb128 0x3f
- 781 009a 19       		.uleb128 0x19
- 782 009b 03       		.uleb128 0x3
- 783 009c 0E       		.uleb128 0xe
- 784 009d 3A       		.uleb128 0x3a
- 785 009e 0B       		.uleb128 0xb
- 786 009f 3B       		.uleb128 0x3b
- 787 00a0 05       		.uleb128 0x5
- 788 00a1 27       		.uleb128 0x27
- 789 00a2 19       		.uleb128 0x19
- 790 00a3 11       		.uleb128 0x11
- 791 00a4 01       		.uleb128 0x1
- 792 00a5 12       		.uleb128 0x12
- 793 00a6 06       		.uleb128 0x6
- 794 00a7 40       		.uleb128 0x40
- 795 00a8 18       		.uleb128 0x18
- 796 00a9 9642     		.uleb128 0x2116
- 797 00ab 19       		.uleb128 0x19
- 798 00ac 01       		.uleb128 0x1
- 799 00ad 13       		.uleb128 0x13
- 800 00ae 00       		.byte	0
- 801 00af 00       		.byte	0
- 802 00b0 0B       		.uleb128 0xb
- 803 00b1 34       		.uleb128 0x34
- 804 00b2 00       		.byte	0
- 805 00b3 03       		.uleb128 0x3
- 806 00b4 0E       		.uleb128 0xe
- 807 00b5 3A       		.uleb128 0x3a
- 808 00b6 0B       		.uleb128 0xb
- 809 00b7 3B       		.uleb128 0x3b
- 810 00b8 05       		.uleb128 0x5
- 811 00b9 49       		.uleb128 0x49
- 812 00ba 13       		.uleb128 0x13
- 813 00bb 02       		.uleb128 0x2
- 814 00bc 18       		.uleb128 0x18
- 815 00bd 00       		.byte	0
- 816 00be 00       		.byte	0
- 817 00bf 0C       		.uleb128 0xc
- 818 00c0 34       		.uleb128 0x34
- 819 00c1 00       		.byte	0
- 820 00c2 03       		.uleb128 0x3
- 821 00c3 0E       		.uleb128 0xe
- 822 00c4 3A       		.uleb128 0x3a
- 823 00c5 0B       		.uleb128 0xb
- 824 00c6 3B       		.uleb128 0x3b
- 825 00c7 0B       		.uleb128 0xb
- 826 00c8 49       		.uleb128 0x49
- 827 00c9 13       		.uleb128 0x13
- 828 00ca 3F       		.uleb128 0x3f
- 829 00cb 19       		.uleb128 0x19
- 830 00cc 02       		.uleb128 0x2
- 831 00cd 18       		.uleb128 0x18
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 22
+ 670 0059 AA000000 		.4byte	.LASF6
+ 671 005d 03       		.uleb128 0x3
+ 672 005e 04       		.byte	0x4
+ 673 005f 05       		.byte	0x5
+ 674 0060 16020000 		.4byte	.LASF7
+ 675 0064 03       		.uleb128 0x3
+ 676 0065 04       		.byte	0x4
+ 677 0066 07       		.byte	0x7
+ 678 0067 D6000000 		.4byte	.LASF8
+ 679 006b 03       		.uleb128 0x3
+ 680 006c 08       		.byte	0x8
+ 681 006d 07       		.byte	0x7
+ 682 006e 44010000 		.4byte	.LASF9
+ 683 0072 03       		.uleb128 0x3
+ 684 0073 04       		.byte	0x4
+ 685 0074 07       		.byte	0x7
+ 686 0075 75010000 		.4byte	.LASF10
+ 687 0079 03       		.uleb128 0x3
+ 688 007a 01       		.byte	0x1
+ 689 007b 08       		.byte	0x8
+ 690 007c 99010000 		.4byte	.LASF11
+ 691 0080 04       		.uleb128 0x4
+ 692 0081 E8000000 		.4byte	.LASF14
+ 693 0085 02       		.byte	0x2
+ 694 0086 E401     		.2byte	0x1e4
+ 695 0088 48000000 		.4byte	0x48
+ 696 008c 03       		.uleb128 0x3
+ 697 008d 04       		.byte	0x4
+ 698 008e 04       		.byte	0x4
+ 699 008f BD000000 		.4byte	.LASF12
+ 700 0093 03       		.uleb128 0x3
+ 701 0094 08       		.byte	0x8
+ 702 0095 04       		.byte	0x4
+ 703 0096 FF000000 		.4byte	.LASF13
+ 704 009a 04       		.uleb128 0x4
+ 705 009b D1000000 		.4byte	.LASF15
+ 706 009f 02       		.byte	0x2
+ 707 00a0 8E02     		.2byte	0x28e
+ 708 00a2 A6000000 		.4byte	0xa6
+ 709 00a6 05       		.uleb128 0x5
+ 710 00a7 80000000 		.4byte	0x80
+ 711 00ab 06       		.uleb128 0x6
+ 712 00ac 23010000 		.4byte	.LASF18
+ 713 00b0 01       		.byte	0x1
+ 714 00b1 29       		.byte	0x29
+ 715 00b2 00000000 		.4byte	.LFB0
+ 716 00b6 48000000 		.4byte	.LFE0-.LFB0
+ 717 00ba 01       		.uleb128 0x1
+ 718 00bb 9C       		.byte	0x9c
+ 719 00bc CF000000 		.4byte	0xcf
+ 720 00c0 07       		.uleb128 0x7
+ 721 00c1 EE000000 		.4byte	.LASF20
+ 722 00c5 01       		.byte	0x1
+ 723 00c6 2B       		.byte	0x2b
+ 724 00c7 80000000 		.4byte	0x80
+ 725 00cb 02       		.uleb128 0x2
+ 726 00cc 91       		.byte	0x91
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 22
 
 
- 832 00ce 00       		.byte	0
- 833 00cf 00       		.byte	0
- 834 00d0 00       		.byte	0
- 835              		.section	.debug_aranges,"",%progbits
- 836 0000 4C000000 		.4byte	0x4c
- 837 0004 0200     		.2byte	0x2
- 838 0006 00000000 		.4byte	.Ldebug_info0
- 839 000a 04       		.byte	0x4
- 840 000b 00       		.byte	0
- 841 000c 0000     		.2byte	0
- 842 000e 0000     		.2byte	0
- 843 0010 00000000 		.4byte	.LFB0
- 844 0014 48000000 		.4byte	.LFE0-.LFB0
- 845 0018 00000000 		.4byte	.LFB1
- 846 001c 30000000 		.4byte	.LFE1-.LFB1
- 847 0020 00000000 		.4byte	.LFB2
- 848 0024 24000000 		.4byte	.LFE2-.LFB2
- 849 0028 00000000 		.4byte	.LFB3
- 850 002c 58000000 		.4byte	.LFE3-.LFB3
- 851 0030 00000000 		.4byte	.LFB4
- 852 0034 48000000 		.4byte	.LFE4-.LFB4
- 853 0038 00000000 		.4byte	.LFB5
- 854 003c 48000000 		.4byte	.LFE5-.LFB5
- 855 0040 00000000 		.4byte	.LFB6
- 856 0044 44000000 		.4byte	.LFE6-.LFB6
- 857 0048 00000000 		.4byte	0
- 858 004c 00000000 		.4byte	0
- 859              		.section	.debug_ranges,"",%progbits
- 860              	.Ldebug_ranges0:
- 861 0000 00000000 		.4byte	.LFB0
- 862 0004 48000000 		.4byte	.LFE0
- 863 0008 00000000 		.4byte	.LFB1
- 864 000c 30000000 		.4byte	.LFE1
- 865 0010 00000000 		.4byte	.LFB2
- 866 0014 24000000 		.4byte	.LFE2
- 867 0018 00000000 		.4byte	.LFB3
- 868 001c 58000000 		.4byte	.LFE3
- 869 0020 00000000 		.4byte	.LFB4
- 870 0024 48000000 		.4byte	.LFE4
- 871 0028 00000000 		.4byte	.LFB5
- 872 002c 48000000 		.4byte	.LFE5
- 873 0030 00000000 		.4byte	.LFB6
- 874 0034 44000000 		.4byte	.LFE6
- 875 0038 00000000 		.4byte	0
- 876 003c 00000000 		.4byte	0
- 877              		.section	.debug_line,"",%progbits
- 878              	.Ldebug_line0:
- 879 0000 DD000000 		.section	.debug_str,"MS",%progbits,1
- 879      02004000 
- 879      00000201 
- 879      FB0E0D00 
- 879      01010101 
- 880              	.LASF1:
- 881 0000 6C6F6E67 		.ascii	"long long int\000"
- 881      206C6F6E 
- 881      6720696E 
- 881      7400
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 23
+ 727 00cd 77       		.sleb128 -9
+ 728 00ce 00       		.byte	0
+ 729 00cf 08       		.uleb128 0x8
+ 730 00d0 3B010000 		.4byte	.LASF16
+ 731 00d4 01       		.byte	0x1
+ 732 00d5 45       		.byte	0x45
+ 733 00d6 00000000 		.4byte	.LFB1
+ 734 00da 54000000 		.4byte	.LFE1-.LFB1
+ 735 00de 01       		.uleb128 0x1
+ 736 00df 9C       		.byte	0x9c
+ 737 00e0 09       		.uleb128 0x9
+ 738 00e1 5B010000 		.4byte	.LASF17
+ 739 00e5 01       		.byte	0x1
+ 740 00e6 9E       		.byte	0x9e
+ 741 00e7 00000000 		.4byte	.LFB2
+ 742 00eb 24000000 		.4byte	.LFE2-.LFB2
+ 743 00ef 01       		.uleb128 0x1
+ 744 00f0 9C       		.byte	0x9c
+ 745 00f1 06       		.uleb128 0x6
+ 746 00f2 45020000 		.4byte	.LASF19
+ 747 00f6 01       		.byte	0x1
+ 748 00f7 B9       		.byte	0xb9
+ 749 00f8 00000000 		.4byte	.LFB3
+ 750 00fc 60000000 		.4byte	.LFE3-.LFB3
+ 751 0100 01       		.uleb128 0x1
+ 752 0101 9C       		.byte	0x9c
+ 753 0102 15010000 		.4byte	0x115
+ 754 0106 07       		.uleb128 0x7
+ 755 0107 EE000000 		.4byte	.LASF20
+ 756 010b 01       		.byte	0x1
+ 757 010c BB       		.byte	0xbb
+ 758 010d 80000000 		.4byte	0x80
+ 759 0111 02       		.uleb128 0x2
+ 760 0112 91       		.byte	0x91
+ 761 0113 77       		.sleb128 -9
+ 762 0114 00       		.byte	0
+ 763 0115 0A       		.uleb128 0xa
+ 764 0116 F1010000 		.4byte	.LASF21
+ 765 011a 01       		.byte	0x1
+ 766 011b 1801     		.2byte	0x118
+ 767 011d 00000000 		.4byte	.LFB4
+ 768 0121 48000000 		.4byte	.LFE4-.LFB4
+ 769 0125 01       		.uleb128 0x1
+ 770 0126 9C       		.byte	0x9c
+ 771 0127 3B010000 		.4byte	0x13b
+ 772 012b 0B       		.uleb128 0xb
+ 773 012c EE000000 		.4byte	.LASF20
+ 774 0130 01       		.byte	0x1
+ 775 0131 1A01     		.2byte	0x11a
+ 776 0133 80000000 		.4byte	0x80
+ 777 0137 02       		.uleb128 0x2
+ 778 0138 91       		.byte	0x91
+ 779 0139 77       		.sleb128 -9
+ 780 013a 00       		.byte	0
+ 781 013b 0A       		.uleb128 0xa
+ 782 013c 1F020000 		.4byte	.LASF22
+ 783 0140 01       		.byte	0x1
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 23
 
 
- 882              	.LASF0:
- 883 000e 756E7369 		.ascii	"unsigned int\000"
- 883      676E6564 
- 883      20696E74 
- 883      00
- 884              	.LASF22:
- 885 001b 4932535F 		.ascii	"I2S_DisableTx\000"
- 885      44697361 
- 885      626C6554 
- 885      7800
- 886              	.LASF20:
- 887 0029 656E6162 		.ascii	"enableInterrupts\000"
- 887      6C65496E 
- 887      74657272 
- 887      75707473 
- 887      00
- 888              	.LASF14:
- 889 003a 75696E74 		.ascii	"uint8\000"
- 889      3800
- 890              	.LASF8:
- 891 0040 6C6F6E67 		.ascii	"long unsigned int\000"
- 891      20756E73 
- 891      69676E65 
- 891      6420696E 
- 891      7400
- 892              	.LASF9:
- 893 0052 6C6F6E67 		.ascii	"long long unsigned int\000"
- 893      206C6F6E 
- 893      6720756E 
- 893      7369676E 
- 893      65642069 
- 894              	.LASF12:
- 895 0069 666C6F61 		.ascii	"float\000"
- 895      7400
- 896              	.LASF19:
- 897 006f 4932535F 		.ascii	"I2S_Stop\000"
- 897      53746F70 
- 897      00
- 898              	.LASF24:
- 899 0078 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 899      43313120 
- 899      352E342E 
- 899      31203230 
- 899      31363036 
- 900 00ab 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 900      20726576 
- 900      6973696F 
- 900      6E203233 
- 900      37373135 
- 901 00de 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 901      66756E63 
- 901      74696F6E 
- 901      2D736563 
- 901      74696F6E 
- 902              	.LASF4:
- 903 0106 756E7369 		.ascii	"unsigned char\000"
- 903      676E6564 
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 24
+ 784 0141 3A01     		.2byte	0x13a
+ 785 0143 00000000 		.4byte	.LFB5
+ 786 0147 48000000 		.4byte	.LFE5-.LFB5
+ 787 014b 01       		.uleb128 0x1
+ 788 014c 9C       		.byte	0x9c
+ 789 014d 61010000 		.4byte	0x161
+ 790 0151 0B       		.uleb128 0xb
+ 791 0152 EE000000 		.4byte	.LASF20
+ 792 0156 01       		.byte	0x1
+ 793 0157 3C01     		.2byte	0x13c
+ 794 0159 80000000 		.4byte	0x80
+ 795 015d 02       		.uleb128 0x2
+ 796 015e 91       		.byte	0x91
+ 797 015f 77       		.sleb128 -9
+ 798 0160 00       		.byte	0
+ 799 0161 0A       		.uleb128 0xa
+ 800 0162 65010000 		.4byte	.LASF23
+ 801 0166 01       		.byte	0x1
+ 802 0167 5B01     		.2byte	0x15b
+ 803 0169 00000000 		.4byte	.LFB6
+ 804 016d 44000000 		.4byte	.LFE6-.LFB6
+ 805 0171 01       		.uleb128 0x1
+ 806 0172 9C       		.byte	0x9c
+ 807 0173 87010000 		.4byte	0x187
+ 808 0177 0B       		.uleb128 0xb
+ 809 0178 EE000000 		.4byte	.LASF20
+ 810 017c 01       		.byte	0x1
+ 811 017d 5D01     		.2byte	0x15d
+ 812 017f 80000000 		.4byte	0x80
+ 813 0183 02       		.uleb128 0x2
+ 814 0184 91       		.byte	0x91
+ 815 0185 77       		.sleb128 -9
+ 816 0186 00       		.byte	0
+ 817 0187 0A       		.uleb128 0xa
+ 818 0188 8C010000 		.4byte	.LASF24
+ 819 018c 01       		.byte	0x1
+ 820 018d 8301     		.2byte	0x183
+ 821 018f 00000000 		.4byte	.LFB7
+ 822 0193 48000000 		.4byte	.LFE7-.LFB7
+ 823 0197 01       		.uleb128 0x1
+ 824 0198 9C       		.byte	0x9c
+ 825 0199 AD010000 		.4byte	0x1ad
+ 826 019d 0B       		.uleb128 0xb
+ 827 019e EE000000 		.4byte	.LASF20
+ 828 01a2 01       		.byte	0x1
+ 829 01a3 8501     		.2byte	0x185
+ 830 01a5 80000000 		.4byte	0x80
+ 831 01a9 02       		.uleb128 0x2
+ 832 01aa 91       		.byte	0x91
+ 833 01ab 77       		.sleb128 -9
+ 834 01ac 00       		.byte	0
+ 835 01ad 0A       		.uleb128 0xa
+ 836 01ae 08020000 		.4byte	.LASF25
+ 837 01b2 01       		.byte	0x1
+ 838 01b3 A301     		.2byte	0x1a3
+ 839 01b5 00000000 		.4byte	.LFB8
+ 840 01b9 48000000 		.4byte	.LFE8-.LFB8
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 24
 
 
- 903      20636861 
- 903      7200
- 904              	.LASF11:
- 905 0114 63686172 		.ascii	"char\000"
- 905      00
- 906              	.LASF18:
- 907 0119 4932535F 		.ascii	"I2S_Enable\000"
- 907      456E6162 
- 907      6C6500
- 908              	.LASF7:
- 909 0124 6C6F6E67 		.ascii	"long int\000"
- 909      20696E74 
- 909      00
- 910              	.LASF25:
- 911 012d 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2S.c\000"
- 911      72617465 
- 911      645F536F 
- 911      75726365 
- 911      5C50536F 
- 912              	.LASF13:
- 913 014a 646F7562 		.ascii	"double\000"
- 913      6C6500
- 914              	.LASF6:
- 915 0151 73686F72 		.ascii	"short unsigned int\000"
- 915      7420756E 
- 915      7369676E 
- 915      65642069 
- 915      6E7400
- 916              	.LASF3:
- 917 0164 7369676E 		.ascii	"signed char\000"
- 917      65642063 
- 917      68617200 
- 918              	.LASF21:
- 919 0170 4932535F 		.ascii	"I2S_EnableTx\000"
- 919      456E6162 
- 919      6C655478 
- 919      00
- 920              	.LASF17:
- 921 017d 4932535F 		.ascii	"I2S_Start\000"
- 921      53746172 
- 921      7400
- 922              	.LASF26:
- 923 0187 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
- 923      73657273 
- 923      5C706561 
- 923      726C7374 
- 923      6C5C446F 
- 924 01b5 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
- 924      73747265 
- 924      616D6572 
- 924      5C666132 
- 924      305F6932 
- 925              	.LASF2:
- 926 01da 6C6F6E67 		.ascii	"long double\000"
- 926      20646F75 
- 926      626C6500 
- 927              	.LASF16:
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccBfyooW.s 			page 25
+ 841 01bd 01       		.uleb128 0x1
+ 842 01be 9C       		.byte	0x9c
+ 843 01bf D3010000 		.4byte	0x1d3
+ 844 01c3 0B       		.uleb128 0xb
+ 845 01c4 EE000000 		.4byte	.LASF20
+ 846 01c8 01       		.byte	0x1
+ 847 01c9 A501     		.2byte	0x1a5
+ 848 01cb 80000000 		.4byte	0x80
+ 849 01cf 02       		.uleb128 0x2
+ 850 01d0 91       		.byte	0x91
+ 851 01d1 77       		.sleb128 -9
+ 852 01d2 00       		.byte	0
+ 853 01d3 0A       		.uleb128 0xa
+ 854 01d4 00000000 		.4byte	.LASF26
+ 855 01d8 01       		.byte	0x1
+ 856 01d9 C401     		.2byte	0x1c4
+ 857 01db 00000000 		.4byte	.LFB9
+ 858 01df 44000000 		.4byte	.LFE9-.LFB9
+ 859 01e3 01       		.uleb128 0x1
+ 860 01e4 9C       		.byte	0x9c
+ 861 01e5 F9010000 		.4byte	0x1f9
+ 862 01e9 0B       		.uleb128 0xb
+ 863 01ea EE000000 		.4byte	.LASF20
+ 864 01ee 01       		.byte	0x1
+ 865 01ef C601     		.2byte	0x1c6
+ 866 01f1 80000000 		.4byte	0x80
+ 867 01f5 02       		.uleb128 0x2
+ 868 01f6 91       		.byte	0x91
+ 869 01f7 77       		.sleb128 -9
+ 870 01f8 00       		.byte	0
+ 871 01f9 0C       		.uleb128 0xc
+ 872 01fa 9E000000 		.4byte	.LASF30
+ 873 01fe 01       		.byte	0x1
+ 874 01ff 15       		.byte	0x15
+ 875 0200 80000000 		.4byte	0x80
+ 876 0204 05       		.uleb128 0x5
+ 877 0205 03       		.byte	0x3
+ 878 0206 00000000 		.4byte	I2S_initVar
+ 879 020a 00       		.byte	0
+ 880              		.section	.debug_abbrev,"",%progbits
+ 881              	.Ldebug_abbrev0:
+ 882 0000 01       		.uleb128 0x1
+ 883 0001 11       		.uleb128 0x11
+ 884 0002 01       		.byte	0x1
+ 885 0003 25       		.uleb128 0x25
+ 886 0004 0E       		.uleb128 0xe
+ 887 0005 13       		.uleb128 0x13
+ 888 0006 0B       		.uleb128 0xb
+ 889 0007 03       		.uleb128 0x3
+ 890 0008 0E       		.uleb128 0xe
+ 891 0009 1B       		.uleb128 0x1b
+ 892 000a 0E       		.uleb128 0xe
+ 893 000b 55       		.uleb128 0x55
+ 894 000c 17       		.uleb128 0x17
+ 895 000d 11       		.uleb128 0x11
+ 896 000e 01       		.uleb128 0x1
+ 897 000f 10       		.uleb128 0x10
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 25
 
 
- 928 01e6 4932535F 		.ascii	"I2S_Init\000"
- 928      496E6974 
- 928      00
- 929              	.LASF5:
- 930 01ef 73686F72 		.ascii	"short int\000"
- 930      7420696E 
- 930      7400
- 931              	.LASF15:
- 932 01f9 72656738 		.ascii	"reg8\000"
- 932      00
- 933              	.LASF27:
- 934 01fe 4932535F 		.ascii	"I2S_initVar\000"
- 934      696E6974 
- 934      56617200 
- 935              	.LASF23:
- 936 020a 4932535F 		.ascii	"I2S_ClearTxFIFO\000"
- 936      436C6561 
- 936      72547846 
- 936      49464F00 
- 937              	.LASF10:
- 938 021a 73697A65 		.ascii	"sizetype\000"
- 938      74797065 
- 938      00
- 939              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 898 0010 17       		.uleb128 0x17
+ 899 0011 00       		.byte	0
+ 900 0012 00       		.byte	0
+ 901 0013 02       		.uleb128 0x2
+ 902 0014 24       		.uleb128 0x24
+ 903 0015 00       		.byte	0
+ 904 0016 0B       		.uleb128 0xb
+ 905 0017 0B       		.uleb128 0xb
+ 906 0018 3E       		.uleb128 0x3e
+ 907 0019 0B       		.uleb128 0xb
+ 908 001a 03       		.uleb128 0x3
+ 909 001b 08       		.uleb128 0x8
+ 910 001c 00       		.byte	0
+ 911 001d 00       		.byte	0
+ 912 001e 03       		.uleb128 0x3
+ 913 001f 24       		.uleb128 0x24
+ 914 0020 00       		.byte	0
+ 915 0021 0B       		.uleb128 0xb
+ 916 0022 0B       		.uleb128 0xb
+ 917 0023 3E       		.uleb128 0x3e
+ 918 0024 0B       		.uleb128 0xb
+ 919 0025 03       		.uleb128 0x3
+ 920 0026 0E       		.uleb128 0xe
+ 921 0027 00       		.byte	0
+ 922 0028 00       		.byte	0
+ 923 0029 04       		.uleb128 0x4
+ 924 002a 16       		.uleb128 0x16
+ 925 002b 00       		.byte	0
+ 926 002c 03       		.uleb128 0x3
+ 927 002d 0E       		.uleb128 0xe
+ 928 002e 3A       		.uleb128 0x3a
+ 929 002f 0B       		.uleb128 0xb
+ 930 0030 3B       		.uleb128 0x3b
+ 931 0031 05       		.uleb128 0x5
+ 932 0032 49       		.uleb128 0x49
+ 933 0033 13       		.uleb128 0x13
+ 934 0034 00       		.byte	0
+ 935 0035 00       		.byte	0
+ 936 0036 05       		.uleb128 0x5
+ 937 0037 35       		.uleb128 0x35
+ 938 0038 00       		.byte	0
+ 939 0039 49       		.uleb128 0x49
+ 940 003a 13       		.uleb128 0x13
+ 941 003b 00       		.byte	0
+ 942 003c 00       		.byte	0
+ 943 003d 06       		.uleb128 0x6
+ 944 003e 2E       		.uleb128 0x2e
+ 945 003f 01       		.byte	0x1
+ 946 0040 3F       		.uleb128 0x3f
+ 947 0041 19       		.uleb128 0x19
+ 948 0042 03       		.uleb128 0x3
+ 949 0043 0E       		.uleb128 0xe
+ 950 0044 3A       		.uleb128 0x3a
+ 951 0045 0B       		.uleb128 0xb
+ 952 0046 3B       		.uleb128 0x3b
+ 953 0047 0B       		.uleb128 0xb
+ 954 0048 27       		.uleb128 0x27
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 26
+
+
+ 955 0049 19       		.uleb128 0x19
+ 956 004a 11       		.uleb128 0x11
+ 957 004b 01       		.uleb128 0x1
+ 958 004c 12       		.uleb128 0x12
+ 959 004d 06       		.uleb128 0x6
+ 960 004e 40       		.uleb128 0x40
+ 961 004f 18       		.uleb128 0x18
+ 962 0050 9642     		.uleb128 0x2116
+ 963 0052 19       		.uleb128 0x19
+ 964 0053 01       		.uleb128 0x1
+ 965 0054 13       		.uleb128 0x13
+ 966 0055 00       		.byte	0
+ 967 0056 00       		.byte	0
+ 968 0057 07       		.uleb128 0x7
+ 969 0058 34       		.uleb128 0x34
+ 970 0059 00       		.byte	0
+ 971 005a 03       		.uleb128 0x3
+ 972 005b 0E       		.uleb128 0xe
+ 973 005c 3A       		.uleb128 0x3a
+ 974 005d 0B       		.uleb128 0xb
+ 975 005e 3B       		.uleb128 0x3b
+ 976 005f 0B       		.uleb128 0xb
+ 977 0060 49       		.uleb128 0x49
+ 978 0061 13       		.uleb128 0x13
+ 979 0062 02       		.uleb128 0x2
+ 980 0063 18       		.uleb128 0x18
+ 981 0064 00       		.byte	0
+ 982 0065 00       		.byte	0
+ 983 0066 08       		.uleb128 0x8
+ 984 0067 2E       		.uleb128 0x2e
+ 985 0068 00       		.byte	0
+ 986 0069 3F       		.uleb128 0x3f
+ 987 006a 19       		.uleb128 0x19
+ 988 006b 03       		.uleb128 0x3
+ 989 006c 0E       		.uleb128 0xe
+ 990 006d 3A       		.uleb128 0x3a
+ 991 006e 0B       		.uleb128 0xb
+ 992 006f 3B       		.uleb128 0x3b
+ 993 0070 0B       		.uleb128 0xb
+ 994 0071 27       		.uleb128 0x27
+ 995 0072 19       		.uleb128 0x19
+ 996 0073 11       		.uleb128 0x11
+ 997 0074 01       		.uleb128 0x1
+ 998 0075 12       		.uleb128 0x12
+ 999 0076 06       		.uleb128 0x6
+ 1000 0077 40       		.uleb128 0x40
+ 1001 0078 18       		.uleb128 0x18
+ 1002 0079 9742     		.uleb128 0x2117
+ 1003 007b 19       		.uleb128 0x19
+ 1004 007c 00       		.byte	0
+ 1005 007d 00       		.byte	0
+ 1006 007e 09       		.uleb128 0x9
+ 1007 007f 2E       		.uleb128 0x2e
+ 1008 0080 00       		.byte	0
+ 1009 0081 3F       		.uleb128 0x3f
+ 1010 0082 19       		.uleb128 0x19
+ 1011 0083 03       		.uleb128 0x3
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 27
+
+
+ 1012 0084 0E       		.uleb128 0xe
+ 1013 0085 3A       		.uleb128 0x3a
+ 1014 0086 0B       		.uleb128 0xb
+ 1015 0087 3B       		.uleb128 0x3b
+ 1016 0088 0B       		.uleb128 0xb
+ 1017 0089 27       		.uleb128 0x27
+ 1018 008a 19       		.uleb128 0x19
+ 1019 008b 11       		.uleb128 0x11
+ 1020 008c 01       		.uleb128 0x1
+ 1021 008d 12       		.uleb128 0x12
+ 1022 008e 06       		.uleb128 0x6
+ 1023 008f 40       		.uleb128 0x40
+ 1024 0090 18       		.uleb128 0x18
+ 1025 0091 9642     		.uleb128 0x2116
+ 1026 0093 19       		.uleb128 0x19
+ 1027 0094 00       		.byte	0
+ 1028 0095 00       		.byte	0
+ 1029 0096 0A       		.uleb128 0xa
+ 1030 0097 2E       		.uleb128 0x2e
+ 1031 0098 01       		.byte	0x1
+ 1032 0099 3F       		.uleb128 0x3f
+ 1033 009a 19       		.uleb128 0x19
+ 1034 009b 03       		.uleb128 0x3
+ 1035 009c 0E       		.uleb128 0xe
+ 1036 009d 3A       		.uleb128 0x3a
+ 1037 009e 0B       		.uleb128 0xb
+ 1038 009f 3B       		.uleb128 0x3b
+ 1039 00a0 05       		.uleb128 0x5
+ 1040 00a1 27       		.uleb128 0x27
+ 1041 00a2 19       		.uleb128 0x19
+ 1042 00a3 11       		.uleb128 0x11
+ 1043 00a4 01       		.uleb128 0x1
+ 1044 00a5 12       		.uleb128 0x12
+ 1045 00a6 06       		.uleb128 0x6
+ 1046 00a7 40       		.uleb128 0x40
+ 1047 00a8 18       		.uleb128 0x18
+ 1048 00a9 9642     		.uleb128 0x2116
+ 1049 00ab 19       		.uleb128 0x19
+ 1050 00ac 01       		.uleb128 0x1
+ 1051 00ad 13       		.uleb128 0x13
+ 1052 00ae 00       		.byte	0
+ 1053 00af 00       		.byte	0
+ 1054 00b0 0B       		.uleb128 0xb
+ 1055 00b1 34       		.uleb128 0x34
+ 1056 00b2 00       		.byte	0
+ 1057 00b3 03       		.uleb128 0x3
+ 1058 00b4 0E       		.uleb128 0xe
+ 1059 00b5 3A       		.uleb128 0x3a
+ 1060 00b6 0B       		.uleb128 0xb
+ 1061 00b7 3B       		.uleb128 0x3b
+ 1062 00b8 05       		.uleb128 0x5
+ 1063 00b9 49       		.uleb128 0x49
+ 1064 00ba 13       		.uleb128 0x13
+ 1065 00bb 02       		.uleb128 0x2
+ 1066 00bc 18       		.uleb128 0x18
+ 1067 00bd 00       		.byte	0
+ 1068 00be 00       		.byte	0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 28
+
+
+ 1069 00bf 0C       		.uleb128 0xc
+ 1070 00c0 34       		.uleb128 0x34
+ 1071 00c1 00       		.byte	0
+ 1072 00c2 03       		.uleb128 0x3
+ 1073 00c3 0E       		.uleb128 0xe
+ 1074 00c4 3A       		.uleb128 0x3a
+ 1075 00c5 0B       		.uleb128 0xb
+ 1076 00c6 3B       		.uleb128 0x3b
+ 1077 00c7 0B       		.uleb128 0xb
+ 1078 00c8 49       		.uleb128 0x49
+ 1079 00c9 13       		.uleb128 0x13
+ 1080 00ca 3F       		.uleb128 0x3f
+ 1081 00cb 19       		.uleb128 0x19
+ 1082 00cc 02       		.uleb128 0x2
+ 1083 00cd 18       		.uleb128 0x18
+ 1084 00ce 00       		.byte	0
+ 1085 00cf 00       		.byte	0
+ 1086 00d0 00       		.byte	0
+ 1087              		.section	.debug_aranges,"",%progbits
+ 1088 0000 64000000 		.4byte	0x64
+ 1089 0004 0200     		.2byte	0x2
+ 1090 0006 00000000 		.4byte	.Ldebug_info0
+ 1091 000a 04       		.byte	0x4
+ 1092 000b 00       		.byte	0
+ 1093 000c 0000     		.2byte	0
+ 1094 000e 0000     		.2byte	0
+ 1095 0010 00000000 		.4byte	.LFB0
+ 1096 0014 48000000 		.4byte	.LFE0-.LFB0
+ 1097 0018 00000000 		.4byte	.LFB1
+ 1098 001c 54000000 		.4byte	.LFE1-.LFB1
+ 1099 0020 00000000 		.4byte	.LFB2
+ 1100 0024 24000000 		.4byte	.LFE2-.LFB2
+ 1101 0028 00000000 		.4byte	.LFB3
+ 1102 002c 60000000 		.4byte	.LFE3-.LFB3
+ 1103 0030 00000000 		.4byte	.LFB4
+ 1104 0034 48000000 		.4byte	.LFE4-.LFB4
+ 1105 0038 00000000 		.4byte	.LFB5
+ 1106 003c 48000000 		.4byte	.LFE5-.LFB5
+ 1107 0040 00000000 		.4byte	.LFB6
+ 1108 0044 44000000 		.4byte	.LFE6-.LFB6
+ 1109 0048 00000000 		.4byte	.LFB7
+ 1110 004c 48000000 		.4byte	.LFE7-.LFB7
+ 1111 0050 00000000 		.4byte	.LFB8
+ 1112 0054 48000000 		.4byte	.LFE8-.LFB8
+ 1113 0058 00000000 		.4byte	.LFB9
+ 1114 005c 44000000 		.4byte	.LFE9-.LFB9
+ 1115 0060 00000000 		.4byte	0
+ 1116 0064 00000000 		.4byte	0
+ 1117              		.section	.debug_ranges,"",%progbits
+ 1118              	.Ldebug_ranges0:
+ 1119 0000 00000000 		.4byte	.LFB0
+ 1120 0004 48000000 		.4byte	.LFE0
+ 1121 0008 00000000 		.4byte	.LFB1
+ 1122 000c 54000000 		.4byte	.LFE1
+ 1123 0010 00000000 		.4byte	.LFB2
+ 1124 0014 24000000 		.4byte	.LFE2
+ 1125 0018 00000000 		.4byte	.LFB3
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 29
+
+
+ 1126 001c 60000000 		.4byte	.LFE3
+ 1127 0020 00000000 		.4byte	.LFB4
+ 1128 0024 48000000 		.4byte	.LFE4
+ 1129 0028 00000000 		.4byte	.LFB5
+ 1130 002c 48000000 		.4byte	.LFE5
+ 1131 0030 00000000 		.4byte	.LFB6
+ 1132 0034 44000000 		.4byte	.LFE6
+ 1133 0038 00000000 		.4byte	.LFB7
+ 1134 003c 48000000 		.4byte	.LFE7
+ 1135 0040 00000000 		.4byte	.LFB8
+ 1136 0044 48000000 		.4byte	.LFE8
+ 1137 0048 00000000 		.4byte	.LFB9
+ 1138 004c 44000000 		.4byte	.LFE9
+ 1139 0050 00000000 		.4byte	0
+ 1140 0054 00000000 		.4byte	0
+ 1141              		.section	.debug_line,"",%progbits
+ 1142              	.Ldebug_line0:
+ 1143 0000 22010000 		.section	.debug_str,"MS",%progbits,1
+ 1143      02004000 
+ 1143      00000201 
+ 1143      FB0E0D00 
+ 1143      01010101 
+ 1144              	.LASF26:
+ 1145 0000 4932535F 		.ascii	"I2S_ClearRxFIFO\000"
+ 1145      436C6561 
+ 1145      72527846 
+ 1145      49464F00 
+ 1146              	.LASF27:
+ 1147 0010 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1147      43313120 
+ 1147      352E342E 
+ 1147      31203230 
+ 1147      31363036 
+ 1148 0043 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 1148      20726576 
+ 1148      6973696F 
+ 1148      6E203233 
+ 1148      37373135 
+ 1149 0076 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 1149      66756E63 
+ 1149      74696F6E 
+ 1149      2D736563 
+ 1149      74696F6E 
+ 1150              	.LASF30:
+ 1151 009e 4932535F 		.ascii	"I2S_initVar\000"
+ 1151      696E6974 
+ 1151      56617200 
+ 1152              	.LASF6:
+ 1153 00aa 73686F72 		.ascii	"short unsigned int\000"
+ 1153      7420756E 
+ 1153      7369676E 
+ 1153      65642069 
+ 1153      6E7400
+ 1154              	.LASF12:
+ 1155 00bd 666C6F61 		.ascii	"float\000"
+ 1155      7400
+ 1156              	.LASF4:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 30
+
+
+ 1157 00c3 756E7369 		.ascii	"unsigned char\000"
+ 1157      676E6564 
+ 1157      20636861 
+ 1157      7200
+ 1158              	.LASF15:
+ 1159 00d1 72656738 		.ascii	"reg8\000"
+ 1159      00
+ 1160              	.LASF8:
+ 1161 00d6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1161      20756E73 
+ 1161      69676E65 
+ 1161      6420696E 
+ 1161      7400
+ 1162              	.LASF14:
+ 1163 00e8 75696E74 		.ascii	"uint8\000"
+ 1163      3800
+ 1164              	.LASF20:
+ 1165 00ee 656E6162 		.ascii	"enableInterrupts\000"
+ 1165      6C65496E 
+ 1165      74657272 
+ 1165      75707473 
+ 1165      00
+ 1166              	.LASF13:
+ 1167 00ff 646F7562 		.ascii	"double\000"
+ 1167      6C6500
+ 1168              	.LASF28:
+ 1169 0106 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2S.c\000"
+ 1169      72617465 
+ 1169      645F536F 
+ 1169      75726365 
+ 1169      5C50536F 
+ 1170              	.LASF18:
+ 1171 0123 4932535F 		.ascii	"I2S_Enable\000"
+ 1171      456E6162 
+ 1171      6C6500
+ 1172              	.LASF0:
+ 1173 012e 756E7369 		.ascii	"unsigned int\000"
+ 1173      676E6564 
+ 1173      20696E74 
+ 1173      00
+ 1174              	.LASF16:
+ 1175 013b 4932535F 		.ascii	"I2S_Init\000"
+ 1175      496E6974 
+ 1175      00
+ 1176              	.LASF9:
+ 1177 0144 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1177      206C6F6E 
+ 1177      6720756E 
+ 1177      7369676E 
+ 1177      65642069 
+ 1178              	.LASF17:
+ 1179 015b 4932535F 		.ascii	"I2S_Start\000"
+ 1179      53746172 
+ 1179      7400
+ 1180              	.LASF23:
+ 1181 0165 4932535F 		.ascii	"I2S_ClearTxFIFO\000"
+ 1181      436C6561 
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 31
+
+
+ 1181      72547846 
+ 1181      49464F00 
+ 1182              	.LASF10:
+ 1183 0175 73697A65 		.ascii	"sizetype\000"
+ 1183      74797065 
+ 1183      00
+ 1184              	.LASF1:
+ 1185 017e 6C6F6E67 		.ascii	"long long int\000"
+ 1185      206C6F6E 
+ 1185      6720696E 
+ 1185      7400
+ 1186              	.LASF24:
+ 1187 018c 4932535F 		.ascii	"I2S_EnableRx\000"
+ 1187      456E6162 
+ 1187      6C655278 
+ 1187      00
+ 1188              	.LASF11:
+ 1189 0199 63686172 		.ascii	"char\000"
+ 1189      00
+ 1190              	.LASF29:
+ 1191 019e 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
+ 1191      73657273 
+ 1191      5C706561 
+ 1191      726C7374 
+ 1191      6C5C446F 
+ 1192 01cc 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
+ 1192      73747265 
+ 1192      616D6572 
+ 1192      5C666132 
+ 1192      305F6932 
+ 1193              	.LASF21:
+ 1194 01f1 4932535F 		.ascii	"I2S_EnableTx\000"
+ 1194      456E6162 
+ 1194      6C655478 
+ 1194      00
+ 1195              	.LASF5:
+ 1196 01fe 73686F72 		.ascii	"short int\000"
+ 1196      7420696E 
+ 1196      7400
+ 1197              	.LASF25:
+ 1198 0208 4932535F 		.ascii	"I2S_DisableRx\000"
+ 1198      44697361 
+ 1198      626C6552 
+ 1198      7800
+ 1199              	.LASF7:
+ 1200 0216 6C6F6E67 		.ascii	"long int\000"
+ 1200      20696E74 
+ 1200      00
+ 1201              	.LASF22:
+ 1202 021f 4932535F 		.ascii	"I2S_DisableTx\000"
+ 1202      44697361 
+ 1202      626C6554 
+ 1202      7800
+ 1203              	.LASF2:
+ 1204 022d 6C6F6E67 		.ascii	"long double\000"
+ 1204      20646F75 
+ 1204      626C6500 
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccjbqtLx.s 			page 32
+
+
+ 1205              	.LASF3:
+ 1206 0239 7369676E 		.ascii	"signed char\000"
+ 1206      65642063 
+ 1206      68617200 
+ 1207              	.LASF19:
+ 1208 0245 4932535F 		.ascii	"I2S_Stop\000"
+ 1208      53746F70 
+ 1208      00
+ 1209              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -27,7 +27,8 @@
 *  Place your includes, defines and code here 
 ********************************************************************************/
 /* `#START isr_i2s_rx_intc` */
-
+#include "project.h"
+int volatile out_value[2]={0,0};
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -165,7 +166,33 @@ CY_ISR(isr_i2s_rx_Interrupt)
 
     /*  Place your Interrupt code here. */
     /* `#START isr_i2s_rx_Interrupt` */
+#ifdef NDEBUG
+    P3_0_Write(1);
+#endif
 
+    static int word_idx = 0;
+    static int byte_idx = 1;
+    
+    // Check for I2S_OUT write FIFO not full
+    do
+    {
+        out_value[word_idx] = out_value[word_idx] | (I2S_ReadByte(word_idx) << (8*byte_idx));
+            
+        if (byte_idx == 0)
+            word_idx = 1 - word_idx;
+        
+        byte_idx = 1 - byte_idx;
+    } while (I2S_ReadRxStatus() & I2S_RX_FIFO_0_NOT_EMPTY);
+
+    if (word_idx == 0 && byte_idx == 1)
+    {
+        DAC_SetValue((out_value[0] >> 8) + 128);
+        
+        out_value[0] = out_value[1] = 0;
+    }
+#ifdef NDEBUG
+    P3_0_Write(0);
+#endif
     /* `#END` */
 }
 

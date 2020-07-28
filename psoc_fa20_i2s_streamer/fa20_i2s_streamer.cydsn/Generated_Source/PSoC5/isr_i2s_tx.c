@@ -28,6 +28,12 @@
 ********************************************************************************/
 /* `#START isr_i2s_tx_intc` */
 #include "project.h"
+#define NUM_ADC_BUF (4)
+    
+extern int16_t volatile adc_buf[NUM_ADC_BUF];
+extern int volatile     adc_buf_wptr;
+extern int volatile     adc_buf_rptr;
+
 /* `#END` */
 
 #ifndef CYINT_IRQ_BASE
@@ -165,12 +171,35 @@ CY_ISR(isr_i2s_tx_Interrupt)
 
     /*  Place your Interrupt code here. */
     /* `#START isr_i2s_tx_Interrupt` */
-    for (int chan = 0; chan < 2; ++chan)
-        for (int byte_idx = 1; byte_idx >= 0; --byte_idx)
-//                I2S_WriteByte( (value >> (8*byte_idx))& 0xFF, 0);
-//                I2S_WriteByte( (force_value >> (8*byte_idx))& 0xFF, chan);
-            I2S_WriteByte( 0xAA, chan);
-    
+#ifdef NDEBUG
+    P3_1_Write(1);
+#endif
+
+    static int word_idx = 0;
+    static int byte_idx = 1;
+   
+    // Check for I2S_OUT write FIFO not full
+    do
+    {
+        int in_value = adc_buf[adc_buf_rptr];
+        //I2S_WriteByte( (force_value >> (8*byte_idx))& 0xFF, word_idx);
+        I2S_WriteByte( (in_value >> (8*byte_idx))& 0xFF, word_idx);
+            
+        if (byte_idx == 0 && word_idx ==1)
+        {
+            adc_buf_rptr = (adc_buf_rptr + 1) % NUM_ADC_BUF;    // Advance read pointer
+        }
+        
+        if (byte_idx == 0)
+        {
+            word_idx = 1 - word_idx;
+        }
+        byte_idx = 1 - byte_idx;
+    } while ((I2S_ReadTxStatus() & I2S_TX_FIFO_0_NOT_FULL) && (adc_buf_wptr != adc_buf_rptr) );
+
+#ifdef NDEBUG
+    P3_1_Write(0);
+#endif
     /* `#END` */
 }
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 1
 
 
    1              		.syntax unified
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
   24:Generated_Source\PSoC5/I2S_PM.c **** * Function Name: I2S_SaveConfig
   25:Generated_Source\PSoC5/I2S_PM.c **** ********************************************************************************
   26:Generated_Source\PSoC5/I2S_PM.c **** *
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 2
 
 
   27:Generated_Source\PSoC5/I2S_PM.c **** * Summary:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
   51:Generated_Source\PSoC5/I2S_PM.c **** *  None.
   52:Generated_Source\PSoC5/I2S_PM.c **** *
   53:Generated_Source\PSoC5/I2S_PM.c **** * Return:
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 3
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 3
 
 
   54:Generated_Source\PSoC5/I2S_PM.c **** *  None.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
   78:Generated_Source\PSoC5/I2S_PM.c **** *    sleep mode.
   79:Generated_Source\PSoC5/I2S_PM.c **** *
   80:Generated_Source\PSoC5/I2S_PM.c **** * Reentrant:
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 4
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 4
 
 
   81:Generated_Source\PSoC5/I2S_PM.c **** *  No.
@@ -216,7 +216,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
  113              	.L5:
  114 0016 00BF     		.align	2
  115              	.L4:
- 116 0018 72640040 		.word	1073767538
+ 116 0018 71640040 		.word	1073767537
  117 001c 00000000 		.word	I2S_backup
  118              		.cfi_endproc
  119              	.LFE2:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
   98:Generated_Source\PSoC5/I2S_PM.c **** * Summary:
   99:Generated_Source\PSoC5/I2S_PM.c **** *  Prepares I2S for exit from sleep mode.
  100:Generated_Source\PSoC5/I2S_PM.c **** *
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 5
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 5
 
 
  101:Generated_Source\PSoC5/I2S_PM.c **** * Parameters:
@@ -270,11 +270,11 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
  117:Generated_Source\PSoC5/I2S_PM.c **** 
  118:Generated_Source\PSoC5/I2S_PM.c ****     if(0u != (I2S_backup.enableState & I2S_EN))
  139              		.loc 1 118 0
- 140 0004 084B     		ldr	r3, .L9
+ 140 0004 0C4B     		ldr	r3, .L10
  141 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  142 0008 03F00403 		and	r3, r3, #4
  143 000c 002B     		cmp	r3, #0
- 144 000e 09D0     		beq	.L8
+ 144 000e 11D0     		beq	.L9
  119:Generated_Source\PSoC5/I2S_PM.c ****     {
  120:Generated_Source\PSoC5/I2S_PM.c ****         /* Enable component's operation */
  121:Generated_Source\PSoC5/I2S_PM.c ****         I2S_Enable();
@@ -285,7 +285,7 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
  124:Generated_Source\PSoC5/I2S_PM.c ****         #if(I2S_TX_DIRECTION_ENABLE)
  125:Generated_Source\PSoC5/I2S_PM.c ****             if(0u != (I2S_backup.enableState & I2S_TX_EN))
  147              		.loc 1 125 0
- 148 0014 044B     		ldr	r3, .L9
+ 148 0014 084B     		ldr	r3, .L10
  149 0016 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
  150 0018 03F00103 		and	r3, r3, #1
  151 001c 002B     		cmp	r3, #0
@@ -298,518 +298,527 @@ ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 1
  128:Generated_Source\PSoC5/I2S_PM.c ****             }
  129:Generated_Source\PSoC5/I2S_PM.c ****         #endif /* (I2S_TX_DIRECTION_ENABLE) */
  130:Generated_Source\PSoC5/I2S_PM.c ****         
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 6
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 6
 
 
  131:Generated_Source\PSoC5/I2S_PM.c ****         #if(I2S_RX_DIRECTION_ENABLE)
  132:Generated_Source\PSoC5/I2S_PM.c ****             if(0u != (I2S_backup.enableState & I2S_RX_EN))
+ 156              		.loc 1 132 0
+ 157 0024 044B     		ldr	r3, .L10
+ 158 0026 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 159 0028 03F00203 		and	r3, r3, #2
+ 160 002c 002B     		cmp	r3, #0
+ 161 002e 01D0     		beq	.L9
  133:Generated_Source\PSoC5/I2S_PM.c ****             {
  134:Generated_Source\PSoC5/I2S_PM.c ****                 I2S_EnableRx();
+ 162              		.loc 1 134 0
+ 163 0030 FFF7FEFF 		bl	I2S_EnableRx
+ 164              	.L9:
  135:Generated_Source\PSoC5/I2S_PM.c ****             }
  136:Generated_Source\PSoC5/I2S_PM.c ****         #endif /* (I2S_RX_DIRECTION_ENABLE) */
  137:Generated_Source\PSoC5/I2S_PM.c ****     }
  138:Generated_Source\PSoC5/I2S_PM.c **** }
- 156              		.loc 1 138 0
- 157 0024 00BF     		nop
- 158 0026 80BD     		pop	{r7, pc}
- 159              	.L10:
- 160              		.align	2
- 161              	.L9:
- 162 0028 00000000 		.word	I2S_backup
- 163              		.cfi_endproc
- 164              	.LFE3:
- 165              		.size	I2S_Wakeup, .-I2S_Wakeup
- 166              		.text
- 167              	.Letext0:
- 168              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
- 169              		.file 3 "Generated_Source\\PSoC5\\I2S.h"
- 170              		.section	.debug_info,"",%progbits
- 171              	.Ldebug_info0:
- 172 0000 0F010000 		.4byte	0x10f
- 173 0004 0400     		.2byte	0x4
- 174 0006 00000000 		.4byte	.Ldebug_abbrev0
- 175 000a 04       		.byte	0x4
- 176 000b 01       		.uleb128 0x1
- 177 000c 0B000000 		.4byte	.LASF19
- 178 0010 0C       		.byte	0xc
- 179 0011 B8010000 		.4byte	.LASF20
- 180 0015 2E010000 		.4byte	.LASF21
- 181 0019 00000000 		.4byte	.Ldebug_ranges0+0
- 182 001d 00000000 		.4byte	0
- 183 0021 00000000 		.4byte	.Ldebug_line0
- 184 0025 02       		.uleb128 0x2
- 185 0026 01       		.byte	0x1
- 186 0027 06       		.byte	0x6
- 187 0028 D8010000 		.4byte	.LASF0
- 188 002c 02       		.uleb128 0x2
- 189 002d 01       		.byte	0x1
- 190 002e 08       		.byte	0x8
- 191 002f AE000000 		.4byte	.LASF1
- 192 0033 02       		.uleb128 0x2
- 193 0034 02       		.byte	0x2
- 194 0035 05       		.byte	0x5
- 195 0036 93010000 		.4byte	.LASF2
- 196 003a 02       		.uleb128 0x2
- 197 003b 02       		.byte	0x2
- 198 003c 07       		.byte	0x7
- 199 003d D3000000 		.4byte	.LASF3
- 200 0041 02       		.uleb128 0x2
- 201 0042 04       		.byte	0x4
- 202 0043 05       		.byte	0x5
- 203 0044 A3010000 		.4byte	.LASF4
- 204 0048 02       		.uleb128 0x2
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 7
+ 165              		.loc 1 138 0
+ 166 0034 00BF     		nop
+ 167 0036 80BD     		pop	{r7, pc}
+ 168              	.L11:
+ 169              		.align	2
+ 170              	.L10:
+ 171 0038 00000000 		.word	I2S_backup
+ 172              		.cfi_endproc
+ 173              	.LFE3:
+ 174              		.size	I2S_Wakeup, .-I2S_Wakeup
+ 175              		.text
+ 176              	.Letext0:
+ 177              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 178              		.file 3 "Generated_Source\\PSoC5\\I2S.h"
+ 179              		.section	.debug_info,"",%progbits
+ 180              	.Ldebug_info0:
+ 181 0000 0F010000 		.4byte	0x10f
+ 182 0004 0400     		.2byte	0x4
+ 183 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 184 000a 04       		.byte	0x4
+ 185 000b 01       		.uleb128 0x1
+ 186 000c 0B000000 		.4byte	.LASF19
+ 187 0010 0C       		.byte	0xc
+ 188 0011 B8010000 		.4byte	.LASF20
+ 189 0015 2E010000 		.4byte	.LASF21
+ 190 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 191 001d 00000000 		.4byte	0
+ 192 0021 00000000 		.4byte	.Ldebug_line0
+ 193 0025 02       		.uleb128 0x2
+ 194 0026 01       		.byte	0x1
+ 195 0027 06       		.byte	0x6
+ 196 0028 D8010000 		.4byte	.LASF0
+ 197 002c 02       		.uleb128 0x2
+ 198 002d 01       		.byte	0x1
+ 199 002e 08       		.byte	0x8
+ 200 002f AE000000 		.4byte	.LASF1
+ 201 0033 02       		.uleb128 0x2
+ 202 0034 02       		.byte	0x2
+ 203 0035 05       		.byte	0x5
+ 204 0036 93010000 		.4byte	.LASF2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 7
 
 
- 205 0049 04       		.byte	0x4
- 206 004a 07       		.byte	0x7
- 207 004b C1000000 		.4byte	.LASF5
- 208 004f 02       		.uleb128 0x2
- 209 0050 08       		.byte	0x8
- 210 0051 05       		.byte	0x5
- 211 0052 1B010000 		.4byte	.LASF6
- 212 0056 02       		.uleb128 0x2
- 213 0057 08       		.byte	0x8
- 214 0058 07       		.byte	0x7
- 215 0059 04010000 		.4byte	.LASF7
- 216 005d 03       		.uleb128 0x3
- 217 005e 04       		.byte	0x4
- 218 005f 05       		.byte	0x5
- 219 0060 696E7400 		.ascii	"int\000"
- 220 0064 02       		.uleb128 0x2
- 221 0065 04       		.byte	0x4
- 222 0066 07       		.byte	0x7
- 223 0067 F7000000 		.4byte	.LASF8
- 224 006b 04       		.uleb128 0x4
- 225 006c 9D010000 		.4byte	.LASF12
- 226 0070 02       		.byte	0x2
- 227 0071 E401     		.2byte	0x1e4
- 228 0073 2C000000 		.4byte	0x2c
- 229 0077 02       		.uleb128 0x2
- 230 0078 04       		.byte	0x4
- 231 0079 04       		.byte	0x4
- 232 007a A8000000 		.4byte	.LASF9
- 233 007e 02       		.uleb128 0x2
- 234 007f 08       		.byte	0x8
- 235 0080 04       		.byte	0x4
- 236 0081 F0000000 		.4byte	.LASF10
- 237 0085 02       		.uleb128 0x2
- 238 0086 01       		.byte	0x1
- 239 0087 08       		.byte	0x8
- 240 0088 29010000 		.4byte	.LASF11
- 241 008c 04       		.uleb128 0x4
- 242 008d BC000000 		.4byte	.LASF13
- 243 0091 02       		.byte	0x2
- 244 0092 8E02     		.2byte	0x28e
- 245 0094 98000000 		.4byte	0x98
- 246 0098 05       		.uleb128 0x5
- 247 0099 6B000000 		.4byte	0x6b
- 248 009d 06       		.uleb128 0x6
- 249 009e 01       		.byte	0x1
- 250 009f 03       		.byte	0x3
- 251 00a0 1D       		.byte	0x1d
- 252 00a1 B2000000 		.4byte	0xb2
- 253 00a5 07       		.uleb128 0x7
- 254 00a6 AC010000 		.4byte	.LASF22
- 255 00aa 03       		.byte	0x3
- 256 00ab 1F       		.byte	0x1f
- 257 00ac 6B000000 		.4byte	0x6b
- 258 00b0 00       		.byte	0
- 259 00b1 00       		.byte	0
- 260 00b2 08       		.uleb128 0x8
- 261 00b3 81010000 		.4byte	.LASF14
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 8
+ 205 003a 02       		.uleb128 0x2
+ 206 003b 02       		.byte	0x2
+ 207 003c 07       		.byte	0x7
+ 208 003d D3000000 		.4byte	.LASF3
+ 209 0041 02       		.uleb128 0x2
+ 210 0042 04       		.byte	0x4
+ 211 0043 05       		.byte	0x5
+ 212 0044 A3010000 		.4byte	.LASF4
+ 213 0048 02       		.uleb128 0x2
+ 214 0049 04       		.byte	0x4
+ 215 004a 07       		.byte	0x7
+ 216 004b C1000000 		.4byte	.LASF5
+ 217 004f 02       		.uleb128 0x2
+ 218 0050 08       		.byte	0x8
+ 219 0051 05       		.byte	0x5
+ 220 0052 1B010000 		.4byte	.LASF6
+ 221 0056 02       		.uleb128 0x2
+ 222 0057 08       		.byte	0x8
+ 223 0058 07       		.byte	0x7
+ 224 0059 04010000 		.4byte	.LASF7
+ 225 005d 03       		.uleb128 0x3
+ 226 005e 04       		.byte	0x4
+ 227 005f 05       		.byte	0x5
+ 228 0060 696E7400 		.ascii	"int\000"
+ 229 0064 02       		.uleb128 0x2
+ 230 0065 04       		.byte	0x4
+ 231 0066 07       		.byte	0x7
+ 232 0067 F7000000 		.4byte	.LASF8
+ 233 006b 04       		.uleb128 0x4
+ 234 006c 9D010000 		.4byte	.LASF12
+ 235 0070 02       		.byte	0x2
+ 236 0071 E401     		.2byte	0x1e4
+ 237 0073 2C000000 		.4byte	0x2c
+ 238 0077 02       		.uleb128 0x2
+ 239 0078 04       		.byte	0x4
+ 240 0079 04       		.byte	0x4
+ 241 007a A8000000 		.4byte	.LASF9
+ 242 007e 02       		.uleb128 0x2
+ 243 007f 08       		.byte	0x8
+ 244 0080 04       		.byte	0x4
+ 245 0081 F0000000 		.4byte	.LASF10
+ 246 0085 02       		.uleb128 0x2
+ 247 0086 01       		.byte	0x1
+ 248 0087 08       		.byte	0x8
+ 249 0088 29010000 		.4byte	.LASF11
+ 250 008c 04       		.uleb128 0x4
+ 251 008d BC000000 		.4byte	.LASF13
+ 252 0091 02       		.byte	0x2
+ 253 0092 8E02     		.2byte	0x28e
+ 254 0094 98000000 		.4byte	0x98
+ 255 0098 05       		.uleb128 0x5
+ 256 0099 6B000000 		.4byte	0x6b
+ 257 009d 06       		.uleb128 0x6
+ 258 009e 01       		.byte	0x1
+ 259 009f 03       		.byte	0x3
+ 260 00a0 1D       		.byte	0x1d
+ 261 00a1 B2000000 		.4byte	0xb2
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 8
 
 
- 262 00b7 03       		.byte	0x3
- 263 00b8 21       		.byte	0x21
- 264 00b9 9D000000 		.4byte	0x9d
- 265 00bd 09       		.uleb128 0x9
- 266 00be 99000000 		.4byte	.LASF15
- 267 00c2 01       		.byte	0x1
- 268 00c3 25       		.byte	0x25
- 269 00c4 00000000 		.4byte	.LFB0
- 270 00c8 0C000000 		.4byte	.LFE0-.LFB0
- 271 00cc 01       		.uleb128 0x1
- 272 00cd 9C       		.byte	0x9c
- 273 00ce 09       		.uleb128 0x9
- 274 00cf E4010000 		.4byte	.LASF16
- 275 00d3 01       		.byte	0x1
- 276 00d4 39       		.byte	0x39
- 277 00d5 00000000 		.4byte	.LFB1
- 278 00d9 0C000000 		.4byte	.LFE1-.LFB1
- 279 00dd 01       		.uleb128 0x1
- 280 00de 9C       		.byte	0x9c
- 281 00df 0A       		.uleb128 0xa
- 282 00e0 E6000000 		.4byte	.LASF17
- 283 00e4 01       		.byte	0x1
- 284 00e5 54       		.byte	0x54
- 285 00e6 00000000 		.4byte	.LFB2
- 286 00ea 20000000 		.4byte	.LFE2-.LFB2
- 287 00ee 01       		.uleb128 0x1
- 288 00ef 9C       		.byte	0x9c
- 289 00f0 0A       		.uleb128 0xa
- 290 00f1 F6010000 		.4byte	.LASF18
- 291 00f5 01       		.byte	0x1
- 292 00f6 70       		.byte	0x70
- 293 00f7 00000000 		.4byte	.LFB3
- 294 00fb 2C000000 		.4byte	.LFE3-.LFB3
- 295 00ff 01       		.uleb128 0x1
- 296 0100 9C       		.byte	0x9c
- 297 0101 0B       		.uleb128 0xb
- 298 0102 00000000 		.4byte	.LASF23
- 299 0106 01       		.byte	0x1
- 300 0107 14       		.byte	0x14
- 301 0108 B2000000 		.4byte	0xb2
- 302 010c 05       		.uleb128 0x5
- 303 010d 03       		.byte	0x3
- 304 010e 00000000 		.4byte	I2S_backup
- 305 0112 00       		.byte	0
- 306              		.section	.debug_abbrev,"",%progbits
- 307              	.Ldebug_abbrev0:
- 308 0000 01       		.uleb128 0x1
- 309 0001 11       		.uleb128 0x11
- 310 0002 01       		.byte	0x1
- 311 0003 25       		.uleb128 0x25
- 312 0004 0E       		.uleb128 0xe
- 313 0005 13       		.uleb128 0x13
- 314 0006 0B       		.uleb128 0xb
- 315 0007 03       		.uleb128 0x3
- 316 0008 0E       		.uleb128 0xe
- 317 0009 1B       		.uleb128 0x1b
- 318 000a 0E       		.uleb128 0xe
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 9
+ 262 00a5 07       		.uleb128 0x7
+ 263 00a6 AC010000 		.4byte	.LASF22
+ 264 00aa 03       		.byte	0x3
+ 265 00ab 1F       		.byte	0x1f
+ 266 00ac 6B000000 		.4byte	0x6b
+ 267 00b0 00       		.byte	0
+ 268 00b1 00       		.byte	0
+ 269 00b2 08       		.uleb128 0x8
+ 270 00b3 81010000 		.4byte	.LASF14
+ 271 00b7 03       		.byte	0x3
+ 272 00b8 21       		.byte	0x21
+ 273 00b9 9D000000 		.4byte	0x9d
+ 274 00bd 09       		.uleb128 0x9
+ 275 00be 99000000 		.4byte	.LASF15
+ 276 00c2 01       		.byte	0x1
+ 277 00c3 25       		.byte	0x25
+ 278 00c4 00000000 		.4byte	.LFB0
+ 279 00c8 0C000000 		.4byte	.LFE0-.LFB0
+ 280 00cc 01       		.uleb128 0x1
+ 281 00cd 9C       		.byte	0x9c
+ 282 00ce 09       		.uleb128 0x9
+ 283 00cf E4010000 		.4byte	.LASF16
+ 284 00d3 01       		.byte	0x1
+ 285 00d4 39       		.byte	0x39
+ 286 00d5 00000000 		.4byte	.LFB1
+ 287 00d9 0C000000 		.4byte	.LFE1-.LFB1
+ 288 00dd 01       		.uleb128 0x1
+ 289 00de 9C       		.byte	0x9c
+ 290 00df 0A       		.uleb128 0xa
+ 291 00e0 E6000000 		.4byte	.LASF17
+ 292 00e4 01       		.byte	0x1
+ 293 00e5 54       		.byte	0x54
+ 294 00e6 00000000 		.4byte	.LFB2
+ 295 00ea 20000000 		.4byte	.LFE2-.LFB2
+ 296 00ee 01       		.uleb128 0x1
+ 297 00ef 9C       		.byte	0x9c
+ 298 00f0 0A       		.uleb128 0xa
+ 299 00f1 F6010000 		.4byte	.LASF18
+ 300 00f5 01       		.byte	0x1
+ 301 00f6 70       		.byte	0x70
+ 302 00f7 00000000 		.4byte	.LFB3
+ 303 00fb 3C000000 		.4byte	.LFE3-.LFB3
+ 304 00ff 01       		.uleb128 0x1
+ 305 0100 9C       		.byte	0x9c
+ 306 0101 0B       		.uleb128 0xb
+ 307 0102 00000000 		.4byte	.LASF23
+ 308 0106 01       		.byte	0x1
+ 309 0107 14       		.byte	0x14
+ 310 0108 B2000000 		.4byte	0xb2
+ 311 010c 05       		.uleb128 0x5
+ 312 010d 03       		.byte	0x3
+ 313 010e 00000000 		.4byte	I2S_backup
+ 314 0112 00       		.byte	0
+ 315              		.section	.debug_abbrev,"",%progbits
+ 316              	.Ldebug_abbrev0:
+ 317 0000 01       		.uleb128 0x1
+ 318 0001 11       		.uleb128 0x11
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 9
 
 
- 319 000b 55       		.uleb128 0x55
- 320 000c 17       		.uleb128 0x17
- 321 000d 11       		.uleb128 0x11
- 322 000e 01       		.uleb128 0x1
- 323 000f 10       		.uleb128 0x10
- 324 0010 17       		.uleb128 0x17
- 325 0011 00       		.byte	0
- 326 0012 00       		.byte	0
- 327 0013 02       		.uleb128 0x2
- 328 0014 24       		.uleb128 0x24
- 329 0015 00       		.byte	0
- 330 0016 0B       		.uleb128 0xb
- 331 0017 0B       		.uleb128 0xb
- 332 0018 3E       		.uleb128 0x3e
- 333 0019 0B       		.uleb128 0xb
- 334 001a 03       		.uleb128 0x3
- 335 001b 0E       		.uleb128 0xe
- 336 001c 00       		.byte	0
- 337 001d 00       		.byte	0
- 338 001e 03       		.uleb128 0x3
- 339 001f 24       		.uleb128 0x24
- 340 0020 00       		.byte	0
- 341 0021 0B       		.uleb128 0xb
- 342 0022 0B       		.uleb128 0xb
- 343 0023 3E       		.uleb128 0x3e
- 344 0024 0B       		.uleb128 0xb
- 345 0025 03       		.uleb128 0x3
- 346 0026 08       		.uleb128 0x8
- 347 0027 00       		.byte	0
- 348 0028 00       		.byte	0
- 349 0029 04       		.uleb128 0x4
- 350 002a 16       		.uleb128 0x16
- 351 002b 00       		.byte	0
- 352 002c 03       		.uleb128 0x3
- 353 002d 0E       		.uleb128 0xe
- 354 002e 3A       		.uleb128 0x3a
- 355 002f 0B       		.uleb128 0xb
- 356 0030 3B       		.uleb128 0x3b
- 357 0031 05       		.uleb128 0x5
- 358 0032 49       		.uleb128 0x49
- 359 0033 13       		.uleb128 0x13
- 360 0034 00       		.byte	0
- 361 0035 00       		.byte	0
- 362 0036 05       		.uleb128 0x5
- 363 0037 35       		.uleb128 0x35
- 364 0038 00       		.byte	0
- 365 0039 49       		.uleb128 0x49
- 366 003a 13       		.uleb128 0x13
- 367 003b 00       		.byte	0
- 368 003c 00       		.byte	0
- 369 003d 06       		.uleb128 0x6
- 370 003e 13       		.uleb128 0x13
- 371 003f 01       		.byte	0x1
- 372 0040 0B       		.uleb128 0xb
- 373 0041 0B       		.uleb128 0xb
- 374 0042 3A       		.uleb128 0x3a
- 375 0043 0B       		.uleb128 0xb
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 10
+ 319 0002 01       		.byte	0x1
+ 320 0003 25       		.uleb128 0x25
+ 321 0004 0E       		.uleb128 0xe
+ 322 0005 13       		.uleb128 0x13
+ 323 0006 0B       		.uleb128 0xb
+ 324 0007 03       		.uleb128 0x3
+ 325 0008 0E       		.uleb128 0xe
+ 326 0009 1B       		.uleb128 0x1b
+ 327 000a 0E       		.uleb128 0xe
+ 328 000b 55       		.uleb128 0x55
+ 329 000c 17       		.uleb128 0x17
+ 330 000d 11       		.uleb128 0x11
+ 331 000e 01       		.uleb128 0x1
+ 332 000f 10       		.uleb128 0x10
+ 333 0010 17       		.uleb128 0x17
+ 334 0011 00       		.byte	0
+ 335 0012 00       		.byte	0
+ 336 0013 02       		.uleb128 0x2
+ 337 0014 24       		.uleb128 0x24
+ 338 0015 00       		.byte	0
+ 339 0016 0B       		.uleb128 0xb
+ 340 0017 0B       		.uleb128 0xb
+ 341 0018 3E       		.uleb128 0x3e
+ 342 0019 0B       		.uleb128 0xb
+ 343 001a 03       		.uleb128 0x3
+ 344 001b 0E       		.uleb128 0xe
+ 345 001c 00       		.byte	0
+ 346 001d 00       		.byte	0
+ 347 001e 03       		.uleb128 0x3
+ 348 001f 24       		.uleb128 0x24
+ 349 0020 00       		.byte	0
+ 350 0021 0B       		.uleb128 0xb
+ 351 0022 0B       		.uleb128 0xb
+ 352 0023 3E       		.uleb128 0x3e
+ 353 0024 0B       		.uleb128 0xb
+ 354 0025 03       		.uleb128 0x3
+ 355 0026 08       		.uleb128 0x8
+ 356 0027 00       		.byte	0
+ 357 0028 00       		.byte	0
+ 358 0029 04       		.uleb128 0x4
+ 359 002a 16       		.uleb128 0x16
+ 360 002b 00       		.byte	0
+ 361 002c 03       		.uleb128 0x3
+ 362 002d 0E       		.uleb128 0xe
+ 363 002e 3A       		.uleb128 0x3a
+ 364 002f 0B       		.uleb128 0xb
+ 365 0030 3B       		.uleb128 0x3b
+ 366 0031 05       		.uleb128 0x5
+ 367 0032 49       		.uleb128 0x49
+ 368 0033 13       		.uleb128 0x13
+ 369 0034 00       		.byte	0
+ 370 0035 00       		.byte	0
+ 371 0036 05       		.uleb128 0x5
+ 372 0037 35       		.uleb128 0x35
+ 373 0038 00       		.byte	0
+ 374 0039 49       		.uleb128 0x49
+ 375 003a 13       		.uleb128 0x13
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 10
 
 
- 376 0044 3B       		.uleb128 0x3b
- 377 0045 0B       		.uleb128 0xb
- 378 0046 01       		.uleb128 0x1
- 379 0047 13       		.uleb128 0x13
- 380 0048 00       		.byte	0
- 381 0049 00       		.byte	0
- 382 004a 07       		.uleb128 0x7
- 383 004b 0D       		.uleb128 0xd
- 384 004c 00       		.byte	0
- 385 004d 03       		.uleb128 0x3
- 386 004e 0E       		.uleb128 0xe
- 387 004f 3A       		.uleb128 0x3a
- 388 0050 0B       		.uleb128 0xb
- 389 0051 3B       		.uleb128 0x3b
- 390 0052 0B       		.uleb128 0xb
- 391 0053 49       		.uleb128 0x49
- 392 0054 13       		.uleb128 0x13
- 393 0055 38       		.uleb128 0x38
- 394 0056 0B       		.uleb128 0xb
- 395 0057 00       		.byte	0
- 396 0058 00       		.byte	0
- 397 0059 08       		.uleb128 0x8
- 398 005a 16       		.uleb128 0x16
- 399 005b 00       		.byte	0
- 400 005c 03       		.uleb128 0x3
- 401 005d 0E       		.uleb128 0xe
- 402 005e 3A       		.uleb128 0x3a
- 403 005f 0B       		.uleb128 0xb
- 404 0060 3B       		.uleb128 0x3b
- 405 0061 0B       		.uleb128 0xb
- 406 0062 49       		.uleb128 0x49
- 407 0063 13       		.uleb128 0x13
- 408 0064 00       		.byte	0
- 409 0065 00       		.byte	0
- 410 0066 09       		.uleb128 0x9
- 411 0067 2E       		.uleb128 0x2e
- 412 0068 00       		.byte	0
- 413 0069 3F       		.uleb128 0x3f
- 414 006a 19       		.uleb128 0x19
- 415 006b 03       		.uleb128 0x3
- 416 006c 0E       		.uleb128 0xe
- 417 006d 3A       		.uleb128 0x3a
- 418 006e 0B       		.uleb128 0xb
- 419 006f 3B       		.uleb128 0x3b
- 420 0070 0B       		.uleb128 0xb
- 421 0071 27       		.uleb128 0x27
- 422 0072 19       		.uleb128 0x19
- 423 0073 11       		.uleb128 0x11
- 424 0074 01       		.uleb128 0x1
- 425 0075 12       		.uleb128 0x12
- 426 0076 06       		.uleb128 0x6
- 427 0077 40       		.uleb128 0x40
- 428 0078 18       		.uleb128 0x18
- 429 0079 9742     		.uleb128 0x2117
- 430 007b 19       		.uleb128 0x19
- 431 007c 00       		.byte	0
- 432 007d 00       		.byte	0
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 11
+ 376 003b 00       		.byte	0
+ 377 003c 00       		.byte	0
+ 378 003d 06       		.uleb128 0x6
+ 379 003e 13       		.uleb128 0x13
+ 380 003f 01       		.byte	0x1
+ 381 0040 0B       		.uleb128 0xb
+ 382 0041 0B       		.uleb128 0xb
+ 383 0042 3A       		.uleb128 0x3a
+ 384 0043 0B       		.uleb128 0xb
+ 385 0044 3B       		.uleb128 0x3b
+ 386 0045 0B       		.uleb128 0xb
+ 387 0046 01       		.uleb128 0x1
+ 388 0047 13       		.uleb128 0x13
+ 389 0048 00       		.byte	0
+ 390 0049 00       		.byte	0
+ 391 004a 07       		.uleb128 0x7
+ 392 004b 0D       		.uleb128 0xd
+ 393 004c 00       		.byte	0
+ 394 004d 03       		.uleb128 0x3
+ 395 004e 0E       		.uleb128 0xe
+ 396 004f 3A       		.uleb128 0x3a
+ 397 0050 0B       		.uleb128 0xb
+ 398 0051 3B       		.uleb128 0x3b
+ 399 0052 0B       		.uleb128 0xb
+ 400 0053 49       		.uleb128 0x49
+ 401 0054 13       		.uleb128 0x13
+ 402 0055 38       		.uleb128 0x38
+ 403 0056 0B       		.uleb128 0xb
+ 404 0057 00       		.byte	0
+ 405 0058 00       		.byte	0
+ 406 0059 08       		.uleb128 0x8
+ 407 005a 16       		.uleb128 0x16
+ 408 005b 00       		.byte	0
+ 409 005c 03       		.uleb128 0x3
+ 410 005d 0E       		.uleb128 0xe
+ 411 005e 3A       		.uleb128 0x3a
+ 412 005f 0B       		.uleb128 0xb
+ 413 0060 3B       		.uleb128 0x3b
+ 414 0061 0B       		.uleb128 0xb
+ 415 0062 49       		.uleb128 0x49
+ 416 0063 13       		.uleb128 0x13
+ 417 0064 00       		.byte	0
+ 418 0065 00       		.byte	0
+ 419 0066 09       		.uleb128 0x9
+ 420 0067 2E       		.uleb128 0x2e
+ 421 0068 00       		.byte	0
+ 422 0069 3F       		.uleb128 0x3f
+ 423 006a 19       		.uleb128 0x19
+ 424 006b 03       		.uleb128 0x3
+ 425 006c 0E       		.uleb128 0xe
+ 426 006d 3A       		.uleb128 0x3a
+ 427 006e 0B       		.uleb128 0xb
+ 428 006f 3B       		.uleb128 0x3b
+ 429 0070 0B       		.uleb128 0xb
+ 430 0071 27       		.uleb128 0x27
+ 431 0072 19       		.uleb128 0x19
+ 432 0073 11       		.uleb128 0x11
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 11
 
 
- 433 007e 0A       		.uleb128 0xa
- 434 007f 2E       		.uleb128 0x2e
- 435 0080 00       		.byte	0
- 436 0081 3F       		.uleb128 0x3f
- 437 0082 19       		.uleb128 0x19
- 438 0083 03       		.uleb128 0x3
- 439 0084 0E       		.uleb128 0xe
- 440 0085 3A       		.uleb128 0x3a
- 441 0086 0B       		.uleb128 0xb
- 442 0087 3B       		.uleb128 0x3b
- 443 0088 0B       		.uleb128 0xb
- 444 0089 27       		.uleb128 0x27
- 445 008a 19       		.uleb128 0x19
- 446 008b 11       		.uleb128 0x11
- 447 008c 01       		.uleb128 0x1
- 448 008d 12       		.uleb128 0x12
- 449 008e 06       		.uleb128 0x6
- 450 008f 40       		.uleb128 0x40
- 451 0090 18       		.uleb128 0x18
- 452 0091 9642     		.uleb128 0x2116
- 453 0093 19       		.uleb128 0x19
- 454 0094 00       		.byte	0
- 455 0095 00       		.byte	0
- 456 0096 0B       		.uleb128 0xb
- 457 0097 34       		.uleb128 0x34
- 458 0098 00       		.byte	0
- 459 0099 03       		.uleb128 0x3
- 460 009a 0E       		.uleb128 0xe
- 461 009b 3A       		.uleb128 0x3a
- 462 009c 0B       		.uleb128 0xb
- 463 009d 3B       		.uleb128 0x3b
- 464 009e 0B       		.uleb128 0xb
- 465 009f 49       		.uleb128 0x49
- 466 00a0 13       		.uleb128 0x13
- 467 00a1 02       		.uleb128 0x2
- 468 00a2 18       		.uleb128 0x18
- 469 00a3 00       		.byte	0
- 470 00a4 00       		.byte	0
- 471 00a5 00       		.byte	0
- 472              		.section	.debug_aranges,"",%progbits
- 473 0000 34000000 		.4byte	0x34
- 474 0004 0200     		.2byte	0x2
- 475 0006 00000000 		.4byte	.Ldebug_info0
- 476 000a 04       		.byte	0x4
- 477 000b 00       		.byte	0
- 478 000c 0000     		.2byte	0
- 479 000e 0000     		.2byte	0
- 480 0010 00000000 		.4byte	.LFB0
- 481 0014 0C000000 		.4byte	.LFE0-.LFB0
- 482 0018 00000000 		.4byte	.LFB1
- 483 001c 0C000000 		.4byte	.LFE1-.LFB1
- 484 0020 00000000 		.4byte	.LFB2
- 485 0024 20000000 		.4byte	.LFE2-.LFB2
- 486 0028 00000000 		.4byte	.LFB3
- 487 002c 2C000000 		.4byte	.LFE3-.LFB3
- 488 0030 00000000 		.4byte	0
- 489 0034 00000000 		.4byte	0
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 12
+ 433 0074 01       		.uleb128 0x1
+ 434 0075 12       		.uleb128 0x12
+ 435 0076 06       		.uleb128 0x6
+ 436 0077 40       		.uleb128 0x40
+ 437 0078 18       		.uleb128 0x18
+ 438 0079 9742     		.uleb128 0x2117
+ 439 007b 19       		.uleb128 0x19
+ 440 007c 00       		.byte	0
+ 441 007d 00       		.byte	0
+ 442 007e 0A       		.uleb128 0xa
+ 443 007f 2E       		.uleb128 0x2e
+ 444 0080 00       		.byte	0
+ 445 0081 3F       		.uleb128 0x3f
+ 446 0082 19       		.uleb128 0x19
+ 447 0083 03       		.uleb128 0x3
+ 448 0084 0E       		.uleb128 0xe
+ 449 0085 3A       		.uleb128 0x3a
+ 450 0086 0B       		.uleb128 0xb
+ 451 0087 3B       		.uleb128 0x3b
+ 452 0088 0B       		.uleb128 0xb
+ 453 0089 27       		.uleb128 0x27
+ 454 008a 19       		.uleb128 0x19
+ 455 008b 11       		.uleb128 0x11
+ 456 008c 01       		.uleb128 0x1
+ 457 008d 12       		.uleb128 0x12
+ 458 008e 06       		.uleb128 0x6
+ 459 008f 40       		.uleb128 0x40
+ 460 0090 18       		.uleb128 0x18
+ 461 0091 9642     		.uleb128 0x2116
+ 462 0093 19       		.uleb128 0x19
+ 463 0094 00       		.byte	0
+ 464 0095 00       		.byte	0
+ 465 0096 0B       		.uleb128 0xb
+ 466 0097 34       		.uleb128 0x34
+ 467 0098 00       		.byte	0
+ 468 0099 03       		.uleb128 0x3
+ 469 009a 0E       		.uleb128 0xe
+ 470 009b 3A       		.uleb128 0x3a
+ 471 009c 0B       		.uleb128 0xb
+ 472 009d 3B       		.uleb128 0x3b
+ 473 009e 0B       		.uleb128 0xb
+ 474 009f 49       		.uleb128 0x49
+ 475 00a0 13       		.uleb128 0x13
+ 476 00a1 02       		.uleb128 0x2
+ 477 00a2 18       		.uleb128 0x18
+ 478 00a3 00       		.byte	0
+ 479 00a4 00       		.byte	0
+ 480 00a5 00       		.byte	0
+ 481              		.section	.debug_aranges,"",%progbits
+ 482 0000 34000000 		.4byte	0x34
+ 483 0004 0200     		.2byte	0x2
+ 484 0006 00000000 		.4byte	.Ldebug_info0
+ 485 000a 04       		.byte	0x4
+ 486 000b 00       		.byte	0
+ 487 000c 0000     		.2byte	0
+ 488 000e 0000     		.2byte	0
+ 489 0010 00000000 		.4byte	.LFB0
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 12
 
 
- 490              		.section	.debug_ranges,"",%progbits
- 491              	.Ldebug_ranges0:
- 492 0000 00000000 		.4byte	.LFB0
- 493 0004 0C000000 		.4byte	.LFE0
- 494 0008 00000000 		.4byte	.LFB1
- 495 000c 0C000000 		.4byte	.LFE1
- 496 0010 00000000 		.4byte	.LFB2
- 497 0014 20000000 		.4byte	.LFE2
- 498 0018 00000000 		.4byte	.LFB3
- 499 001c 2C000000 		.4byte	.LFE3
- 500 0020 00000000 		.4byte	0
- 501 0024 00000000 		.4byte	0
- 502              		.section	.debug_line,"",%progbits
- 503              	.Ldebug_line0:
- 504 0000 9C000000 		.section	.debug_str,"MS",%progbits,1
- 504      02004C00 
- 504      00000201 
- 504      FB0E0D00 
- 504      01010101 
- 505              	.LASF23:
- 506 0000 4932535F 		.ascii	"I2S_backup\000"
- 506      6261636B 
- 506      757000
- 507              	.LASF19:
- 508 000b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
- 508      43313120 
- 508      352E342E 
- 508      31203230 
- 508      31363036 
- 509 003e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
- 509      20726576 
- 509      6973696F 
- 509      6E203233 
- 509      37373135 
- 510 0071 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
- 510      66756E63 
- 510      74696F6E 
- 510      2D736563 
- 510      74696F6E 
- 511              	.LASF15:
- 512 0099 4932535F 		.ascii	"I2S_SaveConfig\000"
- 512      53617665 
- 512      436F6E66 
- 512      696700
- 513              	.LASF9:
- 514 00a8 666C6F61 		.ascii	"float\000"
- 514      7400
- 515              	.LASF1:
- 516 00ae 756E7369 		.ascii	"unsigned char\000"
- 516      676E6564 
- 516      20636861 
- 516      7200
- 517              	.LASF13:
- 518 00bc 72656738 		.ascii	"reg8\000"
- 518      00
- 519              	.LASF5:
- 520 00c1 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 13
+ 490 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 491 0018 00000000 		.4byte	.LFB1
+ 492 001c 0C000000 		.4byte	.LFE1-.LFB1
+ 493 0020 00000000 		.4byte	.LFB2
+ 494 0024 20000000 		.4byte	.LFE2-.LFB2
+ 495 0028 00000000 		.4byte	.LFB3
+ 496 002c 3C000000 		.4byte	.LFE3-.LFB3
+ 497 0030 00000000 		.4byte	0
+ 498 0034 00000000 		.4byte	0
+ 499              		.section	.debug_ranges,"",%progbits
+ 500              	.Ldebug_ranges0:
+ 501 0000 00000000 		.4byte	.LFB0
+ 502 0004 0C000000 		.4byte	.LFE0
+ 503 0008 00000000 		.4byte	.LFB1
+ 504 000c 0C000000 		.4byte	.LFE1
+ 505 0010 00000000 		.4byte	.LFB2
+ 506 0014 20000000 		.4byte	.LFE2
+ 507 0018 00000000 		.4byte	.LFB3
+ 508 001c 3C000000 		.4byte	.LFE3
+ 509 0020 00000000 		.4byte	0
+ 510 0024 00000000 		.4byte	0
+ 511              		.section	.debug_line,"",%progbits
+ 512              	.Ldebug_line0:
+ 513 0000 9C000000 		.section	.debug_str,"MS",%progbits,1
+ 513      02004C00 
+ 513      00000201 
+ 513      FB0E0D00 
+ 513      01010101 
+ 514              	.LASF23:
+ 515 0000 4932535F 		.ascii	"I2S_backup\000"
+ 515      6261636B 
+ 515      757000
+ 516              	.LASF19:
+ 517 000b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 517      43313120 
+ 517      352E342E 
+ 517      31203230 
+ 517      31363036 
+ 518 003e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 518      20726576 
+ 518      6973696F 
+ 518      6E203233 
+ 518      37373135 
+ 519 0071 30202D66 		.ascii	"0 -ffunction-sections -ffat-lto-objects\000"
+ 519      66756E63 
+ 519      74696F6E 
+ 519      2D736563 
+ 519      74696F6E 
+ 520              	.LASF15:
+ 521 0099 4932535F 		.ascii	"I2S_SaveConfig\000"
+ 521      53617665 
+ 521      436F6E66 
+ 521      696700
+ 522              	.LASF9:
+ 523 00a8 666C6F61 		.ascii	"float\000"
+ 523      7400
+ 524              	.LASF1:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 13
 
 
- 520      20756E73 
- 520      69676E65 
- 520      6420696E 
- 520      7400
- 521              	.LASF3:
- 522 00d3 73686F72 		.ascii	"short unsigned int\000"
- 522      7420756E 
- 522      7369676E 
- 522      65642069 
- 522      6E7400
- 523              	.LASF17:
- 524 00e6 4932535F 		.ascii	"I2S_Sleep\000"
- 524      536C6565 
- 524      7000
- 525              	.LASF10:
- 526 00f0 646F7562 		.ascii	"double\000"
- 526      6C6500
- 527              	.LASF8:
- 528 00f7 756E7369 		.ascii	"unsigned int\000"
- 528      676E6564 
- 528      20696E74 
- 528      00
- 529              	.LASF7:
- 530 0104 6C6F6E67 		.ascii	"long long unsigned int\000"
- 530      206C6F6E 
- 530      6720756E 
- 530      7369676E 
- 530      65642069 
- 531              	.LASF6:
- 532 011b 6C6F6E67 		.ascii	"long long int\000"
- 532      206C6F6E 
- 532      6720696E 
- 532      7400
- 533              	.LASF11:
- 534 0129 63686172 		.ascii	"char\000"
- 534      00
- 535              	.LASF21:
- 536 012e 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
- 536      73657273 
- 536      5C706561 
- 536      726C7374 
- 536      6C5C446F 
- 537 015c 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
- 537      73747265 
- 537      616D6572 
- 537      5C666132 
- 537      305F6932 
- 538              	.LASF14:
- 539 0181 4932535F 		.ascii	"I2S_BACKUP_STRUCT\000"
- 539      4241434B 
- 539      55505F53 
- 539      54525543 
- 539      5400
- 540              	.LASF2:
- 541 0193 73686F72 		.ascii	"short int\000"
- 541      7420696E 
+ 525 00ae 756E7369 		.ascii	"unsigned char\000"
+ 525      676E6564 
+ 525      20636861 
+ 525      7200
+ 526              	.LASF13:
+ 527 00bc 72656738 		.ascii	"reg8\000"
+ 527      00
+ 528              	.LASF5:
+ 529 00c1 6C6F6E67 		.ascii	"long unsigned int\000"
+ 529      20756E73 
+ 529      69676E65 
+ 529      6420696E 
+ 529      7400
+ 530              	.LASF3:
+ 531 00d3 73686F72 		.ascii	"short unsigned int\000"
+ 531      7420756E 
+ 531      7369676E 
+ 531      65642069 
+ 531      6E7400
+ 532              	.LASF17:
+ 533 00e6 4932535F 		.ascii	"I2S_Sleep\000"
+ 533      536C6565 
+ 533      7000
+ 534              	.LASF10:
+ 535 00f0 646F7562 		.ascii	"double\000"
+ 535      6C6500
+ 536              	.LASF8:
+ 537 00f7 756E7369 		.ascii	"unsigned int\000"
+ 537      676E6564 
+ 537      20696E74 
+ 537      00
+ 538              	.LASF7:
+ 539 0104 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 539      206C6F6E 
+ 539      6720756E 
+ 539      7369676E 
+ 539      65642069 
+ 540              	.LASF6:
+ 541 011b 6C6F6E67 		.ascii	"long long int\000"
+ 541      206C6F6E 
+ 541      6720696E 
  541      7400
-ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccNrHr47.s 			page 14
+ 542              	.LASF11:
+ 543 0129 63686172 		.ascii	"char\000"
+ 543      00
+ 544              	.LASF21:
+ 545 012e 433A5C55 		.ascii	"C:\\Users\\pearlstl\\Documents\\PSoC Creator\\fa20_"
+ 545      73657273 
+ 545      5C706561 
+ 545      726C7374 
+ 545      6C5C446F 
+ 546 015c 6932735F 		.ascii	"i2s_streamer\\fa20_i2s_streamer.cydsn\000"
+ 546      73747265 
+ 546      616D6572 
+ 546      5C666132 
+ 546      305F6932 
+ 547              	.LASF14:
+ARM GAS  C:\Users\pearlstl\AppData\Local\Temp\ccHfng9N.s 			page 14
 
 
- 542              	.LASF12:
- 543 019d 75696E74 		.ascii	"uint8\000"
- 543      3800
- 544              	.LASF4:
- 545 01a3 6C6F6E67 		.ascii	"long int\000"
- 545      20696E74 
- 545      00
- 546              	.LASF22:
- 547 01ac 656E6162 		.ascii	"enableState\000"
- 547      6C655374 
- 547      61746500 
- 548              	.LASF20:
- 549 01b8 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2S_PM.c\000"
- 549      72617465 
- 549      645F536F 
- 549      75726365 
- 549      5C50536F 
- 550              	.LASF0:
- 551 01d8 7369676E 		.ascii	"signed char\000"
- 551      65642063 
- 551      68617200 
- 552              	.LASF16:
- 553 01e4 4932535F 		.ascii	"I2S_RestoreConfig\000"
- 553      52657374 
- 553      6F726543 
- 553      6F6E6669 
- 553      6700
- 554              	.LASF18:
- 555 01f6 4932535F 		.ascii	"I2S_Wakeup\000"
- 555      57616B65 
- 555      757000
- 556              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+ 548 0181 4932535F 		.ascii	"I2S_BACKUP_STRUCT\000"
+ 548      4241434B 
+ 548      55505F53 
+ 548      54525543 
+ 548      5400
+ 549              	.LASF2:
+ 550 0193 73686F72 		.ascii	"short int\000"
+ 550      7420696E 
+ 550      7400
+ 551              	.LASF12:
+ 552 019d 75696E74 		.ascii	"uint8\000"
+ 552      3800
+ 553              	.LASF4:
+ 554 01a3 6C6F6E67 		.ascii	"long int\000"
+ 554      20696E74 
+ 554      00
+ 555              	.LASF22:
+ 556 01ac 656E6162 		.ascii	"enableState\000"
+ 556      6C655374 
+ 556      61746500 
+ 557              	.LASF20:
+ 558 01b8 47656E65 		.ascii	"Generated_Source\\PSoC5\\I2S_PM.c\000"
+ 558      72617465 
+ 558      645F536F 
+ 558      75726365 
+ 558      5C50536F 
+ 559              	.LASF0:
+ 560 01d8 7369676E 		.ascii	"signed char\000"
+ 560      65642063 
+ 560      68617200 
+ 561              	.LASF16:
+ 562 01e4 4932535F 		.ascii	"I2S_RestoreConfig\000"
+ 562      52657374 
+ 562      6F726543 
+ 562      6F6E6669 
+ 562      6700
+ 563              	.LASF18:
+ 564 01f6 4932535F 		.ascii	"I2S_Wakeup\000"
+ 564      57616B65 
+ 564      757000
+ 565              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

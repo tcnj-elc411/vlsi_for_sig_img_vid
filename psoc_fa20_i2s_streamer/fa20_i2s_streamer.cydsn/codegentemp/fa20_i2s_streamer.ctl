@@ -1,6 +1,6 @@
 -- ======================================================================
 -- fa20_i2s_streamer.ctl generated from fa20_i2s_streamer
--- 07/25/2020 at 13:23
+-- 07/27/2020 at 17:42
 -- This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 -- ======================================================================
 
