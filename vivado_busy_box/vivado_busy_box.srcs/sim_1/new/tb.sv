@@ -86,7 +86,10 @@ begin
         num_items=$fgets( the_line, fd_in );
         
         if (num_items == 0)
+        begin
+            $display( "***** ----> PASS <---- ***** !!!\n" );
             #25 $finish;
+        end
         else if (the_line[0] != "/")
             $sscanf( the_line, "%d %d %d %d %d %d %d %d %d", stim_a, stim_b, stim_c, stim_d, stim_sel, gold_out_arr[0], gold_out_arr[1], gold_out_arr[2], gold_out_arr[3] );
     end
@@ -153,7 +156,7 @@ begin
     if (rst_ && check_flag_p2)
         if (gold_out_arr_p2 != resp_out_arr)
         begin
-            $display( "*** FAIL FAIL FAIL *** !!!\n" );
+            $display( "***** ----> FAIL <---- ***** !!!\n" );
             $finish;
         end
         fail_flag <= (gold_out_arr_p2 != resp_out_arr);
