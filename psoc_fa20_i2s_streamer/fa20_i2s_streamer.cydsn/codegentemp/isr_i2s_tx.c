@@ -179,7 +179,7 @@ CY_ISR(isr_i2s_tx_Interrupt)
     static int byte_idx = 1;
    
     // Check for I2S_OUT write FIFO not full
-    while ((I2S_ReadTxStatus() & I2S_TX_FIFO_0_NOT_FULL) && (adc_buf_wptr != adc_buf_rptr) )
+    do
     {
         int in_value = adc_buf[adc_buf_rptr];
         //I2S_WriteByte( (force_value >> (8*byte_idx))& 0xFF, word_idx);
@@ -195,7 +195,8 @@ CY_ISR(isr_i2s_tx_Interrupt)
             word_idx = 1 - word_idx;
         }
         byte_idx = 1 - byte_idx;
-    }
+    } while ((I2S_ReadTxStatus() & I2S_TX_FIFO_0_NOT_FULL) && (adc_buf_wptr != adc_buf_rptr) );
+
 #ifdef NDEBUG
     P3_1_Write(0);
 #endif

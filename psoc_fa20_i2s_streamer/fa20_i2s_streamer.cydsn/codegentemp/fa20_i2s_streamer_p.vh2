@@ -1,6 +1,6 @@
 -- Project:   fa20_i2s_streamer
--- Generated: 07/27/2020 17:42:07
--- PSoC Creator  4.2
+-- Generated: 07/30/2020 12:09:19
+-- PSoC Creator  4.3
 
 ENTITY fa20_i2s_streamer IS
     PORT(

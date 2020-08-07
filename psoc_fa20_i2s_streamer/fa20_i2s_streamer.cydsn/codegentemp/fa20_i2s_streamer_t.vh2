@@ -1,6 +1,6 @@
--- Project:   C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\fa20_i2s_streamer.cyprj
--- Generated: 07/27/2020 17:42:10
--- PSoC Creator  4.2
+-- Project:   C:\Users\pearlstl\Documents\_Teaching\ELC 470 - VLSI for Signal and Image Processing\vlsi_for_sig_img_vid\psoc_fa20_i2s_streamer\fa20_i2s_streamer.cydsn\fa20_i2s_streamer.cyprj
+-- Generated: 07/30/2020 12:09:22
+-- PSoC Creator  4.3
 
 ENTITY fa20_i2s_streamer IS
     PORT(

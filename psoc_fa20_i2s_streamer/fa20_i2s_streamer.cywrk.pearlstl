@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="fa20_i2s_streamer\fa20_i2s_streamer\TopDesign">
 <ExpandedNodeIds>
 <v>fa20_i2s_streamer</v>
 <v>fa20_i2s_streamer\fa20_i2s_streamer</v>
@@ -195,52 +195,6 @@
 <VisibleNodeIds>
 <v>fa20_i2s_streamer</v>
 <v>fa20_i2s_streamer\fa20_i2s_streamer</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_IN.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_INT.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_IRQ.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_PM.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_theACLK.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\DAC.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\DAC_OUT.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\DAC_PM.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\I2S.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\I2S_PM.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_adc_eoc.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_i2s_rx.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_i2s_tx.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\OUT_ADC_INT.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\OUT_I2S_WS.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\P3_0.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\P3_1.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\SW2.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\Listing Files\SW3.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\fa20_i2s_streamer.elf</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\fa20_i2s_streamer.hex</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Debug\fa20_i2s_streamer.map</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Release</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Release\Listing Files</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Release\Listing Files\ADC.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Release\Listing Files\ADC_IN.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Release\Listing Files\ADC_INT.lst</v>
-<v>fa20_i2s_streamer\fa20_i2s_streamer\CortexM3\ARM_GCC_541\Release\Listing Files\ADC_IRQ.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -290,11 +244,6 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\fa20_i2s_streamer.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\fa20_i2s_streamer.cydsn\fa20_i2s_streamer.cydwr" />
-<name v=".\fa20_i2s_streamer.cydsn\Generated_Source\PSoC5\isr_adc_eoc.c" />
-<name v=".\fa20_i2s_streamer.cydsn\main.c" />
-<name v=".\fa20_i2s_streamer.cydsn\Generated_Source\PSoC5\isr_i2s_tx.c" />
-<name v=".\fa20_i2s_streamer.cydsn\Generated_Source\PSoC5\isr_i2s_rx.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -302,7 +251,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1071, 712" SelectedTabbedMdiWindow="d59f3d05-843a-4084-bcd5-912a38314326"><DocumentWindow Key="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\TopDesign\TopDesign.cysch" Guid="4436c6d9-b843-4ea7-876d-cb4b980d92ae" /><DocumentWindow Key="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\fa20_i2s_streamer.cydwr" Guid="53d91429-72f6-472e-b3b7-3ea9ccc675de" /><DocumentWindow Key="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\Generated_Source\PSoC5\isr_adc_eoc.c" Guid="921499ef-c303-4cd9-9112-2de628774b1d" /><DocumentWindow Key="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\main.c" Guid="f871e82f-a60c-428b-b47a-c95d89880b44" /><DocumentWindow Key="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\Generated_Source\PSoC5\isr_i2s_tx.c" Guid="9141385c-d53e-4347-a2a4-5120606dcae0" /><DocumentWindow Key="C:\Users\pearlstl\Documents\PSoC Creator\fa20_i2s_streamer\fa20_i2s_streamer.cydsn\Generated_Source\PSoC5\isr_i2s_rx.c" Guid="d59f3d05-843a-4084-bcd5-912a38314326" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c6573b-95dc-45c9-9735-33080cfec6b5" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1308, 592" SelectedTabbedMdiWindow="42246cde-6e52-4c26-a4fb-493f4d512d40"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="12c6573b-95dc-45c9-9735-33080cfec6b5" /><DocumentWindow Key="C:\Users\pearlstl\Documents\_Teaching\ELC 470 - VLSI for Signal and Image Processing\vlsi_for_sig_img_vid\psoc_fa20_i2s_streamer\fa20_i2s_streamer.cydsn\TopDesign\TopDesign.cysch" Guid="42246cde-6e52-4c26-a4fb-493f4d512d40" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="Release" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

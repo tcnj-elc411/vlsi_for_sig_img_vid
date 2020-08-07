@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="86240000000fs"></ZoomStartTime>
-      <ZoomEndTime time="106436947694fs"></ZoomEndTime>
-      <Cursor1Time time="92165000000fs"></Cursor1Time>
+      <ZoomStartTime time="981868649230fs"></ZoomStartTime>
+      <ZoomEndTime time="1003626270155fs"></ZoomEndTime>
+      <Cursor1Time time="1000000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="210"></NameColumnWidth>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="5" />
+   <WVObjectSize size="6" />
    <wvobject fp_name="/tb/u_i2s_top/u_parallel_in/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -102,8 +102,12 @@
          <obj_property name="ObjectShortName">bit_idx_negedge_sck[3:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="/tb/inout_i2s_ws" type="logic">
-      <obj_property name="ElementShortName">inout_i2s_ws</obj_property>
-      <obj_property name="ObjectShortName">inout_i2s_ws</obj_property>
+   <wvobject fp_name="/tb/u_i2s_top/out_i2s_sd" type="logic">
+      <obj_property name="ElementShortName">out_i2s_sd</obj_property>
+      <obj_property name="ObjectShortName">out_i2s_sd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb/inout_i2s_sck" type="logic">
+      <obj_property name="ElementShortName">inout_i2s_sck</obj_property>
+      <obj_property name="ObjectShortName">inout_i2s_sck</obj_property>
    </wvobject>
 </wave_config>
