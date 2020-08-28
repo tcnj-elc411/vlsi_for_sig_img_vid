@@ -61,7 +61,7 @@ reg  signed[30:0] gold_out_arr[0:3];
 reg  signed[30:0] gold_out_arr_p1[0:3];
 reg  signed[30:0] gold_out_arr_p2[0:3];
 
-wire   [31*4-1:0]  resp_out_arr_flat;
+wire   [31*4-1:0] resp_out_arr_flat;
 wire signed[30:0] resp_out_arr[0:3];
 
 

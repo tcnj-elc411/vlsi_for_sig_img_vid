@@ -11,15 +11,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="189733747fs"></ZoomStartTime>
-      <ZoomEndTime time="209560857fs"></ZoomEndTime>
-      <Cursor1Time time="199588000fs"></Cursor1Time>
+      <ZoomStartTime time="2621315533333fs"></ZoomStartTime>
+      <ZoomEndTime time="2621387133334fs"></ZoomEndTime>
+      <Cursor1Time time="2621328133000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="194"></NameColumnWidth>
+      <NameColumnWidth column_width="201"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
+   <WVObjectSize size="9" />
+   <wvobject type="divider" fp_name="divider20">
+      <obj_property name="label">Testbench</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
    <wvobject fp_name="/tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -28,73 +32,89 @@
       <obj_property name="ElementShortName">rst_</obj_property>
       <obj_property name="ObjectShortName">rst_</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/reset_count" type="array">
-      <obj_property name="ElementShortName">reset_count[31:0]</obj_property>
-      <obj_property name="ObjectShortName">reset_count[31:0]</obj_property>
+   <wvobject fp_name="group29" type="group">
+      <obj_property name="label">TB Stimulus</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/tb/stim_a" type="array">
+         <obj_property name="ElementShortName">stim_a[15:0]</obj_property>
+         <obj_property name="ObjectShortName">stim_a[15:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/stim_b" type="array">
+         <obj_property name="ElementShortName">stim_b[15:0]</obj_property>
+         <obj_property name="ObjectShortName">stim_b[15:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/stim_c" type="array">
+         <obj_property name="ElementShortName">stim_c[15:0]</obj_property>
+         <obj_property name="ObjectShortName">stim_c[15:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/stim_d" type="array">
+         <obj_property name="ElementShortName">stim_d[15:0]</obj_property>
+         <obj_property name="ObjectShortName">stim_d[15:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb/stim_sel" type="array">
+         <obj_property name="ElementShortName">stim_sel[1:0]</obj_property>
+         <obj_property name="ObjectShortName">stim_sel[1:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="group32" type="group">
+         <obj_property name="label">Modeled Desired Response</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/tb/gold_out_arr_p2" type="array">
+            <obj_property name="ElementShortName">gold_out_arr_p2[0:3][30:0]</obj_property>
+            <obj_property name="ObjectShortName">gold_out_arr_p2[0:3][30:0]</obj_property>
+            <obj_property name="CustomSignalColor">#FFD700</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group33" type="group">
+         <obj_property name="label">Observed Response</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/tb/resp_out_arr" type="array">
+            <obj_property name="ElementShortName">resp_out_arr[0:3][30:0]</obj_property>
+            <obj_property name="ObjectShortName">resp_out_arr[0:3][30:0]</obj_property>
+            <obj_property name="CustomSignalColor">#FF0080</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
-   <wvobject fp_name="/tb/sck_falling_edge" type="logic">
-      <obj_property name="ElementShortName">sck_falling_edge</obj_property>
-      <obj_property name="ObjectShortName">sck_falling_edge</obj_property>
+   <wvobject type="divider" fp_name="divider21">
+      <obj_property name="label">DUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/fd_in" type="array">
-      <obj_property name="ElementShortName">fd_in[31:0]</obj_property>
-      <obj_property name="ObjectShortName">fd_in[31:0]</obj_property>
+   <wvobject fp_name="/tb/u_chip_top/mux_stage1" type="array">
+      <obj_property name="ElementShortName">mux_stage1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mux_stage1[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/fd_out" type="array">
-      <obj_property name="ElementShortName">fd_out[31:0]</obj_property>
-      <obj_property name="ObjectShortName">fd_out[31:0]</obj_property>
+   <wvobject fp_name="/tb/u_chip_top/sel_stage1" type="array">
+      <obj_property name="ElementShortName">sel_stage1[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sel_stage1[1:0]</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/stim_a" type="array">
-      <obj_property name="ElementShortName">stim_a[15:0]</obj_property>
-      <obj_property name="ObjectShortName">stim_a[15:0]</obj_property>
+   <wvobject fp_name="/tb/u_chip_top/prod" type="array">
+      <obj_property name="ElementShortName">prod[32:0]</obj_property>
+      <obj_property name="ObjectShortName">prod[32:0]</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb/stim_b" type="array">
-      <obj_property name="ElementShortName">stim_b[15:0]</obj_property>
-      <obj_property name="ObjectShortName">stim_b[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/stim_c" type="array">
-      <obj_property name="ElementShortName">stim_c[15:0]</obj_property>
-      <obj_property name="ObjectShortName">stim_c[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/stim_d" type="array">
-      <obj_property name="ElementShortName">stim_d[15:0]</obj_property>
-      <obj_property name="ObjectShortName">stim_d[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/stim_sel" type="array">
-      <obj_property name="ElementShortName">stim_sel[1:0]</obj_property>
-      <obj_property name="ObjectShortName">stim_sel[1:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/i" type="array">
-      <obj_property name="ElementShortName">i[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/num_items" type="array">
-      <obj_property name="ElementShortName">num_items[31:0]</obj_property>
-      <obj_property name="ObjectShortName">num_items[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/u_chip_top/result_arr" type="array">
-      <obj_property name="ElementShortName">result_arr[0:3][30:0]</obj_property>
-      <obj_property name="ObjectShortName">result_arr[0:3][30:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/fail_flag" type="logic">
-      <obj_property name="ElementShortName">fail_flag</obj_property>
-      <obj_property name="ObjectShortName">fail_flag</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/gold_out_arr" type="array">
-      <obj_property name="ElementShortName">gold_out_arr[0:3][30:0]</obj_property>
-      <obj_property name="ObjectShortName">gold_out_arr[0:3][30:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/gold_out_arr_p1" type="array">
-      <obj_property name="ElementShortName">gold_out_arr_p1[0:3][30:0]</obj_property>
-      <obj_property name="ObjectShortName">gold_out_arr_p1[0:3][30:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/gold_out_arr_p2" type="array">
-      <obj_property name="ElementShortName">gold_out_arr_p2[0:3][30:0]</obj_property>
-      <obj_property name="ObjectShortName">gold_out_arr_p2[0:3][30:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb/resp_out_arr" type="array">
-      <obj_property name="ElementShortName">resp_out_arr[0:3][30:0]</obj_property>
-      <obj_property name="ObjectShortName">resp_out_arr[0:3][30:0]</obj_property>
+   <wvobject fp_name="/tb/u_chip_top/prod_saturated" type="array">
+      <obj_property name="ElementShortName">prod_saturated[30:0]</obj_property>
+      <obj_property name="ObjectShortName">prod_saturated[30:0]</obj_property>
+      <obj_property name="CustomSignalColor">#D2691E</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>
