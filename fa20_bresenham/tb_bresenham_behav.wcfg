@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_bresenham_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_bresenham" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="619000001fs"></ZoomEndTime>
+      <Cursor1Time time="1275000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="300"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wvobject fp_name="/tb_bresenham/u_bresenham/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/RESET" type="logic">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/state" type="array">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/in_xfc" type="logic">
+      <obj_property name="ElementShortName">in_xfc</obj_property>
+      <obj_property name="ObjectShortName">in_xfc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/cap_x0" type="array">
+      <obj_property name="ElementShortName">cap_x0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">cap_x0[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/cap_y0" type="array">
+      <obj_property name="ElementShortName">cap_y0[8:0]</obj_property>
+      <obj_property name="ObjectShortName">cap_y0[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/cap_x1" type="array">
+      <obj_property name="ElementShortName">cap_x1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">cap_x1[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/cap_y1" type="array">
+      <obj_property name="ElementShortName">cap_y1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">cap_y1[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/incr" type="array">
+      <obj_property name="ElementShortName">incr[1:0]</obj_property>
+      <obj_property name="ObjectShortName">incr[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/step_var_big" type="array">
+      <obj_property name="ElementShortName">step_var_big[9:0]</obj_property>
+      <obj_property name="ObjectShortName">step_var_big[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/step_var_lit" type="array">
+      <obj_property name="ElementShortName">step_var_lit[9:0]</obj_property>
+      <obj_property name="ObjectShortName">step_var_lit[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/step_var_big_lim" type="array">
+      <obj_property name="ElementShortName">step_var_big_lim[9:0]</obj_property>
+      <obj_property name="ObjectShortName">step_var_big_lim[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/bresenham_modulus" type="array">
+      <obj_property name="ElementShortName">bresenham_modulus[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bresenham_modulus[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/next_bresenham_modulus" type="array">
+      <obj_property name="ElementShortName">next_bresenham_modulus[10:0]</obj_property>
+      <obj_property name="ObjectShortName">next_bresenham_modulus[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/dbig" type="array">
+      <obj_property name="ElementShortName">dbig[9:0]</obj_property>
+      <obj_property name="ObjectShortName">dbig[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/dlit" type="array">
+      <obj_property name="ElementShortName">dlit[9:0]</obj_property>
+      <obj_property name="ObjectShortName">dlit[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/dx" type="array">
+      <obj_property name="ElementShortName">dx[9:0]</obj_property>
+      <obj_property name="ObjectShortName">dx[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/dy" type="array">
+      <obj_property name="ElementShortName">dy[8:0]</obj_property>
+      <obj_property name="ObjectShortName">dy[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/x1_gt_x0_flag" type="logic">
+      <obj_property name="ElementShortName">x1_gt_x0_flag</obj_property>
+      <obj_property name="ObjectShortName">x1_gt_x0_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/y1_gt_y0_flag" type="logic">
+      <obj_property name="ElementShortName">y1_gt_y0_flag</obj_property>
+      <obj_property name="ObjectShortName">y1_gt_y0_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_bresenham/u_bresenham/big_x_flag" type="logic">
+      <obj_property name="ElementShortName">big_x_flag</obj_property>
+      <obj_property name="ObjectShortName">big_x_flag</obj_property>
+   </wvobject>
+</wave_config>

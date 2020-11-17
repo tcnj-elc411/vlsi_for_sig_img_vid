@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../fa20_fir_filters.srcs/sources_1/new/direct_form_1.sv" \
+"../../../../fa20_fir_filters.srcs/sources_1/new/sig_flow_graph.sv" \
+"../../../../fa20_fir_filters.srcs/sim_1/new/tb_df1.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

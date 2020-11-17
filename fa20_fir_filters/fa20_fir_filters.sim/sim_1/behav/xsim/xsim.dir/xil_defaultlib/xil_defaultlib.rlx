@@ -1,0 +1,8 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_fir_filters/fa20_fir_filters.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_fir_filters/fa20_fir_filters.srcs/sim_1/new/tb_df1.sv,1602556805,systemVerilog,,,,tb_df1,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_fir_filters/fa20_fir_filters.srcs/sources_1/new/direct_form_1.sv,1602305630,systemVerilog,,C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_fir_filters/fa20_fir_filters.srcs/sources_1/new/sig_flow_graph.sv,,direct_form_1,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_fir_filters/fa20_fir_filters.srcs/sources_1/new/sig_flow_graph.sv,1602260494,systemVerilog,,C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_fir_filters/fa20_fir_filters.srcs/sim_1/new/tb_df1.sv,,prod;sum;z_minus_1,,,,,,,,

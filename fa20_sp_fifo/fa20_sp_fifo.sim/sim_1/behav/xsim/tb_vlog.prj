@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../fa20_sp_fifo.srcs/sources_1/new/ram_model_1w1r.v" \
+"../../../../fa20_sp_fifo.srcs/sources_1/new/sp_fifo.v" \
+"../../../../fa20_sp_fifo.srcs/sim_1/new/tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

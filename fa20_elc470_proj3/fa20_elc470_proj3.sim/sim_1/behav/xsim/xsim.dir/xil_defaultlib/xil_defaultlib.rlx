@@ -1,0 +1,13 @@
+0.6
+2018.3
+Dec  7 2018
+00:33:28
+C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/LPF/dsgn_modules/low_pass_fir_new_new.sv,1604879777,systemVerilog,,C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_sp_fifo/fa20_sp_fifo.srcs/sources_1/new/sp_fifo.v,,low_pass_filter,,,,,,,,
+C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/MUL/dsgn_modules/MUL_SHIFT.v,1604760795,verilog,,C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/SUM/dsgn_modules/SUM.v,,MUL1,,,,,,,,
+C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/OSC/dsgn_modules/OSC.v,1604760795,systemVerilog,,C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/LPF/dsgn_modules/low_pass_fir_new_new.sv,,OSC,,,,,,,,
+C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/SUM/dsgn_modules/SUM.v,1604870790,verilog,,C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/TOP/dsgn_modules/modulator.v,,SUM,,,,,,,,
+C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/TOP/dsgn_modules/modulator.v,1604867537,verilog,,C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_sp_fifo/fa20_sp_fifo.srcs/sources_1/new/ram_model_1w1r.v,,modulator,,,,,,,,
+C:/Users/pearlstl/Documents/GitHub/fa20_elc470_proj/proj3_am_mod/TOP/tb/modulator_tb.v,1604868529,verilog,,,,modulator_tb,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_elc470_proj3/fa20_elc470_proj3.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_sp_fifo/fa20_sp_fifo.srcs/sources_1/new/ram_model_1w1r.v,1600810936,verilog,,,,ram_model_1w1r,,,,,,,,
+C:/Users/pearlstl/Documents/_Teaching/ELC470-VLSI_for_Signal_and_Image_Processing/vlsi_for_sig_img_vid/fa20_sp_fifo/fa20_sp_fifo.srcs/sources_1/new/sp_fifo.v,1600695867,systemVerilog,,,,sp_fifo,,,,,,,,
